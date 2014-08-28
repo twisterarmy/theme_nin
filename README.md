@@ -5,6 +5,11 @@ Nin is a clean and flat theme for [Twister](http://twister.net.co) [(twister-cor
 
 ![home](https://raw.githubusercontent.com/myleneb/twister-nin/master/captures/home.jpg)
 
+![home](https://raw.githubusercontent.com/myleneb/twister-nin/master/captures/message.jpg)
+
+![home](https://raw.githubusercontent.com/myleneb/twister-nin/master/captures/following.jpg)
+
+
 
 Installation
 ============
