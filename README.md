@@ -24,7 +24,5 @@ TODO
 ====
 
 * login page
-* tox and bm profiles
-* Switch from normal posts to promoted posts in postboard
 
  
