@@ -398,7 +398,6 @@ a:hover { color: #b4c669; text-decoration: none; }
 p { padding: 5px 0; }
 
 h2, h3 { font-size: 1.1em; text-transform: uppercase; letter-spacing: 0.07em; font-weight: 500; line-height: 1.8em; }
-h2 span, .following h2, h3 span, .following h3 { display: none !important; }
 
 textarea, input[type=text] { font: 0.95em/1.3em "Roboto", sans-serif; font-weight: 400; }
 
@@ -602,6 +601,7 @@ ol.toptrends-list a:hover { background: white; color: #66686b; }
 
 /***** DIRECT MESSAGES MODAL********* */
 .directMessages .post-area-new { display: none; padding: 20px; z-index: 5; background: #e2e1de; }
+.directMessages .post-area-new .modal-header h3 span { display: inline !important; }
 .directMessages .modal-wrapper { width: 520px; height: 490px; top: 10%; margin: 0 0 0 -260px; overflow-x: hidden; }
 .directMessages .modal-content { overflow-y: auto; height: 300px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; width: 520px; }
 .directMessages .modal-buttons { display: none; }
