@@ -12,6 +12,7 @@ Installation
 * Download .zip file
 * Extract it and rename the main folder to "html"
 * Delete or rename current html folder in your twister folder and replace it with this new one
+(you may have to chmod files)
 
 
 Features
