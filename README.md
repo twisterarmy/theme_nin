@@ -3,8 +3,7 @@ Theme Nin for twister-html
 
 Nin is a clean and flat theme for [Twister](http://twister.net.co) [(github)](https://github.com/miguelfreitas/twister-core) based on [(github)](https://github.com/miguelfreitas/twister-html)
 
-
-![alt tag](https://raw.github.com/username/projectname/branch/path/to/img.png)
+![](https://raw.github.com/myleneb/theme-nin/capture/home.jpg)
 
 
 Installation
