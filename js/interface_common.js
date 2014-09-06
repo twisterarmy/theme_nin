@@ -125,6 +125,9 @@ function openProfileModal(e)
             unfollow(username);
         });
     };
+    
+    $(".tox-ctc").attr("title", polyglot.t("Copy to clipboard"));
+    $(".bitmessage-ctc").attr("title", polyglot.t("Copy to clipboard"));
 }
 
 function newHashtagModal(hashtag) {
@@ -1111,7 +1114,7 @@ function convert2Unicodes(s, ta) {
 
     if (unicodeConversionStack.length > 0){
         var ub = ta.closest(".post-area-new").find(".undo-unicode");
-        ub.text("undo: " + unicodeConversionStack[0].u);
+        ub.text(polyglot.t("undo") + ": " + unicodeConversionStack[0].u);
         $.MAL.enableButton(ub);
     } else {
         $.MAL.disableButton(ta.closest(".post-area-new").find(".undo-unicode"));
@@ -1144,7 +1147,7 @@ function undoLastUnicode(e) {
     }
 
     if (unicodeConversionStack.length > 0)
-        $(this).text("undo: " + unicodeConversionStack[0].u);
+        $(this).text(polyglot.t("undo") + ": " + unicodeConversionStack[0].u);
     else
         $.MAL.disableButton($(this));
 
