@@ -388,6 +388,8 @@ li { list-style: none; }
 
 html, body { height: 100%; min-height: 100%; background: #e2e1de; color: #66686b; font: 0.95em/1.3em "Roboto", sans-serif; font-weight: 400; }
 
+body { margin: auto 10px;}
+
 br { display: block; }
 
 img { background: #e2e1de; -moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; }
@@ -706,4 +708,6 @@ ul.dropdown-menu > li > a { display: block; padding: 3px 20px; clear: both; whit
   .postboard { margin: 0; padding: 10px; }
   .who-to-follow, .toptrends { display: none; }
   .mini-profile .post-area, .mini-profile .post-area-new { display: none; }
-  .following-list li { width: 98%; float: none; margin: 2% 1%; } }
+  .following-list li { width: 98%; float: none; margin: 2% 1%; } 
+  body { margin: auto;}
+}
