@@ -1,0 +1,56 @@
+//these are the main variables used in the sass file
+
+
+$grid_width : 100% // largeur de la grille en %
+$grid_max_width : 96% // largeur max. en px
+$grid_cols : 12 // nombre de colonnes
+$grid_gut : 2% // largeur de la goutière en %
+$grid_col : ($grid_width - ($grid_gut * ($grid_cols - 1))) / $grid_cols
+$class-col : col !default 
+
+.col
+	float: left
+	margin: 0 $grid_gut 0 0
+	+box-sizing(border-box)
+	@extend .clear-fix
+	&.last
+		margin-right: 0
+@for $i from 1 through $grid_cols
+	$j: $i - 1
+	.#{$class-col}-#{$i}
+		width: ($i * $grid_col) + ($j * $grid_gut)
+
+
+
+$site-width : $grid_max_width
+$gut-width : $grid_gut
+$indicators-width : 55px
+$postboard-modal-width : auto
+
+
+$light-grey: #e9e9e9
+$dark-blue: #38434E
+$color-yellow: #E6953C
+$color-pink: #BF6B6C
+$color-green: #B4C669 
+$color-red: #EF5D43 
+$color-blue: #446CB3
+$dark-grey : #66686B
+
+$main-color-light: #aaa
+$main-color-dark: #596073
+$main-color-color: $color-green
+$main-background-color: $light-grey 
+
+$bloc-background-color: white
+$background-light: lighten($main-background-color, 4% )
+
+$defaut-font-color: $dark-grey
+
+
+/* FONTS */
+
+$main-font-family: "Roboto", sans-serif
+$symbol-font-family: "fontello"
+$serif-font-family: "Droid"
+$alt-font-family : "Laranja", serif

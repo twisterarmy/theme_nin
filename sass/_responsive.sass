@@ -1,0 +1,57 @@
+
+@media (max-width:1200px)
+
+	.wrapper 
+		width: 98% 
+		margin: auto
+	.dashboard.left 
+		width: 33%
+	.postboard 
+		width: 64%
+		margin-right: 1%
+		float: right
+
+
+@media (max-width: 600px)
+
+	@for $i from 1 through $grid_cols
+		$j: $i - 1
+		.#{$class-col}-#{$i}
+			width: 100%
+			margin: 0 $grid_gut $grid_gut 0
+
+	.col
+		float: none
+		padding: 0 20px
+
+	.text-right 
+		text-align: left
+
+	.modal-wrapper
+		width: 100%
+		z-index: 1200
+	.profile-modal
+		.modal-content
+			padding: 0
+			.profile-card
+				width: 100%
+				float: none
+				margin: 0 auto
+				position: fixed 
+				height: 100px!important
+				overflow: hidden
+				z-index: 5000
+				+box-shadow(0 0 20px #000)
+			.twister-user-info , .who-follow
+				display: none
+			.modal-header 
+				z-index: 1200
+			.postboard 
+				position: fixed 
+				bottom: 0
+				width: 100%
+				padding: 0
+	.dashboard.right 
+		position: absolute 
+		top: 150px
+		z-index: 12

@@ -1,0 +1,90 @@
+
+.userMenu
+  width: 100%
+  position: fixed
+  left: 0
+  margin: 0
+  //+background-image(radial-gradient(at top , $color-green, #6F8E97,$color-blue) )
+  background: $main-color-dark
+  z-index: 2
+  ul
+    @extend .clear-fix
+    +box-sizing(border-box)
+    width: $site-width
+    max-width: 100%
+    margin: auto
+    background: image-url("logo.png") no-repeat 50% 50%
+    background-size: 20px
+    li
+      float: left
+      margin: 0 20px 0 0
+      position: relative
+      display: block
+      > a
+        line-height: 50px
+        padding: 0 .5em
+        display: inline-block
+        color: rgba(white, 0.7)!important
+        font-size: 1.2em
+        position: relative
+        font-weight: 400
+        +box-sizing(border-box)
+        &:hover
+          color: white!important
+      &.current  a
+        color: white!important
+        +text-shadow(1px 1px 0 rgba(#000,.2))
+
+
+/* Menu specific entries */ 
+
+.userMenu li
+
+  &.userMenu-home 
+    a span.label
+      display: block!important
+      text-align: center
+    .menu-news
+      position: absolute
+      text-align: center
+      display: none
+      top: 6px
+      right: -6px
+      background: $main-color-color
+      color: #fff
+      width: 15px 
+      height: 15px
+      line-height: 15px
+      font-size: 10px
+      padding: 3px
+      font-weight: 900
+      +border-radius(50%)
+      +box-sizing(content-box)
+      +text-shadow(1px 1px 0 rgba(#000, .3))
+      &.show 
+        display: block
+
+  &.userMenu-dhtindicator, &.userMenu-connections, &.userMenu-messages
+    display: none!important
+
+  &.userMenu-config, &.userMenu-search
+    float: right
+    position: relative
+    margin-right: 0
+    color: white
+    + a 
+      color: $main-color-dark 
+  &.userMenu-search
+    margin: 3px
+    > input 
+      border: 1px solid $main-color-light
+      line-height: 12px 
+      font-size: 12px
+      padding: 7px
+      &:focus 
+        border-color: $main-color-dark
+  &.userMenu-config > a
+    @extend .icon-cog
+    @extend .extend-icon
+    font-size: 1.5em
+
