@@ -107,7 +107,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-weight: normal;
   font-style: normal;
 }
-[class^="icon-"]:before, [class*=" icon-"]:before, .extend-icon:before, .userMenu li.userMenu-config > a:before, .modal-close:before, .mark-all-as-read:before, .modal-back:before, .post-context span:before, .post-reply:before, .post-propagate:before, .post-favorite:before, .post .show-more:before, ul.userMenu-search-profiles button:before, .mini-profile-indicators .userMenu-connections a:before, .mini-profile-indicators .userMenu-messages a:before, .mini-profile-indicators .userMenu-user a:before, .twister-user-remove:before, .refresh-toptrends:before, .twistday-reminder .refresh:before, .refresh-users:before, .icon-down-after:after {
+[class^="icon-"]:before, [class*=" icon-"]:before, .extend-icon:before, .userMenu li.userMenu-config > a:before, .modal-header span:before, .post-context span:before, .post-reply:before, .post-propagate:before, .post-favorite:before, .post .show-more:before, ul.userMenu-search-profiles button:before, .mini-profile-indicators .userMenu-connections a:before, .mini-profile-indicators .userMenu-messages a:before, .mini-profile-indicators .userMenu-user a:before, .twister-user-remove:before, .refresh-toptrends:before, .twistday-reminder .refresh:before, .refresh-users:before, .icon-down-after:after {
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
@@ -153,12 +153,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* '' */
-.icon-ok:before, .mark-all-as-read:before {
+.icon-ok:before, .modal-header span.mark-all-as-read:before {
   content: "";
 }
 
 /* '' */
-.icon-cancel:before, .modal-close:before, .twister-user-remove:before {
+.icon-cancel:before, .modal-header span.modal-close:before, .twister-user-remove:before {
   content: "";
 }
 
@@ -202,7 +202,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* '' */
-.icon-left:before, .modal-back:before {
+.icon-left:before, .modal-header span.modal-back:before {
   content: "";
 }
 
@@ -242,14 +242,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* '' */
-.col, .login .module, .network.singleBlock .module, .twister-user {
+.col, .twister-user {
   float: left;
   margin: 0 2.5% 0 0;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-.col.last, .login .last.module, .network.singleBlock .last.module, .network.singleBlock .module:last-child, .network.singleBlock .module.twister-user:nth-child(4n), .last.twister-user, .twister-user:nth-child(4n) {
+.col.last, .last.twister-user, .twister-user:nth-child(4n) {
   margin-right: 0;
 }
 
@@ -273,7 +273,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   width: 19.375%;
 }
 
-.col-6, .login .module, .network.singleBlock .module {
+.col-6 {
   width: 23.75%;
 }
 
@@ -418,7 +418,7 @@ h3 .isFollowing:after {
   box-shadow: 0 8px 13px rgba(51, 51, 51, 0.1);
 }
 
-.clear-fix:after, .col:after, .login .module:after, .network.singleBlock .module:after, .twister-user:after, .userMenu ul:after, .modal-content:after, .modal-header:after, .direct-messages-thread .post:after, .mini-following-info a:after, .twister-user-info:after, .forEdition.profile-card:after, .expanded-content:after, .following .following-list li a:after, .network.singleBlock:after, .options .tab-content:after, .promoted-posts-only:after, ul.userMenu-search-profiles li:after, .mini-profile .post-area:after, .mini-profile-indicators:after, .profile-data:after, #postboard-top:after, #postboard-top .post-area:after, .who-to-follow.module li:after, .who-to-follow ol:after, .twistday-reminder:after {
+.clear-fix:after, .col:after, .twister-user:after, .userMenu ul:after, .modal-content:after, .modal-header:after, .direct-messages-thread .post:after, .mini-following-info a:after, .twister-user-info:after, .forEdition.profile-card:after, .expanded-content:after, .following .following-list li a:after, .network.singleBlock:after, .options .tab-content:after, .promoted-posts-only:after, ul.userMenu-search-profiles li:after, .mini-profile .post-area:after, .mini-profile-indicators:after, .profile-data:after, #postboard-top:after, #postboard-top .post-area:after, .who-to-follow.module li:after, .who-to-follow ol:after, .twistday-reminder:after {
   content: "";
   display: table;
   clear: both;
@@ -495,7 +495,7 @@ button.small, .modal-wrapper.who-to-follow-modal button, a.button.small {
   height: 50px;
   left: 0;
   margin: 0;
-  background-color: #555555;
+  background-color: #3c3c3c;
   z-index: 2;
 }
 .userMenu ul {
@@ -649,52 +649,30 @@ button.small, .modal-wrapper.who-to-follow-modal button, a.button.small {
   font-size: 1rem;
   color: white;
 }
-
-.modal-close {
+.modal-header span {
   position: absolute;
+  top: 0;
+  line-height: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.1s linear;
+}
+.modal-header span:hover {
+  color: white;
+}
+.modal-header span b {
+  display: none;
+}
+.modal-header span.modal-close {
   right: 10px;
-  top: 0;
-  font-size: 14px;
-  line-height: 50px;
-  cursor: pointer;
-  color: rgba(255, 255, 255, 0.7);
 }
-.modal-close:hover {
-  color: white;
-}
-.modal-close b {
+.modal-header span.mark-all-as-read {
   display: none;
+  right: 70px;
 }
-
-.mark-all-as-read {
-  float: right;
-  cursor: pointer;
-  font-size: 1.3em;
-  line-height: 50px;
-  padding: 0 5px;
-  color: white;
-  transition: all 0.1s linear;
-  display: none;
-}
-
-.modal-back:hover, .mark-all-as-read:hover {
-  color: white;
-}
-
-.modal-back {
-  position: absolute;
+.modal-header span.modal-back {
   right: 35px;
-  top: 0;
-  font-size: 14px;
-  line-height: 50px;
-  cursor: pointer;
-  color: rgba(255, 255, 255, 0.7);
-}
-.modal-back:hover {
-  color: white;
-}
-.modal-back b {
-  display: none;
 }
 
 /* MODAL */
@@ -789,6 +767,7 @@ button.small, .modal-wrapper.who-to-follow-modal button, a.button.small {
   padding-bottom: 6px;
 }
 
+/********* DIRECT MESSAGES MODAL ********** */
 /****** DIRECT MESSAGES MODAL********* */
 .modal-wrapper.directMessages .post-area-new {
   display: none;
@@ -799,8 +778,11 @@ button.small, .modal-wrapper.who-to-follow-modal button, a.button.small {
   width: 100%;
   padding: 0 !important;
 }
-.modal-wrapper.directMessages .post-area-new .modal-header h3 span {
-  display: inline !important;
+.modal-wrapper.directMessages .modal-header h3 span {
+  display: inline-block !important;
+  padding-left: 5px;
+  color: white;
+  cursor: default;
 }
 .modal-wrapper.directMessages .modal-content {
   -moz-box-sizing: border-box;
@@ -852,9 +834,16 @@ button.small, .modal-wrapper.who-to-follow-modal button, a.button.small {
 .direct-messages-list .post:hover:after {
   display: block;
 }
+.direct-messages-list li {
+  position: relative;
+  border-bottom: 1px solid #dddddd;
+}
 
 .direct-messages-thread {
   padding-bottom: 150px;
+}
+.direct-messages-thread li {
+  position: relative;
 }
 .direct-messages-thread .post {
   background: none;
@@ -869,6 +858,7 @@ button.small, .modal-wrapper.who-to-follow-modal button, a.button.small {
   font-size: 10px;
   margin: 10px 0;
   cursor: default;
+  position: static;
 }
 .direct-messages-thread .post .post-info-time:hover {
   color: #aaa;
@@ -2044,7 +2034,7 @@ ul.userMenu-search-profiles button .unfollow {
   display: block;
   position: relative;
   font-size: 0.8em;
-  width: 33.3%;
+  width: 25%;
   float: left;
   border-right: 1px solid #dddddd;
 }
@@ -2115,6 +2105,9 @@ ul.userMenu-search-profiles button .unfollow {
   padding: 0 0 1em 0;
   text-align: center;
   background: white;
+}
+.mini-profile .profile-data {
+  display: none;
 }
 .profile-data li {
   display: inline;
@@ -2650,114 +2643,5 @@ ul.dropdown-menu li > li > a {
     width: 64%;
     margin-right: 1%;
     float: right;
-  }
-}
-@media (max-width: 600px) {
-  .col-1 {
-    width: 100%;
-    margin: 0 2.5% 2.5% 0;
-  }
-
-  .col-2 {
-    width: 100%;
-    margin: 0 2.5% 2.5% 0;
-  }
-
-  .col-3, .twister-user {
-    width: 100%;
-    margin: 0 2.5% 2.5% 0;
-  }
-
-  .col-4 {
-    width: 100%;
-    margin: 0 2.5% 2.5% 0;
-  }
-
-  .col-5 {
-    width: 100%;
-    margin: 0 2.5% 2.5% 0;
-  }
-
-  .col-6, .login .module, .network.singleBlock .module {
-    width: 100%;
-    margin: 0 2.5% 2.5% 0;
-  }
-
-  .col-7 {
-    width: 100%;
-    margin: 0 2.5% 2.5% 0;
-  }
-
-  .col-8 {
-    width: 100%;
-    margin: 0 2.5% 2.5% 0;
-  }
-
-  .col-9 {
-    width: 100%;
-    margin: 0 2.5% 2.5% 0;
-  }
-
-  .col-10 {
-    width: 100%;
-    margin: 0 2.5% 2.5% 0;
-  }
-
-  .col-11 {
-    width: 100%;
-    margin: 0 2.5% 2.5% 0;
-  }
-
-  .col-12 {
-    width: 100%;
-    margin: 0 2.5% 2.5% 0;
-  }
-
-  .col, .login .module, .network.singleBlock .module, .twister-user {
-    float: none;
-    padding: 0 20px;
-  }
-
-  .text-right {
-    text-align: left;
-  }
-
-  .modal-wrapper {
-    width: 100%;
-    z-index: 1200;
-  }
-
-  .profile-modal .modal-content {
-    padding: 0;
-  }
-  .profile-modal .modal-content .profile-card {
-    width: 100%;
-    float: none;
-    margin: 0 auto;
-    position: fixed;
-    height: 100px !important;
-    overflow: hidden;
-    z-index: 5000;
-    -moz-box-shadow: 0 0 20px #000;
-    -webkit-box-shadow: 0 0 20px #000;
-    box-shadow: 0 0 20px #000;
-  }
-  .profile-modal .modal-content .twister-user-info, .profile-modal .modal-content .who-follow {
-    display: none;
-  }
-  .profile-modal .modal-content .modal-header {
-    z-index: 1200;
-  }
-  .profile-modal .modal-content .postboard {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    padding: 0;
-  }
-
-  .dashboard.right {
-    position: absolute;
-    top: 150px;
-    z-index: 12;
   }
 }
