@@ -2,24 +2,25 @@
 $(document).ready(function()
 {
     var windowHeight = $(window).height();
-    $('.right').css('height', windowHeight - 100);
-    $('.module.who-to-follow').detach().appendTo($('.dashboard.left'));
-    $('.module.twistday-reminder').detach().appendTo($('.dashboard.left'));
+    //$('.right').css('height', windowHeight - 100);
+    $('.module.who-to-follow').detach().appendTo($('.dashboard.right'));
+    $('.module.twistday-reminder').detach().appendTo($('.dashboard.right'));
 });
 
 
 $(window).resize(function()
 {
     var windowHeight = $(window).height();
-    $('.right').css('height', windowHeight - 100);
-    $('.module.who-to-follow').detach().appendTo($('.dashboard.left'));
-    $('.module.twistday-reminder').detach().appendTo($('.dashboard.left'));
+    //$('.right').css('height', windowHeight - 100);
+    $('.module.who-to-follow').detach().appendTo($('.dashboard.right'));
+    $('.module.twistday-reminder').detach().appendTo($('.dashboard.right'));
 });
 
 $(function(){
     var windowHeight = $(window).height();
     $('.modal-close').html('');
-    $('.right').css('height', windowHeight - 100);
+    //$('.right').css('height', windowHeight - 100);
+    $('.mini-profile .open-following-page').parent('li').detach().appendTo($('.mini-profile-indicators'));
     $('.modal-back').html('');
     $('.twister-user-remove').html('');
     $('.profile-card-main').attr('style', '');
