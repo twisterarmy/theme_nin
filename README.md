@@ -5,10 +5,3 @@ Nin is a clean and flat theme [Twister](http://twister.net.co) [(twister-core on
 
 This is experimental by now.
 
-
-Maproad
-
-
--- cleaning sass
--- 
-
