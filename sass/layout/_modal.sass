@@ -15,7 +15,7 @@ $header-modal-height : $menu-height
 	position: fixed
 	+box-sizing(border-box)
 	@extend .box-shadow
-	height: 100%
+	height: 100vh
 	right: 0
 	bottom: 0
 	overflow: hidden
@@ -33,7 +33,7 @@ $header-modal-height : $menu-height
 
 .modal-content
 	@extend .clear-fix
-	background: $background-light
+	overflow: hidden
 	overflow-y: auto
 	.postboard-news
 		position: absolute
@@ -43,6 +43,7 @@ $header-modal-height : $menu-height
 		@extend .color-1
 	h2 span 
 		display: none
+	background: $bloc-light-color
 
 
 
@@ -50,11 +51,10 @@ $header-modal-height : $menu-height
 
 .modal-header
 	position: relative
-	background: $color-blue
-	height: $header-modal-height
+	background: $main-color-dark
+	height: $header-modal-height 
 	+box-sizing(border-box)
 	@extend .clear-fix
-	border-bottom: 1px solid $background-light
 
 	h3
 		padding-left: 20px
@@ -124,8 +124,10 @@ $header-modal-height : $menu-height
 		position: relative
 		width: 100%
 		margin: auto
+		background: $main-background-color
 		h2 
 			display: block
+
 	.post-text
 		margin: 0 0 0 40px
 	.post-photo
@@ -166,11 +168,7 @@ $header-modal-height : $menu-height
 		display: none
 	h2
 		text-transform: none
-.following-config-method-buttons
-	.public-following
-		background-color: $color-green
-		margin: 0px 2px
-		padding: 6px 16px
+
 
 /************ RETWIST POSTS MODAL **********/
 
@@ -179,9 +177,7 @@ $header-modal-height : $menu-height
 		margin-top: -110px
 	.modal-content
 		padding: 20px 15px
-	.modal-buttons
-		.modal-propagate
-			background-color: $color-green
+
 	.post-expand, .post-interactions
 		display: none
 
@@ -363,18 +359,32 @@ $header-modal-height : $menu-height
 
 /****** FOLLOWING MODAL*******/
 
-.modal-wrapper.following-modal
 
-	.modal-content
-		padding: 0
-	ol
-		margin: 5px
-	.open-profile-modal
-		&:hover
-			text-decoration: none
-	.postboard
-		h2
-			display: none
+.modal-wrapper.following-modal
+	h2 
+		display: none
+.mini-following-info
+	border-bottom: 1px solid $main-background-color
+	line-height: 45px
+
+	a 
+		display: block 
+		padding: 10px
+		width: 100%
+		@extend .clear-fix
+		color: $defaut-font-color
+		&:hover 
+			background: $bloc-background-color
+	.mini-profile-photo
+		height: 48px
+		width: 48px
+		line-height: 0
+		margin: 0 $space 0 0
+		float: left
+	.mini-screen-name 
+		display: none
+
+ 
 
 
 /******* WHO TO FOLLOW MODAL*******/

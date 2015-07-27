@@ -249,56 +249,56 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-.col.last, .following, .following-list li.last, .following-list li.following, .following-list li:nth-child(4n), .following-list li.dashboard.right, .following-list .network.singleBlock li.module:nth-child(4n), .network.singleBlock .following-list li.module:nth-child(4n), .login .last.module, .login .module.following, .login .module.dashboard.right, .network.singleBlock .last.module, .network.singleBlock .module.following, .network.singleBlock .module:last-child, .network.singleBlock .module.dashboard.right, .network.singleBlock .module.twister-user:nth-child(4n), .col.dashboard.right, .dashboard.right.following, .dashboard.right.twister-user, .last.twister-user, .twister-user:nth-child(4n) {
+.col.last, .following, .following-list li.last, .following-list li.following, .following-list li:nth-child(4n), .following-list .network.singleBlock li.module:nth-child(4n), .network.singleBlock .following-list li.module:nth-child(4n), .login .last.module, .login .module.following, .network.singleBlock .last.module, .network.singleBlock .module.following, .network.singleBlock .module:last-child, .network.singleBlock .module.twister-user:nth-child(4n), .last.twister-user, .twister-user:nth-child(4n) {
   margin-right: 0;
 }
 
 .col-1 {
-  width: 6.04167%;
+  width: 1.875%;
 }
 
 .col-2 {
-  width: 14.58333%;
+  width: 6.25%;
 }
 
 .col-3, .following-list li, .twister-user {
-  width: 23.125%;
+  width: 10.625%;
 }
 
 .col-4 {
-  width: 31.66667%;
+  width: 15%;
 }
 
 .col-5 {
-  width: 40.20833%;
+  width: 19.375%;
 }
 
 .col-6, .login .module, .network.singleBlock .module {
-  width: 48.75%;
+  width: 23.75%;
 }
 
 .col-7 {
-  width: 57.29167%;
+  width: 28.125%;
 }
 
 .col-8 {
-  width: 65.83333%;
+  width: 32.5%;
 }
 
 .col-9, .following {
-  width: 74.375%;
+  width: 36.875%;
 }
 
 .col-10 {
-  width: 82.91667%;
+  width: 41.25%;
 }
 
 .col-11 {
-  width: 91.45833%;
+  width: 45.625%;
 }
 
 .col-12 {
-  width: 100%;
+  width: 50%;
 }
 
 /* FONTS */
@@ -307,6 +307,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  list-style: none;
 }
 
 html, body {
@@ -319,13 +320,13 @@ html, body {
 
 html {
   font-size: 15px;
-  background-color: #e9e9e9;
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjEuMCIgeDI9IjEuMCIgeTI9IjAuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2FhYWFhYSIvPjxzdG9wIG9mZnNldD0iMjUlIiBzdG9wLWNvbG9yPSIjZTllOWU5Ii8+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiNlOWU5ZTkiLz48c3RvcCBvZmZzZXQ9Ijc1JSIgc3RvcC1jb2xvcj0iI2U5ZTllOSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2FhYWFhYSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-color: #dddddd;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjEuMCIgeDI9IjEuMCIgeTI9IjAuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjZGRkZGRkIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
   background-size: 100%;
-  background-image: -webkit-gradient(linear, 0% 100%, 100% 0%, color-stop(0%, #aaaaaa), color-stop(25%, #e9e9e9), color-stop(50%, #e9e9e9), color-stop(75%, #e9e9e9), color-stop(100%, #aaaaaa));
-  background-image: -moz-linear-gradient(bottom, #aaaaaa, #e9e9e9, #e9e9e9, #e9e9e9, #aaaaaa);
-  background-image: -webkit-linear-gradient(bottom, #aaaaaa, #e9e9e9, #e9e9e9, #e9e9e9, #aaaaaa);
-  background-image: linear-gradient(to top right, #aaaaaa, #e9e9e9, #e9e9e9, #e9e9e9, #aaaaaa);
+  background-image: -webkit-gradient(linear, 0% 100%, 100% 0%, color-stop(0%, #ffffff), color-stop(50%, #dddddd), color-stop(100%, #ffffff));
+  background-image: -moz-linear-gradient(bottom, #ffffff, #dddddd, #ffffff);
+  background-image: -webkit-linear-gradient(bottom, #ffffff, #dddddd, #ffffff);
+  background-image: linear-gradient(to top right, #ffffff, #dddddd, #ffffff);
   background-attachment: fixed;
 }
 
@@ -355,6 +356,10 @@ i, em {
 
 strong, b {
   font-weight: 600;
+}
+
+img {
+  background: #222;
 }
 
 h1 {
@@ -407,13 +412,13 @@ h3 .isFollowing:after {
   display: none;
 }
 
-.box-shadow, .modal-wrapper, .prompt-wrapper, .open, .mini-profile .post-area-new, #postboard-top .post-area .post-area-new, .dialog-modal, .mini-profile, .who-to-follow.module, .toptrends.module, .twistday-reminder, ul.dropdown-menu {
+.box-shadow, .modal-wrapper, .prompt-wrapper, .open, .mini-profile .post-area-new, #postboard-top .post-area .post-area-new, .dialog-modal, .mini-profile, .who-to-follow.module, ol.toptrends-list a, .twistday-reminder, ul.dropdown-menu {
   -moz-box-shadow: 0 8px 13px rgba(51, 51, 51, 0.1);
   -webkit-box-shadow: 0 8px 13px rgba(51, 51, 51, 0.1);
   box-shadow: 0 8px 13px rgba(51, 51, 51, 0.1);
 }
 
-.clear-fix:after, .col:after, .following:after, .following-list li:after, .login .module:after, .network.singleBlock .module:after, .twister-user:after, .userMenu ul:after, .modal-content:after, .modal-header:after, .direct-messages-thread .post:after, .twister-user-info:after, .forEdition.profile-card:after, .expanded-content:after, .mini-following-info:after, .network.singleBlock:after, .options .tab-content:after, .promoted-posts-only:after, ul.userMenu-search-profiles li:after, .mini-profile .post-area:after, .mini-profile-indicators:after, .profile-data:after, #postboard-top:after, #postboard-top .post-area:after, .who-to-follow.module li:after, .who-to-follow ol:after, .twistday-reminder:after {
+.clear-fix:after, .col:after, .following:after, .following-list li:after, .login .module:after, .network.singleBlock .module:after, .twister-user:after, .userMenu ul:after, .modal-content:after, .modal-header:after, .direct-messages-thread .post:after, .mini-following-info a:after, .twister-user-info:after, .forEdition.profile-card:after, .expanded-content:after, .network.singleBlock:after, .options .tab-content:after, .promoted-posts-only:after, ul.userMenu-search-profiles li:after, .mini-profile .post-area:after, .mini-profile-indicators:after, .profile-data:after, #postboard-top:after, #postboard-top .post-area:after, .who-to-follow.module li:after, .who-to-follow ol:after, .twistday-reminder:after {
   content: "";
   display: table;
   clear: both;
@@ -460,13 +465,13 @@ button.disabled:hover, .mini-profile-actions span.disabled:hover, a.button.disab
   box-shadow: 1px 1px 0 rgba(68, 68, 68, 0.3);
 }
 button.color-1, .modal-content button.postboard-news, .modal-content .mini-profile-actions span.postboard-news, .mini-profile-actions .modal-content span.postboard-news, button.follow, .mini-profile-actions span.follow, .mini-profile-actions span.color-1, a.button.color-1, .modal-content a.button.postboard-news, a.button.follow {
-  background: #00AA8B;
-  border-color: #009076;
+  background: #B4C669;
+  border-color: #abbf57;
   color: white;
   font-weight: 500;
 }
 button.color-1:hover, .modal-content button.postboard-news:hover, .modal-content .mini-profile-actions span.postboard-news:hover, .mini-profile-actions .modal-content span.postboard-news:hover, button.follow:hover, .mini-profile-actions span.follow:hover, .mini-profile-actions span.color-1:hover, a.button.color-1:hover, .modal-content a.button.postboard-news:hover, a.button.follow:hover {
-  border-color: #005d4c;
+  border-color: #90a43e;
 }
 button.color-2, button.unfollow, .mini-profile-actions span.unfollow, .mini-profile-actions span.color-2, a.button.color-2, a.button.unfollow {
   background: #C3C3C3;
@@ -490,7 +495,7 @@ button.small, .modal-wrapper.who-to-follow-modal button, .modal-wrapper.who-to-f
   height: 50px;
   left: 0;
   margin: 0;
-  background-color: #F5F5F5;
+  background-color: #555555;
   z-index: 2;
 }
 .userMenu ul {
@@ -513,7 +518,7 @@ button.small, .modal-wrapper.who-to-follow-modal button, .modal-wrapper.who-to-f
   line-height: 50px;
   padding: 0 0.5em;
   display: inline-block;
-  color: rgba(68, 68, 68, 0.7) !important;
+  color: rgba(255, 255, 255, 0.7) !important;
   font-size: 1em;
   position: relative;
   font-weight: 500;
@@ -522,10 +527,10 @@ button.small, .modal-wrapper.who-to-follow-modal button, .modal-wrapper.who-to-f
   box-sizing: border-box;
 }
 .userMenu ul li > a:hover {
-  color: #444 !important;
+  color: white !important;
 }
 .userMenu ul li.current a {
-  color: #444 !important;
+  color: white !important;
 }
 
 /* Menu specific entries */
@@ -565,10 +570,10 @@ button.small, .modal-wrapper.who-to-follow-modal button, .modal-wrapper.who-to-f
   float: right;
   position: relative;
   margin-right: 0;
-  color: #444;
+  color: white;
 }
 .userMenu li.userMenu-config + a, .userMenu li.userMenu-search + a {
-  color: #596073;
+  color: #222;
 }
 .userMenu li.userMenu-search {
   margin: 3px;
@@ -580,7 +585,7 @@ button.small, .modal-wrapper.who-to-follow-modal button, .modal-wrapper.who-to-f
   padding: 7px;
 }
 .userMenu li.userMenu-search > input:focus {
-  border-color: #596073;
+  border-color: #222;
 }
 .userMenu li.userMenu-config > a {
   font-size: 1.5rem;
@@ -595,7 +600,7 @@ button.small, .modal-wrapper.who-to-follow-modal button, .modal-wrapper.who-to-f
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  height: 100%;
+  height: 100vh;
   right: 0;
   bottom: 0;
   overflow: hidden;
@@ -615,8 +620,9 @@ button.small, .modal-wrapper.who-to-follow-modal button, .modal-wrapper.who-to-f
 }
 
 .modal-content {
-  background: #f3f3f3;
+  overflow: hidden;
   overflow-y: auto;
+  background: #f6f6f6;
 }
 .modal-content .postboard-news {
   position: absolute;
@@ -630,12 +636,11 @@ button.small, .modal-wrapper.who-to-follow-modal button, .modal-wrapper.who-to-f
 
 .modal-header {
   position: relative;
-  background: #00AA8B;
+  background: #222;
   height: 50px;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  border-bottom: 1px solid #f3f3f3;
 }
 .modal-header h3 {
   padding-left: 20px;
@@ -702,6 +707,7 @@ button.small, .modal-wrapper.who-to-follow-modal button, .modal-wrapper.who-to-f
   position: relative;
   width: 100%;
   margin: auto;
+  background: #dddddd;
 }
 .modal-content .postboard h2 {
   display: block;
@@ -751,21 +757,12 @@ button.small, .modal-wrapper.who-to-follow-modal button, .modal-wrapper.who-to-f
   text-transform: none;
 }
 
-.following-config-method-buttons .public-following {
-  background-color: #B4C669;
-  margin: 0px 2px;
-  padding: 6px 16px;
-}
-
 /************ RETWIST POSTS MODAL ********* */
 .prompt-wrapper.reTwist.prompt-wrapper {
   margin-top: -110px;
 }
 .prompt-wrapper.reTwist .modal-content {
   padding: 20px 15px;
-}
-.prompt-wrapper.reTwist .modal-buttons .modal-propagate {
-  background-color: #B4C669;
 }
 .prompt-wrapper.reTwist .post-expand, .prompt-wrapper.reTwist .post-interactions {
   display: none;
@@ -786,7 +783,7 @@ button.small, .modal-wrapper.who-to-follow-modal button, .modal-wrapper.who-to-f
 .modal-wrapper.directMessages .post-area-new {
   display: none;
   z-index: 5;
-  background: #e9e9e9;
+  background: #dddddd;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -949,16 +946,31 @@ button.small, .modal-wrapper.who-to-follow-modal button, .modal-wrapper.who-to-f
 }
 
 /****** FOLLOWING MODAL****** */
-.modal-wrapper.following-modal .modal-content {
-  padding: 0;
+.modal-wrapper.following-modal h2 {
+  display: none;
 }
-.modal-wrapper.following-modal ol {
-  margin: 5px;
+
+.mini-following-info {
+  border-bottom: 1px solid #dddddd;
+  line-height: 45px;
 }
-.modal-wrapper.following-modal .open-profile-modal:hover {
-  text-decoration: none;
+.mini-following-info a {
+  display: block;
+  padding: 10px;
+  width: 100%;
+  color: #444;
 }
-.modal-wrapper.following-modal .postboard h2 {
+.mini-following-info a:hover {
+  background: white;
+}
+.mini-following-info .mini-profile-photo {
+  height: 48px;
+  width: 48px;
+  line-height: 0;
+  margin: 0 1rem 0 0;
+  float: left;
+}
+.mini-following-info .mini-screen-name {
   display: none;
 }
 
@@ -1044,7 +1056,6 @@ button.small, .modal-wrapper.who-to-follow-modal button, .modal-wrapper.who-to-f
 .profile-card {
   width: 100%;
   background: white;
-  border-bottom: 1px solid #f3f3f3;
   padding: 15px;
 }
 
@@ -1131,7 +1142,6 @@ button.small, .modal-wrapper.who-to-follow-modal button, .modal-wrapper.who-to-f
   display: none;
   margin: 0 15px 0 0;
   font-weight: 500;
-  background: #f3f3f3;
   padding: 2px 8px 3px 8px;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
@@ -1142,7 +1152,7 @@ button.small, .modal-wrapper.who-to-follow-modal button, .modal-wrapper.who-to-f
   font-size: 13px;
   line-height: 15px;
   cursor: pointer;
-  color: #596073;
+  color: #222;
 }
 .bitmessage-ctc:hover, .tox-ctc:hover {
   color: #B4C669;
@@ -1182,7 +1192,6 @@ button.small, .modal-wrapper.who-to-follow-modal button, .modal-wrapper.who-to-f
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: auto;
-  background: #f3f3f3;
 }
 .forEdition.profile-card .profile-card-main {
   margin: 0;
@@ -1191,7 +1200,6 @@ button.small, .modal-wrapper.who-to-follow-modal button, .modal-wrapper.who-to-f
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 10px;
-  background: #f3f3f3;
 }
 .forEdition.profile-card .profile-card-main input {
   display: block;
@@ -1239,8 +1247,7 @@ button.small, .modal-wrapper.who-to-follow-modal button, .modal-wrapper.who-to-f
 
 /************* POST BOARD ************ */
 .postboard {
-  float: left;
-  width: 50%;
+  width: 100%;
   padding: 20px;
 }
 .postboard h2 {
@@ -1313,10 +1320,7 @@ button.small, .modal-wrapper.who-to-follow-modal button, .modal-wrapper.who-to-f
 }
 
 .open, .mini-profile .post-area-new, #postboard-top .post-area .post-area-new {
-  background: none;
-}
-.open:hover, .mini-profile .post-area-new:hover, #postboard-top .post-area .post-area-new:hover {
-  background: none;
+  background: none !important;
 }
 
 .post-photo {
@@ -1374,7 +1378,7 @@ button.small, .modal-wrapper.who-to-follow-modal button, .modal-wrapper.who-to-f
   padding: 0;
 }
 .post-text samp {
-  background: #f3f3f3;
+  background: #eee;
   font-size: 0.9rem;
   line-height: 0.9rem;
   display: inline-block;
@@ -1542,7 +1546,7 @@ button.small, .modal-wrapper.who-to-follow-modal button, .modal-wrapper.who-to-f
 .user-name-tooltip {
   display: none;
   position: absolute;
-  background: #60677c;
+  background: #2a2a2a;
   font-size: 12px;
   white-space: nowrap;
   padding: 3px 5px;
@@ -1556,7 +1560,7 @@ button.small, .modal-wrapper.who-to-follow-modal button, .modal-wrapper.who-to-f
   width: 0;
   left: 4px;
   bottom: -5px;
-  border-top: solid 5px #60677c;
+  border-top: solid 5px #2a2a2a;
   border-left: solid 5px transparent;
   border-right: solid 5px transparent;
 }
@@ -1590,7 +1594,7 @@ button.small, .modal-wrapper.who-to-follow-modal button, .modal-wrapper.who-to-f
   width: 64px;
   height: 64px;
   overflow: hidden;
-  background: #e9e9e9;
+  background: #dddddd;
 }
 
 .following .mini-profile-view {
@@ -1657,7 +1661,7 @@ button.small, .modal-wrapper.who-to-follow-modal button, .modal-wrapper.who-to-f
   right: -2em;
   transition: height 0.4s linear;
   transition: padding-top 0.1s linear;
-  background: #596073;
+  background: #222;
   z-index: 3;
 }
 .mini-profile-actions:hover ul {
@@ -1667,7 +1671,7 @@ button.small, .modal-wrapper.who-to-follow-modal button, .modal-wrapper.who-to-f
 .mini-profile-actions ul li {
   text-align: left;
   margin: 0;
-  background: #596073;
+  background: #222;
   white-space: nowrap;
   color: #aaa;
   font-size: 12px;
@@ -1801,23 +1805,6 @@ button.small, .modal-wrapper.who-to-follow-modal button, .modal-wrapper.who-to-f
 
 .swarm-status {
   display: none !important;
-}
-
-.mini-following-info {
-  width: 45px;
-  height: 45px;
-  text-align: center;
-  background: white;
-  margin: 1%;
-  float: left;
-}
-.mini-following-info .mini-screen-name, .mini-following-info .mini-following-name {
-  display: none;
-}
-.mini-following-info .mini-profile-photo {
-  height: 45px;
-  width: 45px;
-  border-radius: 0;
 }
 
 .login .header-bold {
@@ -2018,14 +2005,13 @@ button.small, .modal-wrapper.who-to-follow-modal button, .modal-wrapper.who-to-f
   margin: 0 5px 0 0;
   padding: 5px 15px;
   color: #aaa;
-  background: #f3f3f3;
 }
 .options label.tabs:hover {
-  color: #596073;
+  color: #222;
 }
 .options input:checked + label.tabs {
   background: white;
-  color: #596073;
+  color: #222;
 }
 
 .promoted-posts-only {
@@ -2041,42 +2027,48 @@ button.small, .modal-wrapper.who-to-follow-modal button, .modal-wrapper.who-to-f
   transition: color 0.1s linear;
 }
 .promoted-posts-only li.active {
-  color: #596073;
+  color: #222;
   background: white;
   cursor: default;
 }
 .promoted-posts-only li:hover, .promoted-posts-only li.disabled:hover {
-  color: #596073;
+  color: #222;
 }
 .promoted-posts-only li.disabled {
   color: #aaa;
-  background: #f3f3f3;
+  background: #C3C3C3;
 }
 
 /* Wrapper and blocks */
 .wrapper {
-  width: 100%;
+  width: 50%;
   max-width: 100%;
-  margin: 0;
+  margin: auto;
   padding-top: 50px;
   position: relative;
   z-index: 1;
-  min-height: 100%;
 }
 
-.dashboard.left, .dashboard.right {
-  float: left;
+.dashboard.left {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  height: 100vh;
+  overflow: hidden;
   width: 25%;
-  position: relative;
 }
 .dashboard.right {
-  height: 0;
+  position: fixed;
+  right: 0;
+  top: 50px;
+  overflow: hidden;
+  width: 25%;
 }
 
 /********** CONFIG SUBMENU & SEARCH RESULTS *********** */
 .dialog-modal {
   display: none;
-  background: #596073;
+  background: #222;
   position: absolute;
   top: 45px;
   right: -10px;
@@ -2104,7 +2096,7 @@ ul.userMenu-search-profiles li {
   display: block;
   padding: 5px 10px;
   margin: 0;
-  border-bottom: 1px solid #e9e9e9;
+  border-bottom: 1px solid #dddddd;
 }
 ul.userMenu-search-profiles .mini-profile-name {
   font-size: 12px;
@@ -2141,7 +2133,7 @@ ul.userMenu-search-profiles button .follow, ul.userMenu-search-profiles .mini-pr
   background-color: #B4C669;
 }
 ul.userMenu-search-profiles button .unfollow, ul.userMenu-search-profiles .mini-profile-actions span .unfollow, .mini-profile-actions ul.userMenu-search-profiles span .unfollow {
-  background-color: #596073;
+  background-color: #222;
 }
 
 .userMenu-search input[type="text"] {
@@ -2175,7 +2167,6 @@ ul.userMenu-search-profiles button .unfollow, ul.userMenu-search-profiles .mini-
   margin-top: 1px;
   margin-bottom: 20px;
   padding: 0.5em;
-  background: #f3f3f3;
 }
 .mini-profile .post-area-new {
   -moz-box-shadow: none;
@@ -2191,7 +2182,9 @@ ul.userMenu-search-profiles button .unfollow, ul.userMenu-search-profiles .mini-
 .mini-profile-indicators {
   margin: 0;
   text-align: center;
-  background-color: #fdfdfd;
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+  background: white;
 }
 .mini-profile-indicators li {
   -moz-box-sizing: border-box;
@@ -2200,7 +2193,12 @@ ul.userMenu-search-profiles button .unfollow, ul.userMenu-search-profiles .mini-
   display: block;
   position: relative;
   font-size: 0.8em;
-  border-top: 1px solid #e9e9e9;
+  width: 33.3%;
+  float: left;
+  border-right: 1px solid #dddddd;
+}
+.mini-profile-indicators li:last-child {
+  border: none;
 }
 .mini-profile-indicators li a {
   color: #444;
@@ -2209,9 +2207,6 @@ ul.userMenu-search-profiles button .unfollow, ul.userMenu-search-profiles .mini-
 }
 .mini-profile-indicators li a:hover {
   text-decoration: underline;
-}
-.mini-profile-indicators li a:before {
-  display: none !important;
 }
 
 .messages-qtd {
@@ -2288,9 +2283,6 @@ ul.userMenu-search-profiles button .unfollow, ul.userMenu-search-profiles .mini-
   display: inline-block;
   padding-right: 5px;
 }
-.profile-data li a:last-child {
-  display: none;
-}
 
 .mini-profile-info a:hover {
   text-decoration: none;
@@ -2303,7 +2295,6 @@ ul.userMenu-search-profiles button .unfollow, ul.userMenu-search-profiles .mini-
   text-align: center;
   padding: 10px;
   font-size: 12px;
-  background: white;
   z-index: 10;
   -moz-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
@@ -2330,7 +2321,7 @@ ul.userMenu-search-profiles button .unfollow, ul.userMenu-search-profiles .mini-
 .mini-follower-link:after {
   content: "·";
   font-weight: 900;
-  color: #596073;
+  color: #222;
   margin-left: 1px;
 }
 
@@ -2450,7 +2441,7 @@ textarea.splited-post {
 .who-to-follow.module li {
   width: 100%;
   min-height: auto;
-  border-bottom: 1px solid #e9e9e9;
+  border-bottom: 1px solid #dddddd;
   margin: 0;
   padding-bottom: 10px;
   margin-top: 10px;
@@ -2479,7 +2470,6 @@ textarea.splited-post {
   background: white;
   width: 100%;
   min-height: auto;
-  border-bottom: 1px solid #f3f3f3;
 }
 
 img.twister-user-photo {
@@ -2494,7 +2484,7 @@ img.twister-user-photo {
   width: 48px;
   height: 48px;
   margin: 10px;
-  background: #e9e9e9;
+  background: #dddddd;
 }
 
 .followers {
@@ -2548,7 +2538,7 @@ img.twister-user-photo {
 }
 
 .refresh-toptrends, .twistday-reminder .refresh, .refresh-users {
-  color: #596073;
+  color: #222;
   cursor: pointer;
   font-size: 11px;
   font-weight: 500;
@@ -2562,7 +2552,7 @@ img.twister-user-photo {
 }
 
 .view-all-users {
-  color: #596073;
+  color: #222;
   cursor: pointer;
   font-size: 11px;
   font-weight: 500;
@@ -2584,8 +2574,7 @@ img.twister-user-photo {
 /***********TOP TRENDS************** */
 .toptrends.module {
   margin: 0 0 20px 0;
-  background: white;
-  padding: 20px;
+  padding: 0 20px;
 }
 .toptrends small {
   display: none;
@@ -2606,15 +2595,15 @@ ol.toptrends-list a {
   color: #aaa;
   padding: 3px 8px;
   display: inline-block;
-  background: #f3f3f3;
   text-transform: uppercase;
   font-size: 11px;
   margin: 3px;
   font-weight: 500;
+  background: white;
 }
 ol.toptrends-list a:hover {
-  background: white;
-  color: #596073;
+  background: rgba(255, 255, 255, 0.4);
+  color: #222;
 }
 
 /********* TWISTDAY REMINDER ****** */

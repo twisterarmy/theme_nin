@@ -7,8 +7,7 @@ $avatar-width : 48px
 
 
 .postboard
-	float: left
-	width: 50%
+	width: 100%
 	padding: 20px
 	h2 
 		display: none
@@ -71,11 +70,8 @@ $avatar-width : 48px
 
 
 .open
-	background: none
+	background: none!important
 	@extend .box-shadow
-
-	&:hover
-		background: none
 
 .post-photo
 	margin: 0
@@ -127,7 +123,7 @@ $avatar-width : 48px
 	min-height: $avatar-width
 	padding: 0
 	samp
-		background: $background-light
+		background: #eee
 		font-size: .9rem 
 		line-height: .9rem
 		display: inline-block 

@@ -1,6 +1,7 @@
 *
 	outline: none!important
 	+box-sizing(border-box)
+	list-style: none
 
 
 html, body
@@ -13,7 +14,7 @@ html, body
 html 
 	font-size: $global-font-size
 	background-color: $main-background-color
-	+background-image(linear-gradient(to top right, #aaa, $main-background-color,$main-background-color,$main-background-color, #aaa) )
+	+background-image(linear-gradient(to top right, #fff, $main-background-color, #fff) )
 	background-attachment: fixed
 
 body 
@@ -39,6 +40,9 @@ i, em
 
 strong, b 
 	font-weight: 600
+
+img 
+	background: $main-color-dark
 
 h1
 	font-size: 1.1em
