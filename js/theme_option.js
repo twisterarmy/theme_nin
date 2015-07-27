@@ -31,16 +31,11 @@ $(function(){
         $(this).prependTo($(this).parent());
     });
 
-    // open-following-page
-
-
-
 
     $( '.userMenu-home.current a' ).on( 'click', function() {
         $('html, body').animate({scrollTop:0},300);
         return false
     });
-
 
 
     
@@ -77,11 +72,6 @@ $(function(){
 
 
 
-
-
-
-
-
 function localizeLabels() {
     $("label[for=tab_language]").text(polyglot.t("Language"));
     $("label[for=t-2]").text(polyglot.t("Theme"));
@@ -93,8 +83,6 @@ function localizeLabels() {
 
 function openModal(modal) {
     window_scrollY = window.pageYOffset;
-
-    //$('body').css('overflow', 'hidden');
 
     if (!modal.classBase)
         modal.classBase = '.modal-wrapper';

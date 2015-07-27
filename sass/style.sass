@@ -1,24 +1,27 @@
-@import _fonts
+
 @import compass
 @import 'compass/reset'
 @import 'compass/utilities'
 
-// utils
-
-@import _var
-@import _commons
-@import _utils
+// base
+@import 'base/_fonts'
+@import 'base/_var'
+@import 'base/_commons'
+@import 'base/_utils'
 
 // layout
-@import _menu
-@import _modal
-@import _profile
-@import _postboard
-@import _following
-@import _login
-@import _network
+@import 'layout/_menu'
+@import 'layout/_modal'
+@import 'layout/_profile'
+@import 'layout/_postboard'
 
-@import _tabs
+// pages
+
+@import 'pages/_following'
+@import 'pages/_login'
+@import 'pages/_network'
+
+@import 'layout/_tabs'
 
 
 
@@ -764,4 +767,4 @@ ul.dropdown-menu
 	color: #B4C669
 
 
-@import _responsive
+@import 'layout/_responsive'
