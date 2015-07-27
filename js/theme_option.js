@@ -5,7 +5,6 @@ $(document).ready(function()
     $('.right').css('height', windowHeight - 100);
     $('.module.who-to-follow').detach().appendTo($('.dashboard.left'));
     $('.module.twistday-reminder').detach().appendTo($('.dashboard.left'));
-
 });
 
 
@@ -112,8 +111,8 @@ function openModal(modal) {
             .append(modal.content);
     else
         modal.content = modal.self.find('.modal-content');
-        modal.self.prependTo('.right').fadeIn('fast');
-        $('html, body').animate({scrollTop:0},300);
+        modal.self.prependTo('body').fadeIn('fast');
+        
 
     if (modal.classBase === '.modal-wrapper') {
         modal.content.outerHeight(modal.self.height() - modal.self.find('.modal-header').outerHeight());

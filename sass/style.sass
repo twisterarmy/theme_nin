@@ -2,15 +2,22 @@
 @import compass
 @import 'compass/reset'
 @import 'compass/utilities'
+
+// utils
+
 @import _var
+@import _commons
 @import _utils
+
+// layout
 @import _menu
+@import _modal
 @import _profile
 @import _postboard
 @import _following
 @import _login
 @import _network
-@import _commons
+
 @import _tabs
 
 
@@ -18,26 +25,26 @@
 
 
 .promoted-posts-only
-  margin: 0 0
-  @extend .clear-fix
-  float: right
+	margin: 0 0
+	@extend .clear-fix
+	float: right
 
-  li
-    cursor: pointer
-    display: inline-block
-    margin: 0 0 0 5px
-    padding: 5px 15px
-    font-size: .9em
-    transition: color .1s linear
-    &.active
-      color: $main-color-dark
-      background: white
-      cursor: default
-    &:hover, &.disabled:hover
-      color: $main-color-dark
-    &.disabled
-      color: $main-color-light
-      background: $background-light
+	li
+		cursor: pointer
+		display: inline-block
+		margin: 0 0 0 5px
+		padding: 5px 15px
+		font-size: .9em
+		transition: color .1s linear
+		&.active
+			color: $main-color-dark
+			background: white
+			cursor: default
+		&:hover, &.disabled:hover
+			color: $main-color-dark
+		&.disabled
+			color: $main-color-light
+			background: $background-light
 
 
 
@@ -46,24 +53,23 @@
 
 /* Wrapper and blocks */
 .wrapper
-  width: $site-width
-  max-width: 100%
-  margin: 0 auto
-  padding-top: 70px
-  position: relative
-  z-index: 1
-  min-height: 100%
+	width: $site-width
+	max-width: 100%
+	margin: 0 
+	padding-top: $menu-height
+	position: relative
+	z-index: 1
+	min-height: 100%
 
 .dashboard
-  &.left, &.right
-    @extend .col 
-    @extend .col-3
-    position: relative
-  &.right 
-    @extend .last
-    height: 0
-    background: #ededed
-    @extend .col-4
+	&.left, &.right
+		float: left
+		width: 25%
+		position: relative
+	&.right 
+		@extend .last
+		height: 0
+
 
 
 
@@ -74,340 +80,311 @@
 /********** CONFIG SUBMENU & SEARCH RESULTS ************/
 
 .dialog-modal
-  display: none
-  background: $main-color-dark
-  position: absolute
-  top: 45px
-  right: -10px
-  width: 250px
-  overflow: hidden
-  border-bottom: solid 2px $main-color-color
-  box-shadow: 8px 10px 15px 0px rgba(0,0,0, .3)
+	display: none
+	background: $main-color-dark
+	position: absolute
+	top: 45px
+	right: -10px
+	width: 250px
+	overflow: hidden
+	@extend .box-shadow
 
 .userMenu-search .dialog-modal:after
-  right: auto
-  left: 150px
+	right: auto
+	left: 150px
 
 .direct-messages, .dropdown-menu-item
-  display: block
-  padding: 10px
+	display: block
+	padding: 10px
 
 
 ul.userMenu-search-profiles
-  width: 100%
-  padding: 0
-  background: white
-  li
-    float: none
-    display: block
-    padding: 5px 10px
-    margin: 0
-    @extend .clear-fix
-    border-bottom: 1px solid $main-background-color
-  .mini-profile-name
-    font-size: 12px
-    display: block
-    margin: 0
-    padding: 0
-  .mini-profile-photo
-    width: 30px
-    height: 30px
-    margin: 0 10px 0 0
-    float: left
-  .mini-profile-info
-    width: 100%
-    float: none
+	width: 100%
+	padding: 0
+	background: white
+	li
+		float: none
+		display: block
+		padding: 5px 10px
+		margin: 0
+		@extend .clear-fix
+		border-bottom: 1px solid $main-background-color
+	.mini-profile-name
+		font-size: 12px
+		display: block
+		margin: 0
+		padding: 0
+	.mini-profile-photo
+		width: 30px
+		height: 30px
+		margin: 0 10px 0 0
+		float: left
+	.mini-profile-info
+		width: 100%
+		float: none
 
-  button
-    padding: 3px
-    @extend .extend-icon
-    &:after
-      content: ''
-      font-family: $symbol-font-family
-    .follow .unfollow
-      position: absolute
-      bottom: 10px
-      right: 10px
-      &:hover
-        background-color: $main-color-light
-    .follow
-      background-color: $main-color-color
-      @extend .icon-plus
-    .unfollow
-      background-color: $main-color-dark
-      @extend .icon-minus
+	button
+		padding: 3px
+		@extend .extend-icon
+		&:after
+			content: ''
+			font-family: $symbol-font-family
+		.follow .unfollow
+			position: absolute
+			bottom: 10px
+			right: 10px
+			&:hover
+				background-color: $main-color-light
+		.follow
+			background-color: $main-color-color
+			@extend .icon-plus
+		.unfollow
+			background-color: $main-color-dark
+			@extend .icon-minus
 
 
 .userMenu-search input[type="text"]
-  float: right
-  padding: 3px 10px
-  margin: 9px 20px 0 0
-  border: none
-  background: $bloc-background-color
-  box-sizing: border-box
+	float: right
+	padding: 3px 10px
+	margin: 9px 20px 0 0
+	border: none
+	background: $bloc-background-color
+	box-sizing: border-box
 
 .userMenu-search-sugestions a
-  color: rgba(0, 0, 0, 0.7)
-  padding: 10x 20px
-  display: block
-  clear: both
+	color: rgba(0, 0, 0, 0.7)
+	padding: 10x 20px
+	display: block
+	clear: both
 
 
-.follow-suggestions
-  button
-    .follow .unfollow
-      position: absolute
-      bottom: 10px
-      right: 10px
-      &:hover
-        background-color: $main-color-light
-    .follow
-      background-color: $main-color-color
-    .unfollow
-      background-color: $main-color-dark
-  li 
-    position: relative
-    box-sizing: border-box
-    background: $bloc-background-color
-    @extend .clear-fix
-    @extend .col 
-    @extend .col-3
-    min-height: 100px
-    margin-bottom: 20px
-    &:nth-child(4n) 
-      @extend .last
-    &:nth-child(4n+1)
-      clear: left
+
 
 
 
 /***************** MINI PROFILE *******************************/
 
 .mini-profile
-  .mini-profile-info
-    position: relative
-    text-align: center
-    background: $bloc-background-color
-    padding: 20px 0
-  a.button
-    background: $main-color-light
-    margin: 1em auto
-  .post-area
-    margin-top: 1px
-    margin-bottom: 20px
-    padding: .5em
-    background: $background-light
-    @extend .clear-fix
-  .post-area-new
-    @extend .open
-    padding: 0
-    margin: 0
-    textarea
-      width: 100%
+	@extend .box-shadow
+	.mini-profile-info
+		position: relative
+		text-align: center
+		background: $bloc-background-color
+		padding: 20px 0
+		
+	a.button
+		background: $main-color-light
+		margin: 1em auto
+	.post-area
+		margin-top: 1px
+		margin-bottom: 20px
+		padding: .5em
+		background: $background-light
+		@extend .clear-fix
+	.post-area-new
+		@extend .open
+		+box-shadow(none)
+		padding: 0
+		margin: 0
+		textarea
+			width: 100%
 
 .mini-profile-indicators
-  margin: 0 
-  text-align: center
-  @extend .clear-fix
-  background-color: lighten($background-light,4%)
+	margin: 0 
+	text-align: center
+	@extend .clear-fix
+	background-color: lighten($background-light,4%)
 
-  li
-    +box-sizing(border-box)
-    display: block
-    position: relative
-    font-size: .8em
-    border-top: 1px solid $main-background-color 
+	li
+		+box-sizing(border-box)
+		display: block
+		position: relative
+		font-size: .8em
+		border-top: 1px solid $main-background-color 
 
-    a
-      color: $dark-grey
-      display: block
-      padding: 1em 0
-      &:hover
-        text-decoration: underline
+		a
+			color: $dark-grey
+			display: block
+			padding: 1em 0
+			&:hover
+				text-decoration: underline
 
-      &:before
-        display: none!important
+			&:before
+				display: none!important
 
-  .userMenu-connections a
-    @extend .icon-bell
-    @extend .extend-icon
-  .userMenu-messages a
-    @extend .icon-mail
-    @extend .extend-icon
-  .userMenu-user a
-    @extend .icon-user
-    @extend .extend-icon
+	.userMenu-connections a
+		@extend .icon-bell
+		@extend .extend-icon
+	.userMenu-messages a
+		@extend .icon-mail
+		@extend .extend-icon
+	.userMenu-user a
+		@extend .icon-user
+		@extend .extend-icon
 
 .messages-qtd
-  position: absolute
-  top: 50%
-  margin-top: -11px
-  right: 11px
-  background: $main-color-color
-  +text-shadow(1px 1px 0 rgba(#000,.2))
-  color: #fff
-  width: 25px 
-  height: 25px
-  line-height: 25px
-  font-size: 10px
-  font-weight: 900
-  +border-radius(50%)
+	position: absolute
+	top: 50%
+	margin-top: -11px
+	right: 11px
+	background: $main-color-color
+	+text-shadow(1px 1px 0 rgba(#000,.2))
+	color: #fff
+	width: 25px 
+	height: 25px
+	line-height: 25px
+	font-size: 10px
+	font-weight: 900
+	+border-radius(50%)
 
 .mini-profile-view
-  display: none
+	display: none
 
 .mini-profile-name
-  color: $dark-grey
-  font-size: 1.3em
-  font-weight: 700
-  padding: 10px  0
-  display: block
-  margin: auto
-  &:hover
-    color: $main-color-light
+	color: $dark-grey
+	font-size: 1.3em
+	font-weight: 700
+	padding: 10px  0
+	display: block
+	margin: auto
+	&:hover
+		color: $main-color-light
 
 
 .mini-profile-photo
-  width: 70px
-  height: 70px
-  overflow: hidden
-  +border-radius(50%)
-  display: block
-  margin: auto
-  img
-    min-width: 100%
-    min-height: 100%
-    border-radius: (50%)
+	width: 70px
+	height: 70px
+	overflow: hidden
+	+border-radius(50%)
+	display: block
+	margin: auto
+	img
+		min-width: 100%
+		min-height: 100%
+		border-radius: (50%)
 
 
 
 .profile-data
-  @extend .clear-fix
-  clear: both
-  padding: 0 0 1em 0
-  text-align: center
-  background: $bloc-background-color
+	@extend .clear-fix
+	clear: both
+	padding: 0 0 1em 0
+	text-align: center
+	background: $bloc-background-color
 
-  li
-    display: block
-    @extend .col 
-    @extend .col-4 
-    +box-sizing(border-box)
-    &.current a
-      border-bottom: 3px solid $main-color-color
-    &:last-child 
-      @extend .last
-    a
-      color: $dark-grey
-      display: inline-block
-      font-size: 13px
-      padding-bottom: 3px
-      &:hover
-        color: $main-color-light
-      span
-        &.posts-count, &.following-count, &.followers-count
-          font-weight: 900
-          display: block
-          line-height: 15px
-
-
-
+	li
+		display: inline
+		margin: 0 5px
+		float: none
+		a
+			color: $dark-grey
+			display: inline-block
+			font-size: 13px
+			padding-bottom: 3px
+			&:hover
+				color: $main-color-light
+			span
+				&.posts-count, &.following-count, &.followers-count
+					display: inline-block
+					padding-right: 5px
+			&:last-child
+				display: none
 
 .mini-profile-info a:hover
-  text-decoration: none
+	text-decoration: none
 
 .who-follow
-  display: block
-  position: absolute
-  bottom: 10px
-  text-align: center
-  padding: 10px
-  font-size: 12px
-  background: lighten($background-light, 5%)
-  z-index: 10
-  +transition(all .2s linear)
+	display: block
+	position: absolute
+	bottom: 10px
+	text-align: center
+	padding: 10px
+	font-size: 12px
+	background: lighten($background-light, 5%)
+	z-index: 10
+	+transition(all .2s linear)
 
 .show-more-followers
-  font-weight: 700
-  display: block
-  cursor: pointer
-  float: right
-  color: $dark-grey
+	font-weight: 700
+	display: block
+	cursor: pointer
+	float: right
+	color: $dark-grey
 
 .mini-follower-link
-  display: inline-block
-  margin: 1px
-  line-height: 12px
-  &.isFollowing:after
-    display: none
-  &:after
-    content: '·'
-    font-weight: 900
-    color: $main-color-dark
-    margin-left: 1px
+	display: inline-block
+	margin: 1px
+	line-height: 12px
+	&.isFollowing:after
+		display: none
+	&:after
+		content: '·'
+		font-weight: 900
+		color: $main-color-dark
+		margin-left: 1px
 
 
 
 /***************** POST AREA ***************/
 
 .post-area-new
-  textarea
-    resize: none
-    box-shadow: none!important
-    +box-sizing(border-box)
-    width: 100%
-    display: block
-    transition: all .3s linear
-    -webkit-transition: height 0.3s linear
-    -moz-transition: height 0.3s linear
-    -o-transition: height 0.3s linear
-    -ms-transition: height 0.3s linear
-    height: 28px
-    border: none
-    background: rgba(255, 255, 255, 1)
-    border: 1px solid rgba(0, 0, 0, 0.1)
-    padding: 3px
-    margin: 5px 0
-    &:focus
-      border-bottom: solid 2px $color-green
+	textarea
+		resize: none
+		+box-sizing(border-box)
+		width: 100%
+		display: block
+		transition: all .3s linear
+		-webkit-transition: height 0.3s linear
+		-moz-transition: height 0.3s linear
+		-o-transition: height 0.3s linear
+		-ms-transition: height 0.3s linear
+		height: 28px
+		border: none
+		background: rgba(255, 255, 255, 1)
+		border: 1px solid rgba(0, 0, 0, 0.1)
+		padding: 3px
+		margin: 5px 0
+		&:focus
+			border-bottom: solid 1px $main-color-color
 
 #postboard-top
-  clear: both
-  position: relative
-  @extend .clear-fix
-  margin-bottom: 1px
-  transition: height .3s linear
-  padding: 10px 10px 5px 10px
-  background: white
-  overflow: hidden
-  display: none
-  &.hide
-    display: none!important
-  &.show
-    display: block
+	clear: both
+	position: relative
+	@extend .clear-fix
+	margin-bottom: 1px
+	transition: height .3s linear
+	padding: 10px 10px 5px 10px
+	background: white
+	overflow: hidden
+	display: none
+	&.hide
+		display: none!important
+	&.show
+		display: block
 
-  .profile-photo
-    position: absolute
-    top: 10px
-    left: 10px
-    width: 48px
-    height: 48px
-    overflow: hidden
-    img
-      width: 100%
-  .post-area
-    overflow: hidden
-    @extend .clear-fix
-    width: 100%
-    padding-left: 58px
-    padding-right: 0
-    display: inline
-    +box-sizing(border-box)
-    float: right
-    .post-area-new
-      @extend .open
-      textarea
-        margin: 0 0 5px 0
+	.profile-photo
+		position: absolute
+		top: 10px
+		left: 10px
+		width: 48px
+		height: 48px
+		overflow: hidden
+		img
+			width: 100%
+	.post-area
+		overflow: hidden
+		@extend .clear-fix
+		width: 100%
+		padding-left: 58px
+		padding-right: 0
+		display: inline
+		+box-sizing(border-box)
+		float: right
+		.post-area-new
+			@extend .open
+			+box-shadow(none)
+			textarea
+				margin: 0 0 10px 0
 
 
 
@@ -416,732 +393,375 @@ ul.userMenu-search-profiles
 
 
 .post-area-new.open textarea
-  height: 80px
+	height: 80px
 
 textarea.splited-post
-  box-shadow: none!important
-  height: 28px
+	box-shadow: none!important
+	height: 28px
 
 .splited-post-counter
-  color: rgba(0, 0, 0, 0.3)
-  font-weight: bold
-  &:before
-    content: '\2026'
+	color: rgba(0, 0, 0, 0.3)
+	font-weight: bold
+	&:before
+		content: '\2026'
 
 .post-area-extras
-  overflow: hidden
-  height: 0
-  text-align: right
+	overflow: hidden
+	height: 0
+	text-align: right
 
 .post-area-new.open > .post-area-extras
-  height: auto
-  transition: all .6s linear
+	height: auto
+	transition: all .6s linear
 
 .post-area-remaining
-  padding-right: 3px
-  &.warn
-    color: #ff0000
+	padding-right: 3px
+	&.warn
+		color: #ff0000
 
 
 
-
-/******* WHO TO FOLLOW MODAL*******/
-
-.modal-wrapper.who-to-follow-modal
-  .modal-content
-    padding: 15px
-    +box-sizing(border-box)
-  ol
-    margin: 5px
-  .open-profile-modal
-    &:hover
-      text-decoration: none
-  .twister-user
-    position: relative
-    padding: 5px
-
-
-
-  .bio
-    color: rgba(0, 0, 0, 0.6)
-    font-style: italic
 
 
 /******** WHO TO FOLLOW ********/
 
 .who-to-follow
-  &.module
-    margin-bottom: 20px
-    background: white
-    padding: 20px
-    width: 100%
-    li 
-      width: 100%
-      min-height: auto
-      border-bottom: 1px solid $main-background-color
-      margin: 0
-      padding-bottom: 10px
-      margin-top: 10px
-      &:last-child 
-        border: none
-      @extend .clear-fix
-      button 
-        position: absolute 
-        right: 0
-        top: 20%
+	&.module
+		margin-bottom: 20px
+		background: white
+		padding: 20px
+		width: 100%
+		@extend .box-shadow
+		li 
+			width: 100%
+			min-height: auto
+			border-bottom: 1px solid $main-background-color
+			margin: 0
+			padding-bottom: 10px
+			margin-top: 10px
+			&:last-child 
+				border: none
+			@extend .clear-fix
+			button 
+				position: absolute 
+				right: 0
+				top: 20%
 
 
-  small
-    display: none
-  h3
-    float: left
-  ol
-    @extend .clear-fix
-    clear: both
+	small
+		display: none
+	h3
+		float: left
+	ol
+		@extend .clear-fix
+		clear: both
 
 .twister-user
-  position: relative
-  box-sizing: border-box
-  background: $bloc-background-color
-  @extend .clear-fix
-  @extend .col 
-  @extend .col-3
-  width: 100%
-  min-height: auto
-  border-bottom: 1px solid $background-light
-  &:nth-child(4n) 
-    @extend .last
-  .twister-user-info
-    width: 80%
-  button 
-    position: absolute 
-    right: 0
-    top: 5%
+	position: relative
+	box-sizing: border-box
+	background: $bloc-background-color
+	@extend .clear-fix
+	@extend .col 
+	@extend .col-3
+	width: 100%
+	min-height: auto
+	border-bottom: 1px solid $background-light
+	&:nth-child(4n) 
+		@extend .last
+
 
 
 img.twister-user-photo
-  +border-radius(50%)
-  float: left
-  vertical-align: middle
-  display: block
-  float: left
-  vertical-align: middle
-  width: 48px
-  height: 48px
-  margin: 10px
-  background: $main-background-color
+	+border-radius(50%)
+	float: left
+	vertical-align: middle
+	display: block
+	float: left
+	vertical-align: middle
+	width: 48px
+	height: 48px
+	margin: 10px
+	background: $main-background-color
 
 
 
 
 .followers
-  font-size: 12px
-  color: $dark-grey
-  label, a
-    display: inline-block
+	font-size: 12px
+	color: $dark-grey
+	label, a
+		display: inline-block
 
 .followed-by
-  color: $main-color-light
-  font-size: 12px
-  cursor: pointer
-  display: block
+	color: $main-color-light
+	font-size: 12px
+	cursor: pointer
+	display: block
 
 .twister-user-name, .twister-by-user-name
-  font-weight: bold
-  font-size: 14px
-  color: $main-color-light
-  text-decoration: none
+	font-weight: bold
+	font-size: 14px
+	color: $main-color-light
+	text-decoration: none
 
 .twister-user-tag
-  font-size: 12px
-  line-height: 14px
-  opacity: .8
-  display: inline-block
-  letter-spacing: 0px
+	font-size: 12px
+	line-height: 14px
+	opacity: .8
+	display: inline-block
+	letter-spacing: 0px
 
 .twister-user-remove
-  font-size: 13px
-  opacity: .2
-  text-decoration: none
-  cursor: pointer
-  position: absolute
-  padding: 5px
-  top: -5px
-  right: -5px
-  display: inline-block
-  @extend .icon-cancel
-  @extend .extend-icon
+	font-size: 13px
+	opacity: .2
+	text-decoration: none
+	cursor: pointer
+	position: absolute
+	padding: 5px
+	top: -5px
+	right: -5px
+	display: inline-block
+	@extend .icon-cancel
+	@extend .extend-icon
 
 .twister-user:hover .twister-user-remove
-  text-decoration: none
+	text-decoration: none
 
 .twister-user-remove:hover
-  opacity: 1
+	opacity: 1
 
 .refresh-toptrends, .twistday-reminder .refresh, .refresh-users
-  @extend .icon-arrows
-  @extend .extend-icon
-  color: $main-color-dark
-  cursor: pointer
-  font-size: 11px
-  font-weight: 500
-  text-transform: none
-  letter-spacing: 0
-  float: right
-  display: block
-  padding: 4px
-  margin: 0 0 0 15px
-  position: relative
+	@extend .icon-arrows
+	@extend .extend-icon
+	color: $main-color-dark
+	cursor: pointer
+	font-size: 11px
+	font-weight: 500
+	text-transform: none
+	letter-spacing: 0
+	float: right
+	display: block
+	padding: 4px
+	margin: 0 0 0 15px
+	position: relative
 
 .view-all-users
-  color: $main-color-dark
-  cursor: pointer
-  font-size: 11px
-  font-weight: 500
-  text-transform: none
-  letter-spacing: 0
-  float: right
-  display: block
-  padding: 4px
-  margin: 0 0 0 15px
-  position: relative
+	color: $main-color-dark
+	cursor: pointer
+	font-size: 11px
+	font-weight: 500
+	text-transform: none
+	letter-spacing: 0
+	float: right
+	display: block
+	padding: 4px
+	margin: 0 0 0 15px
+	position: relative
 
 .refresh-toptrends:hover, .twistday-reminder .refresh:hover, .refresh-users:hover, .view-all-users:hover
-  color: $main-color-color
-  text-decoration: none
-  background-color: transparent
+	color: $main-color-color
+	text-decoration: none
+	background-color: transparent
 
 /***********TOP TRENDS***************/
 
 .toptrends
-  &.module
-    margin: 0 0 20px 0
-    background: white
-    padding: 20px
-  small
-    display: none
-  h3
-    float: left
+	&.module
+		margin: 0 0 20px 0
+		background: white
+		padding: 20px
+		@extend .box-shadow
+	small
+		display: none
+	h3
+		float: left
 
 ol.toptrends-list
-  margin: 0
-  margin-bottom: 10px
-  clear: both
+	margin: 0
+	margin-bottom: 10px
+	clear: both
 
-  li
-    display: inline-block
+	li
+		display: inline-block
 
-  a
-    color: $main-color-light
-    padding: 3px 8px
-    display: inline-block
-    background: $background-light
-    text-transform: uppercase
-    font-size: 11px
-    margin: 3px
-    font-weight: 500
+	a
+		color: $main-color-light
+		padding: 3px 8px
+		display: inline-block
+		background: $background-light
+		text-transform: uppercase
+		font-size: 11px
+		margin: 3px
+		font-weight: 500
 
-    &:hover
-      background: white
-      color: $main-color-dark
+		&:hover
+			background: white
+			color: $main-color-dark
 
 /********* TWISTDAY REMINDER *******/
 
 .twistday-reminder
-  width: 100%
-  background: white
-  @extend .clear-fix
-  padding: 20px
-  small
-    display: none
+	width: 100%
+	background: white
+	@extend .box-shadow
+	@extend .clear-fix
+	padding: 20px
+	small
+		display: none
 
 
-/*********** POPUP MODAL **************/
-
-.modal-wrapper
-  background: white
-  z-index: 3000
-  width: 100%
-  position: absolute
-  +box-sizing(border-box)
-  height: 100%
-  left: 0
-  top: 0
-  overflow: hidden
-  .post-area-new
-    padding: 10px
-
-.modal-blackout
-  background: rgba(0, 0, 0, 0)
-  z-index: -1
-  position: fixed
-  left: 0
-  top: 0
-  width: 0
-  height: 0
-
-.modal-content
-  @extend .clear-fix
-  background: $background-light
-  overflow-y: auto
-  .postboard h2
-    position: fixed
-    z-index: 2
-    margin-top: -60px
-    margin-left: -60px
-    span
-      display: none
-
-
-
-
-.modal-header
-  position: relative
-  background: $main-color-dark
-  height: 40px
-  +box-sizing(border-box)
-  @extend .clear-fix
-  border-bottom: 1px solid $background-light
-
-  h3
-    padding-left: 20px
-    color: white
-    line-height: 40px
-
-.modal-close
-  @extend .extend-icon
-  @extend .icon-cancel
-  position: absolute
-  right: 10px
-  top: 0
-  font-size: 14px
-  line-height: 40px
-  cursor: pointer
-  color:  rgba(white , 0.7)
-  &:hover
-    color: white
-  b
-    display: none
-
-.mark-all-as-read
-  float: right
-  cursor: pointer
-  font-size: 1.3em
-  line-height: 40px
-  padding: 0 5px
-  color:  white
-  transition: all .1s linear
-  display: none
-.modal-back:hover, .mark-all-as-read:hover
-  color: white
-
-.mark-all-as-read
-  @extend .extend-icon
-  @extend .icon-ok
-
-
-.modal-back
-  @extend .extend-icon
-  @extend .icon-left
-  position: absolute
-  right: 35px
-  top: 0
-  font-size: 14px
-  line-height: 40px
-  cursor: pointer
-  color:  rgba(white , 0.7)
-  &:hover
-    color: white
-  b
-    display: none
-
-/*********** POPUP PROMPT *************/
-
-.prompt-wrapper
-  background: rgba( 255, 255,255, 1.0 )
-  z-index: 5
-  position: fixed
-  top: 50%
-  left: 50%
-  width: 600px
-  margin-left: -300px
-  box-shadow: 0 0 30px rgba( 0, 0, 0, .6 )
-  .modal-buttons
-    padding: 10px
-    text-align: right
-    button:last-child
-      padding: 5px 20px
-
-/************ FOLLOWING-CONFIG MODAL **********/
-
-.prompt-wrapper.following-config-modal
-  margin-top: -100px
-  .modal-content
-    padding: 10px
-    text-align: center
-  .modal-buttons
-    display: none
-  h2
-    text-transform: none
-.following-config-method-buttons
-  .public-following
-    background-color: $color-green
-    margin: 0px 2px
-    padding: 6px 16px
-
-/************ RETWIST POSTS MODAL **********/
-
-.prompt-wrapper.reTwist
-  &.prompt-wrapper
-    margin-top: -110px
-  .modal-content
-    padding: 20px 15px
-  .modal-buttons
-    .modal-propagate
-      background-color: $color-green
-  .post-expand, .post-interactions
-    display: none
-
-/********* REPLY POSTS MODAL***************/
-
-.prompt-wrapper.reply
-  &.prompt-wrapper
-    margin-top: -110px
-  .modal-buttons, .post-expand, .post-interactions
-    display: none
-  .post-area
-    padding-bottom: 6px
-
-/****** DIRECT MESSAGES MODAL**********/
-
-.modal-wrapper.directMessages
-
-  .post-area-new
-    display: none
-    z-index: 5
-    background: $main-background-color
-    position: absolute 
-    bottom: 0
-    width: 100%
-    padding: 0!important
-    .modal-header
-      h3 span
-        display: inline!important
-
-  .modal-content
-    +box-sizing(border-box)
-    width: 100%
-
-  .post-photo
-    height: 48px
-    width: 48px
-  .post-text
-    margin-left: 58px
-    font-size: .9em
-  .post-info-name
-    float: none
-  .post-info-tag
-    line-height: 1em
-    padding: 0
-    display: inline
-    font-size: 80%
-    margin: 0 0 0 1em
-  .post-info-sent  
-    position: absolute
-    left: 50%
-    top: 10px
-    display: none
-
-.direct-messages-list .post
-  padding: 20px
-  cursor: pointer
-  &:after
-    content: ""
-    font-family: $symbol-font-family
-    position: absolute
-    right: 5px
-    top: 50%
-    font-size: 1.1em
-    margin: -6px 0 0 0
-    color: rgba(0, 0, 0, 0.4)
-    display: none
-
-.direct-messages-list
-  .post:hover:after
-    display: block
-
-.direct-messages-thread
-  padding-bottom: 150px
-  .post
-    @extend .clear-fix
-    background: none
-    left: 0
-    margin: 0px 10px 20px 10px
-    cursor: default
-    .post-info-time
-      float: none
-      display: block
-      text-align: center
-      font-size: 10px
-      margin: 10px 0
-      cursor: default
-      &:hover
-        color: $main-color-light
-
-
-    .post-text:after, .post-text:nth-child(2n):after
-      content: ""
-      width: 1px
-      background: transparent
-      position: absolute
-      top: 10px
-      white-space: normal
-
-    .post-text:after
-      border-top: solid 7px transparent
-      border-bottom: solid 7px transparent
-      border-right: solid 7px white
-      left: -7px
-
-    .post-text
-      background: white
-      margin-right: 60px
-      margin-left: 60px
-      position: relative
-      display: inline-block
-      max-width: 300px
-      font-size: .9em
-      padding: 5px 10px
-      z-index: 4
-      float: left
-      word-wrap: break-word
-      max-width: 60%
-      min-height: 15px
-
-    .post-photo
-      position: absolute
-      left: 0
-      top: 10px
-
-
-
-  .post.sent
-
-    .post-text:after
-      border-top: solid 7px transparent
-      border-bottom: solid 7px transparent
-      border-right: none
-      border-left: solid 7px white
-      right: -7px
-      left: auto
-    .post-text
-      float: right
-    .post-photo
-      position: absolute
-      right: 0
-      left: auto
-
-
-
-/********* NEW USER MODAL**************/
-
-.modal-wrapper.new-user
-
-  .modal-content
-    padding: 25px
-  .modal-close
-    display: none
-  .text
-    margin: 0 0 15px 0
-  .emphasis
-    text-align: center
-  .secret-key
-    display: block
-    margin-top: 8px
-    color: rgba(0.5, 0, 0, 1)
-    font-weight: bold
-    font-size: 110%
-
-/******** HASHTAG MODAL***********/
-
-.modal-wrapper.hashtag-modal
-
-  .postboard
-    padding: 0
-
-/****** CONVERSATION MODAL***********/
-
-.modal-wrapper.conversation-modal
-
-  .postboard
-    padding: 0
-
-/****** FOLLOWING MODAL*******/
-
-.modal-wrapper.following-modal
-
-  .modal-content
-    padding: 0
-  ol
-    margin: 5px
-  .open-profile-modal
-    &:hover
-      text-decoration: none
-  .postboard
-    h2
-      display: none
 
 
 
 /******* LOADER *************/
 
 .postboard-loading, .loading-roller
-  clear: both
-  text-align: center
-  div
-    display: inline-block
-    width: 120px
-    height: 10px
-    background-color: $main-color-light
-    position: relative
-    margin: 10px 0 0 0
-    &:after
-      content: ""
-      position: absolute
-      background-color: white
-      left: 2px
-      top: 2px
-      bottom: 2px
-      z-index: 999
-      animation-name: slide
-      animation-duration: 1.5s
-      animation-easing-function: linear
-      animation-iteration-count: infinite
-      -webkit-animation-name: slide
-      -webkit-animation-duration: 1.5s
-      -webkit-animation-easing-function: linear
-      -webkit-animation-iteration-count: infinite
-      -moz-animation-name: slide
-      -moz-animation-duration: 1.5s
-      -moz-animation-easing-function: linear
-      -moz-animation-iteration-count: infinite
+	clear: both
+	text-align: center
+	div
+		display: inline-block
+		width: 120px
+		height: 10px
+		background-color: $main-color-light
+		position: relative
+		margin: 10px 0 0 0
+		&:after
+			content: ""
+			position: absolute
+			background-color: white
+			left: 2px
+			top: 2px
+			bottom: 2px
+			z-index: 999
+			animation-name: slide
+			animation-duration: 1.5s
+			animation-easing-function: linear
+			animation-iteration-count: infinite
+			-webkit-animation-name: slide
+			-webkit-animation-duration: 1.5s
+			-webkit-animation-easing-function: linear
+			-webkit-animation-iteration-count: infinite
+			-moz-animation-name: slide
+			-moz-animation-duration: 1.5s
+			-moz-animation-easing-function: linear
+			-moz-animation-iteration-count: infinite
 
 @keyframes slide
-  0%
-    right: 60px
-    left: 2px
-  5%
-    left: 2px
-  50%
-    right: 2px
-    left: 60px
-  55%
-    right: 2px
-  100%
-    right: 60px
-    left: 2px
+	0%
+		right: 60px
+		left: 2px
+	5%
+		left: 2px
+	50%
+		right: 2px
+		left: 60px
+	55%
+		right: 2px
+	100%
+		right: 60px
+		left: 2px
 
 
 @-webkit-keyframes slide
-  0%
-    right: 100px
-    left: 2px
-  5%
-    left: 2px
-  50%
-    right: 2px
-    left: 100px
-  55%
-    right: 2px
-  100%
-    right: 100px
-    left: 2px
+	0%
+		right: 100px
+		left: 2px
+	5%
+		left: 2px
+	50%
+		right: 2px
+		left: 100px
+	55%
+		right: 2px
+	100%
+		right: 100px
+		left: 2px
 
 
 @-moz-keyframes slide
-  0%
-    right: 60px
-    left: 2px
-  5%
-    left: 2px
-  50%
-    right: 2px
-    left: 60px
-  55%
-    right: 2px
-  100%
-    right: 60px
-    left: 2px
+	0%
+		right: 60px
+		left: 2px
+	5%
+		left: 2px
+	50%
+		right: 2px
+		left: 60px
+	55%
+		right: 2px
+	100%
+		right: 60px
+		left: 2px
 
 
 /* Options*/
 
 .options
-  .appearance div
-    clear: both
-    div
-      float: left
-      clear: none
-      padding: 10px
-      .label
-        font-weight: 400
+	.appearance div
+		clear: both
+		div
+			float: left
+			clear: none
+			padding: 10px
+			.label
+				font-weight: 400
 
-  #filterLangList
-    width: 90%
+	#filterLangList
+		width: 90%
 
-  #filterLangListCont div, #TopTrendsCont div, #TwistdayReminderCont div
-    float: none
-    padding: 0px 4px
+	#filterLangListCont div, #TopTrendsCont div, #TwistdayReminderCont div
+		float: none
+		padding: 0px 4px
 
 .suboptions
-  margin: 5px 30px
-  border: double 2px rgba(69, 71, 77, 0.1)
-  height: 0px
-  padding: 0!important
-  overflow: hidden
-  float: right
-  transition: height .3s linear
-  -webkit-transition: height .3s linear
-  -moz-transition: height .3s linear
-  -o-transition: height .3s linear
-  -ms-transition: height .3s linear
-  font-size: .9em
-  line-height: .9em
-  font-style: italic
-  div
-    float: none!important
-  span
-    font-style: normal
+	margin: 5px 30px
+	border: double 2px rgba(69, 71, 77, 0.1)
+	height: 0px
+	padding: 0!important
+	overflow: hidden
+	float: right
+	transition: height .3s linear
+	-webkit-transition: height .3s linear
+	-moz-transition: height .3s linear
+	-o-transition: height .3s linear
+	-ms-transition: height .3s linear
+	font-size: .9em
+	line-height: .9em
+	font-style: italic
+	div
+		float: none!important
+	span
+		font-style: normal
 
 /********** AUTOCOMPLETING *********/
 
 .textcomplete-wrapper textarea
-  display: inline
+	display: inline
 
 ul.dropdown-menu
-  min-width: 160px
-  padding: 5px 0 7px
-  margin: 2px 0 0
-  list-style: none
-  background-color: #fff
-  border: 1px solid rgba(0, 0, 0, 0.2)
-  border-bottom: solid 2px #B4C669
-  box-shadow: 8px 10px 10px 0px rgba(0,0,0, .2)
-  li
-    > li > a
-      padding: 3px 20px
-      white-space: nowrap
-      transition: all 100ms
+	min-width: 160px
+	padding: 5px 0 7px
+	margin: 2px 0 0
+	list-style: none
+	background-color: #fff
+	border: 1px solid rgba(0, 0, 0, 0.2)
+	border-bottom: solid 2px #B4C669
+	@extend .box-shadow
+	li
+		> li > a
+			padding: 3px 20px
+			white-space: nowrap
+			transition: all 100ms
 
 /* Language filter messages */
 
 .langFilterSimData
-  color: rgba( 0, 0, 0, .7 )
-  font: 10px "Open Sans", sans-serif
-  text-align: center
+	color: rgba( 0, 0, 0, .7 )
+	font: 10px "Open Sans", sans-serif
+	text-align: center
 
 .langFilterSimData em
-  color: #B4C669
+	color: #B4C669
 
 
 @import _responsive

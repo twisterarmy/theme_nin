@@ -1,97 +1,85 @@
 *
-  outline: none!important
-  +box-sizing(border-box)
+	outline: none!important
+	+box-sizing(border-box)
 
-li
-  list-style: none
 
 html, body
-  height: 100%
-  min-height: 100%
-  background: $main-background-color
-  color: $defaut-font-color
-  font: .95em/1.3em $main-font-family
-  font-weight: 400
+	height: 100%
+	min-height: 100%
+	color: $defaut-font-color
+	position: absolute 
+	width: 100%
 
-br
-  display: block
+html 
+	font-size: $global-font-size
+	background-color: $main-background-color
+	+background-image(linear-gradient(to top right, #aaa, $main-background-color,$main-background-color,$main-background-color, #aaa) )
+	background-attachment: fixed
 
-img 
-  background: $main-background-color
-  +border-radius(2px)
+body 
+	font-size: $main-font-size
+	line-height : $main-line-height
+	font-family : $main-font-family
+	font-weight: 400
+	
+
 
 a
-  text-decoration: none
-  color: $main-color-color
-  &:hover, &:active
-    color: $main-color-color
-    text-decoration: none
-    i 
-      text-decoration: underline
+	text-decoration: none
+	color: $main-color-color
+	&:hover, &:active
+		color: $main-color-color
+		text-decoration: none
+	i 
+		text-decoration: underline
+		font-style: normal
 
-p 
-  padding: 5px 0
+i, em 
+	font-style: italic 
 
+strong, b 
+	font-weight: 600
 
-h2, h3
-  font-size: 1.1em
-  text-transform: uppercase
-  letter-spacing: 0.07em
-  font-weight: 400
-  line-height: 1.8em
-  margin-bottom: 10px
-  
-h3 
-  font-weight: 700
-  font-size: 1em
+h1
+	font-size: 1.1em
+	text-transform: uppercase
+	letter-spacing: 0.07em
+	font-weight: 700
+	line-height: 1.1em
 
-textarea, input[type=text]
-  font: .95em/1.3em $main-font-family
-  font-weight: 400
-  
+h2
+	font-size: 1.1em
+	text-transform: uppercase
+	letter-spacing: 0.07em
+	font-weight: 400
+	line-height: 1.1em
+
+h3
+	font-size: 1.1em
+	font-weight: 400
+	line-height: 1.1em
+
+br 
+	display: block
+
+textarea, input 
+	background: white 
+	display: block 
+	border: none
 
 /* isFollowing */
 
 .isFollowing:after
-  color: $main-color-color
-  content: '\e806'
-  font-family: 'fontello'
-  padding-left: 2px
-  display: inline
-  font-size: 10px
-  vertical-align: top
-  line-height: 10px
-  &:hover
-    text-decoration: none!important
-  h3 &  
-    display: none
-
-/************** BUTTONS ************/
-
-button, a.button
-  padding: 6px 8px
-  font-size: 13px
-  display: inline-block
-  line-height: 1em
-  font-weight: 500
-  margin: 0 
-  float: none
-  text-shadow: 2px 2px 0 rgba(black,0)
-  +transition-property(background)
-  +transition-duration(.1s)
-  color: white
-  background-color: #6F8E97
-  +border-radius(2px)
-  border: none
-  font-family: 'fontello', 'Roboto'
-  cursor: pointer
-  &:hover
-    background: $main-color-color
-    text-shadow: 2px 2px 0 rgba(black,.1)
-  &.disabled
-    opacity: .5
-    background-color: #999
-    &:hover
-      color: $bloc-background-color
-
+	color: $main-color-color
+	content: '\e806'
+	font-family:  $symbol-font-family
+	padding-left: 2px
+	display: inline
+	font-size: 10px
+	vertical-align: top
+	line-height: 10px
+	&:hover
+		text-decoration: none!important
+	h3 &  
+		display: none
 
