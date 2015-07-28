@@ -163,12 +163,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* '' */
-.icon-plus:before, ul.userMenu-search-profiles button .follow:before {
+.icon-plus:before {
   content: "";
 }
 
 /* '' */
-.icon-minus:before, ul.userMenu-search-profiles button .unfollow:before {
+.icon-minus:before {
   content: "";
 }
 
@@ -249,6 +249,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   list-style: none;
+  color: #444;
 }
 
 html, body {
@@ -362,13 +363,13 @@ h3 .isFollowing:after {
   display: none;
 }
 
-.box-shadow, .modal-wrapper, .prompt-wrapper, .postboard .post, .dashboard > .module, .dialog-modal, .mini-profile, ol.toptrends-list a, ul.dropdown-menu {
+.box-shadow, .modal-wrapper, .postboard .post, .dashboard > .module, .mini-profile, ol.toptrends-list a, ul.dropdown-menu {
   -moz-box-shadow: 0 8px 13px rgba(17, 17, 17, 0);
   -webkit-box-shadow: 0 8px 13px rgba(17, 17, 17, 0);
   box-shadow: 0 8px 13px rgba(17, 17, 17, 0);
 }
 
-.clear-fix:after, .userMenu ul:after, .modal-content:after, .modal-header:after, .direct-messages-thread .post:after, .mini-following-info a:after, .forEdition.profile-card:after, .expanded-content:after, .following .following-list li a:after, .network.singleBlock:after, .options .tab-content:after, .promoted-posts-only:after, ul.userMenu-search-profiles li:after, .mini-profile .post-area:after, .mini-profile-indicators:after, .profile-data:after, #postboard-top:after, #postboard-top .post-area:after, .who-to-follow ol:after, .twister-user:after {
+.clear-fix:after, .userMenu > ul:after, .modal-content:after, .modal-header:after, .direct-messages-thread .post:after, .mini-following-info a:after, .forEdition.profile-card:after, .expanded-content:after, .following .following-list li a:after, .network.singleBlock:after, .options .tab-content:after, .promoted-posts-only:after, ul.userMenu-search-profiles li:after, .mini-profile .post-area:after, .mini-profile-indicators:after, .profile-data:after, #postboard-top:after, #postboard-top .post-area:after, .who-to-follow ol:after, .twister-user:after {
   content: "";
   display: table;
   clear: both;
@@ -383,7 +384,6 @@ button, a.button {
   font-size: 0.75rem;
   position: relative;
   font-weight: 300;
-  margin: 2px;
   text-transform: uppercase;
   -moz-transition-property: background, border-color;
   -o-transition-property: background, border-color;
@@ -447,7 +447,7 @@ button.small, .modal-wrapper.who-to-follow-modal button, .who-to-follow.module l
   background-color: #64676C;
   z-index: 2;
 }
-.userMenu ul {
+.userMenu > ul {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -457,13 +457,13 @@ button.small, .modal-wrapper.who-to-follow-modal button, .who-to-follow.module l
   background: url('../img/logo.png?1437893891') no-repeat 50% 50%;
   background-size: 20px;
 }
-.userMenu ul li {
+.userMenu > ul li {
   float: left;
   margin: 0 20px 0 0;
   position: relative;
   display: block;
 }
-.userMenu ul li > a {
+.userMenu > ul li > a {
   line-height: 50px;
   padding: 0 0.5em;
   display: inline-block;
@@ -475,10 +475,13 @@ button.small, .modal-wrapper.who-to-follow-modal button, .who-to-follow.module l
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-.userMenu ul li > a:hover {
+.userMenu > ul li > a:hover {
   color: white !important;
 }
-.userMenu ul li.current a {
+.userMenu > ul li > a span {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+.userMenu > ul li.current a, .userMenu > ul li.current a span {
   color: white !important;
 }
 
@@ -647,26 +650,30 @@ button.small, .modal-wrapper.who-to-follow-modal button, .who-to-follow.module l
 
 /*********** POPUP PROMPT ************ */
 .prompt-wrapper {
-  background: white;
+  background: #FDFCFA;
   z-index: 5;
   position: fixed;
   top: 50%;
   left: 50%;
   width: 600px;
   margin-left: -300px;
+  -moz-box-shadow: 0 8px 33px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 8px 33px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 33px rgba(0, 0, 0, 0.3);
 }
 .prompt-wrapper .modal-buttons {
   padding: 10px;
   text-align: right;
 }
+.prompt-wrapper .modal-content {
+  background: #FDFCFA;
+  padding: 10px 10px 30px 10px;
+  text-align: center;
+}
 
 /************ FOLLOWING-CONFIG MODAL ********* */
 .prompt-wrapper.following-config-modal {
   margin-top: -100px;
-}
-.prompt-wrapper.following-config-modal .modal-content {
-  padding: 10px;
-  text-align: center;
 }
 .prompt-wrapper.following-config-modal .modal-buttons {
   display: none;
@@ -994,6 +1001,7 @@ button.small, .modal-wrapper.who-to-follow-modal button, .who-to-follow.module l
 .profile-modal .modal-content .profile-card {
   margin: 0;
   padding: 0;
+  border-bottom: 1px solid #EBEBEB;
 }
 .profile-modal .modal-content .profile-data {
   background: none;
@@ -1866,6 +1874,9 @@ button.small, .modal-wrapper.who-to-follow-modal button, .who-to-follow.module l
   border-top: 1px solid #EBEBEB;
   padding: 10px;
 }
+.dashboard > .module small {
+  display: none;
+}
 
 /********** CONFIG SUBMENU & SEARCH RESULTS *********** */
 .dialog-modal {
@@ -1876,6 +1887,9 @@ button.small, .modal-wrapper.who-to-follow-modal button, .who-to-follow.module l
   right: -10px;
   width: 250px;
   overflow: hidden;
+  -moz-box-shadow: 0 8px 33px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 8px 33px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 33px rgba(0, 0, 0, 0.3);
 }
 
 .userMenu-search .dialog-modal:after {
@@ -1891,12 +1905,11 @@ button.small, .modal-wrapper.who-to-follow-modal button, .who-to-follow.module l
 ul.userMenu-search-profiles {
   width: 100%;
   padding: 0;
-  background: white;
+  background: #FDFCFA;
 }
 ul.userMenu-search-profiles li {
   float: none;
   display: block;
-  padding: 5px 10px;
   margin: 0;
   border-bottom: 1px solid #EBEBEB;
 }
@@ -1909,7 +1922,7 @@ ul.userMenu-search-profiles .mini-profile-name {
 ul.userMenu-search-profiles .mini-profile-photo {
   width: 30px;
   height: 30px;
-  margin: 0 10px 0 0;
+  margin: 10px;
   float: left;
 }
 ul.userMenu-search-profiles .mini-profile-info {
@@ -1917,25 +1930,18 @@ ul.userMenu-search-profiles .mini-profile-info {
   float: none;
 }
 ul.userMenu-search-profiles button {
-  padding: 3px;
-}
-ul.userMenu-search-profiles button:after {
-  content: "";
-  font-family: "fontello";
-}
-ul.userMenu-search-profiles button .follow .unfollow {
+  padding: 3px 5px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
   position: absolute;
   bottom: 10px;
   right: 10px;
 }
-ul.userMenu-search-profiles button .follow .unfollow:hover {
-  background-color: #aaa;
-}
-ul.userMenu-search-profiles button .follow {
-  background-color: #A1B775;
-}
-ul.userMenu-search-profiles button .unfollow {
-  background-color: #222;
+ul.userMenu-search-profiles button:after {
+  content: "";
+  font-family: "fontello";
+  font-size: 1.1rem;
 }
 
 .userMenu-search input[type="text"] {
@@ -2392,17 +2398,6 @@ img.twister-user-photo {
 }
 
 /***********TOP TRENDS************** */
-.toptrends.module {
-  margin: 0 0 20px 0;
-  padding: 0 20px;
-}
-.toptrends small {
-  display: none;
-}
-.toptrends h3 {
-  float: left;
-}
-
 ol.toptrends-list {
   margin: 0;
   margin-bottom: 10px;
@@ -2446,7 +2441,6 @@ ol.toptrends-list a:hover {
   background: white;
 }
 .twistday-reminder .twister-user-full, .twistday-reminder .twister-user-tag {
-  padding: 0 0 0.5rem 0;
   font-size: 1rem;
   line-height: 1rem;
   color: #444;

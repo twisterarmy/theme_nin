@@ -13,7 +13,7 @@ $menu-font-color: white
 	//+background-image(linear-gradient(to left , $color-green, $color-green, #5E80A2) )
 	
 	z-index: 2
-	ul
+	> ul
 		@extend .clear-fix
 		+box-sizing(border-box)
 		width: 100%
@@ -37,7 +37,9 @@ $menu-font-color: white
 				+box-sizing(border-box)
 				&:hover
 					color: $menu-font-color!important
-			&.current  a
+			> a span 
+				color: rgba($menu-font-color, 0.7)!important
+			&.current  a, &.current a span
 				color: $menu-font-color!important
 				//+text-shadow(1px 1px 0 rgba(#000,.2))
 
@@ -82,6 +84,7 @@ $menu-font-color: white
 			color: $main-color-dark 
 	&.userMenu-search
 		margin: 3px
+
 		> input 
 			border: 1px solid $main-color-light
 			line-height: 12px 

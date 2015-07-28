@@ -89,7 +89,8 @@
 			clear: left
 			border-top: 1px solid $main-background-color
 			padding: 10px
-
+		small
+			display: none
 
 
 
@@ -105,7 +106,7 @@
 	right: -10px
 	width: 250px
 	overflow: hidden
-	@extend .box-shadow
+	+box-shadow(0 8px 33px rgba(#000, .3))
 
 .userMenu-search .dialog-modal:after
 	right: auto
@@ -116,14 +117,16 @@
 	padding: 10px
 
 
+
+
 ul.userMenu-search-profiles
 	width: 100%
 	padding: 0
-	background: white
+	background: $bloc-light-color
+	
 	li
 		float: none
 		display: block
-		padding: 5px 10px
 		margin: 0
 		@extend .clear-fix
 		border-bottom: 1px solid $main-background-color
@@ -135,30 +138,24 @@ ul.userMenu-search-profiles
 	.mini-profile-photo
 		width: 30px
 		height: 30px
-		margin: 0 10px 0 0
+		margin: 10px
 		float: left
 	.mini-profile-info
 		width: 100%
 		float: none
 
 	button
-		padding: 3px
+		padding: 3px 5px
+		+border-radius(2px)
 		@extend .extend-icon
 		&:after
 			content: ''
 			font-family: $symbol-font-family
-		.follow .unfollow
-			position: absolute
-			bottom: 10px
-			right: 10px
-			&:hover
-				background-color: $main-color-light
-		.follow
-			background-color: $main-color-color
-			@extend .icon-plus
-		.unfollow
-			background-color: $main-color-dark
-			@extend .icon-minus
+			font-size: 1.1rem
+		position: absolute
+		bottom: 10px
+		right: 10px
+
 
 
 .userMenu-search input[type="text"]
@@ -589,13 +586,7 @@ img.twister-user-photo
 /***********TOP TRENDS***************/
 
 .toptrends
-	&.module
-		margin: 0 0 20px 0
-		padding: 0 20px
-	small
-		display: none
-	h3
-		float: left
+
 
 ol.toptrends-list
 	margin: 0
@@ -636,7 +627,6 @@ ol.toptrends-list
 			background: white
 
 	.twister-user-full, .twister-user-tag
-		padding: 0 0 .5rem 0
 		font-size: 1rem 
 		line-height: 1rem 
 		color: $defaut-font-color

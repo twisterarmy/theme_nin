@@ -120,26 +120,28 @@ $header-modal-height : $menu-height
 /*********** POPUP PROMPT *************/
 
 .prompt-wrapper
-	background: rgba( 255, 255,255, 1.0 )
+	background: $bloc-light-color
 	z-index: 5
 	position: fixed
 	top: 50%
 	left: 50%
 	width: 600px
 	margin-left: -300px
-	@extend .box-shadow
+	+box-shadow(0 8px 33px rgba(#000, .3))
 	.modal-buttons
 		padding: 10px
 		text-align: right
+	.modal-content
+		background: $bloc-light-color
+		padding: 10px 10px 30px 10px
+		text-align: center
 
 
 /************ FOLLOWING-CONFIG MODAL **********/
 
 .prompt-wrapper.following-config-modal
 	margin-top: -100px
-	.modal-content
-		padding: 10px
-		text-align: center
+
 	.modal-buttons
 		display: none
 	h2
