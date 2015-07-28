@@ -11,4 +11,3 @@ After dowloading the folder, create a symlink to it in your .twister/html/ direc
 + responsive version
 + options to change basis colors (and border-radius)
 + refresh modals when it's already open
-+ 
