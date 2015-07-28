@@ -2,32 +2,9 @@
 
 
 
-// G R I D 
 
-$grid_width : 50% // grid width %
-$grid_max_width : 100% // max width
-$grid_cols : 12 // cols number
-$grid_gut : 2.5% // gut width %
-$grid_col : ($grid_width - ($grid_gut * ($grid_cols - 1))) / $grid_cols
-$class-col : col !default 
-
-.col
-	float: left
-	margin: 0 $grid_gut 0 0
-	+box-sizing(border-box)
-	@extend .clear-fix
-	&.last
-		margin-right: 0
-@for $i from 1 through $grid_cols
-	$j: $i - 1
-	.#{$class-col}-#{$i}
-		width: ($i * $grid_col) + ($j * $grid_gut)
-
-
-// vars used for the website
-
-$site-width : $grid_max_width
-$gut-width : $grid_gut
+$site-width : 100%
+$gut-width : 2.5%
 $space : 1rem
 // colors
 

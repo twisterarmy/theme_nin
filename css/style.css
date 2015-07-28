@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url(../css/jquery.mCustomScrollbar.css);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -243,65 +242,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* '' */
-.col {
-  float: left;
-  margin: 0 2.5% 0 0;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-.col.last {
-  margin-right: 0;
-}
-
-.col-1 {
-  width: 1.875%;
-}
-
-.col-2 {
-  width: 6.25%;
-}
-
-.col-3 {
-  width: 10.625%;
-}
-
-.col-4 {
-  width: 15%;
-}
-
-.col-5 {
-  width: 19.375%;
-}
-
-.col-6 {
-  width: 23.75%;
-}
-
-.col-7 {
-  width: 28.125%;
-}
-
-.col-8 {
-  width: 32.5%;
-}
-
-.col-9 {
-  width: 36.875%;
-}
-
-.col-10 {
-  width: 41.25%;
-}
-
-.col-11 {
-  width: 45.625%;
-}
-
-.col-12 {
-  width: 50%;
-}
-
 /* FONTS */
 * {
   outline: none !important;
@@ -428,7 +368,7 @@ h3 .isFollowing:after {
   box-shadow: 0 8px 13px rgba(17, 17, 17, 0);
 }
 
-.clear-fix:after, .col:after, .userMenu ul:after, .modal-content:after, .modal-header:after, .direct-messages-thread .post:after, .mini-following-info a:after, .forEdition.profile-card:after, .expanded-content:after, .following .following-list li a:after, .network.singleBlock:after, .options .tab-content:after, .promoted-posts-only:after, ul.userMenu-search-profiles li:after, .mini-profile .post-area:after, .mini-profile-indicators:after, .profile-data:after, #postboard-top:after, #postboard-top .post-area:after, .who-to-follow ol:after, .twister-user:after {
+.clear-fix:after, .userMenu ul:after, .modal-content:after, .modal-header:after, .direct-messages-thread .post:after, .mini-following-info a:after, .forEdition.profile-card:after, .expanded-content:after, .following .following-list li a:after, .network.singleBlock:after, .options .tab-content:after, .promoted-posts-only:after, ul.userMenu-search-profiles li:after, .mini-profile .post-area:after, .mini-profile-indicators:after, .profile-data:after, #postboard-top:after, #postboard-top .post-area:after, .who-to-follow ol:after, .twister-user:after {
   content: "";
   display: table;
   clear: both;
