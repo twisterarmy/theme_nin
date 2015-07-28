@@ -14,7 +14,7 @@ html, body
 html 
 	font-size: $global-font-size
 	background-color: $main-background-color
-	+background-image(linear-gradient(to top right, #fff, $main-background-color, #fff) )
+	//+background-image(linear-gradient(to top right, #fff, $main-background-color, #fff) )
 	background-attachment: fixed
 
 body 
@@ -22,6 +22,7 @@ body
 	line-height : $main-line-height
 	font-family : $main-font-family
 	font-weight: 400
+	overflow-y: scroll
 	
 
 
@@ -71,6 +72,18 @@ textarea, input
 	display: block 
 	border: none
 
+
+samp
+	background: #eee
+	font-size: .9rem 
+	line-height: .9rem
+	display: inline-block 
+	padding:  5px 8px
+	+border-radius(2px)
+	color: #333
+	font-weight: 500
+	font-family: monospace
+	
 /* isFollowing */
 
 .isFollowing:after

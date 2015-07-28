@@ -1,26 +1,27 @@
 
-$(document).ready(function()
-{
-    var windowHeight = $(window).height();
-    //$('.right').css('height', windowHeight - 100);
-    $('.module.who-to-follow').detach().appendTo($('.dashboard.right'));
-    $('.module.twistday-reminder').detach().appendTo($('.dashboard.right'));
-});
+
 
 
 $(window).resize(function()
 {
-    var windowHeight = $(window).height();
-    //$('.right').css('height', windowHeight - 100);
+
     $('.module.who-to-follow').detach().appendTo($('.dashboard.right'));
     $('.module.twistday-reminder').detach().appendTo($('.dashboard.right'));
 });
 
-$(function(){
+
+
+
+
+$(document).ready(function()
+{
+
+    $('.module.who-to-follow').detach().appendTo($('.dashboard.right'));
+    $('.module.twistday-reminder').detach().appendTo($('.dashboard.right'));
     var windowHeight = $(window).height();
     $('.modal-close').html('');
-    //$('.right').css('height', windowHeight - 100);
-    $('.mini-profile .open-following-page').parent('li').detach().appendTo($('.mini-profile-indicators'));
+    //$('.mini-profile .open-following-page').parent('li').detach().appendTo($('.mini-profile-indicators'));
+
     $('.modal-back').html('');
     $('.twister-user-remove').html('');
     $('.profile-card-main').attr('style', '');
@@ -37,6 +38,7 @@ $(function(){
         $('html, body').animate({scrollTop:0},300);
         return false
     });
+
 
 
     
@@ -65,6 +67,10 @@ $(function(){
     if (/\/options.html$/i.test(document.location))
         $(document).ready(localizeLabels);
 
+
+    $('<div></div>').appendTo('.postboard-loading');
+    $('<div></div>').appendTo('.postboard-loading');
+    $('<div></div>').appendTo('.postboard-loading');
 
 
 
@@ -100,8 +106,10 @@ function openModal(modal) {
             .append(modal.content);
     else
         modal.content = modal.self.find('.modal-content');
-        modal.self.prependTo('body').fadeIn('fast');
-        
+        modal.postboard = modal.self.find('.postboard-posts');
+
+        modal.self.prependTo('body').fadeIn('slow');
+     
 
     if (modal.classBase === '.modal-wrapper') {
         modal.content.outerHeight(modal.self.height() - modal.self.find('.modal-header').outerHeight());

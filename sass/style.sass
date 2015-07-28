@@ -1,4 +1,7 @@
 
+@import '../css/jquery.mCustomScrollbar.css'
+
+
 @import compass
 @import 'compass/reset'
 @import 'compass/utilities'
@@ -22,7 +25,6 @@
 @import 'pages/_network'
 
 @import 'layout/_tabs'
-
 
 
 
@@ -56,7 +58,7 @@
 
 /* Wrapper and blocks */
 .wrapper
-	width: 50%
+	width: 100%
 	max-width: 100%
 	margin: auto
 	padding-top: $menu-height
@@ -65,21 +67,32 @@
 
 .dashboard
 	&.left
-		position: fixed 
+		position: absolute 
 		top: $menu-height 
 		left: 0
-		height: 100vh
-		overflow: hidden
-		width: 25%
+		width: 30%
+		> .module
+			float: right
 	&.right 
 		position: fixed 
 		right: 0
 		top: $menu-height 
 		overflow: hidden
-		width: 25%
+		width: 30%
 
-
-
+	> .module
+		max-width: 320px
+		margin-bottom: 20px
+		background: $bloc-light-color
+		width: 100%
+		@extend .box-shadow
+		h3
+			float: left
+			padding: 20px
+		h4 
+			clear: left
+			border-top: 1px solid $main-background-color
+			padding: 10px
 
 
 
@@ -176,10 +189,7 @@ ul.userMenu-search-profiles
 .mini-profile
 	@extend .box-shadow
 	.mini-profile-info
-		position: relative
-		text-align: center
-		background: $bloc-background-color
-		padding: 20px 0
+
 		
 	a.button
 		background: $main-color-light
@@ -212,17 +222,21 @@ ul.userMenu-search-profiles
 		font-size: .8em
 		width: 25%
 		float: left
+		text-align: center
 		border-right: 1px solid $main-background-color
 		&:last-child 
 			border: none
 
 		a
-			color: $dark-grey
+			color: lighten($dark-grey,20%)
 			display: block
-			padding: 1em 0
+			padding: 1rem 0
 			&:hover
-				text-decoration: underline
-
+				color: $dark-grey
+			&:before 
+				display: block!important
+				width: 100%!important
+				font-size: 1.4rem!important
 
 	.userMenu-connections a
 		@extend .icon-bell
@@ -349,11 +363,11 @@ ul.userMenu-search-profiles
 		-moz-transition: height 0.3s linear
 		-o-transition: height 0.3s linear
 		-ms-transition: height 0.3s linear
-		height: 28px
+		height: 48px
 		border: none
 		background: rgba(255, 255, 255, 1)
 		border: 1px solid rgba(0, 0, 0, 0.1)
-		padding: 3px
+		padding: 5px
 		margin: 5px 0
 		&:focus
 			border-bottom: solid 1px $main-color-color
@@ -398,6 +412,13 @@ ul.userMenu-search-profiles
 				margin: 0 0 10px 0
 
 
+#post-preview 
+	background: $bloc-background-color 
+	border: 1px solid $main-background-color 
+	padding: 15px
+	+transition-property(all)
+	+transition-duration(.1s)
+	width: 100%!important
 
 
 
@@ -438,31 +459,25 @@ textarea.splited-post
 
 .who-to-follow
 	&.module
-		margin-bottom: 20px
-		background: white
-		padding: 20px
-		width: 100%
-		@extend .box-shadow
+
 		li 
-			width: 100%
-			min-height: auto
-			border-bottom: 1px solid $main-background-color
-			margin: 0
-			padding-bottom: 10px
-			margin-top: 10px
-			&:last-child 
-				border: none
-			@extend .clear-fix
 			button 
 				position: absolute 
-				right: 0
-				top: 20%
+				right: 10px
+				top: 10px
+				@extend .small
+				display: none 
+			&:hover button 
+				display: block
+		.bio 
+			text-align: left!important
 
 
 	small
 		display: none
 	h3
 		float: left
+		padding: 20px
 	ol
 		@extend .clear-fix
 		clear: both
@@ -470,27 +485,29 @@ textarea.splited-post
 .twister-user
 	position: relative
 	box-sizing: border-box
-	background: $bloc-background-color
+	background: $bloc-light-color
 	@extend .clear-fix
-	@extend .col 
-	@extend .col-3
+	border-top: 1px solid $main-background-color
 	width: 100%
 	min-height: auto
-	&:nth-child(4n) 
-		@extend .last
+	padding: 10px 0
+	clear: left
+	+transition-property(background)
+	+transition-duration(.1s)
+	@extend .clear-fix
+	&:hover 
+		background: white
 
 
 
 img.twister-user-photo
-	+border-radius(50%)
 	float: left
-	vertical-align: middle
 	display: block
 	float: left
-	vertical-align: middle
+
 	width: 48px
-	height: 48px
-	margin: 10px
+	height: auto
+	margin: 0 10px
 	background: $main-background-color
 
 
@@ -609,97 +626,117 @@ ol.toptrends-list
 /********* TWISTDAY REMINDER *******/
 
 .twistday-reminder
-	width: 100%
-	background: white
-	@extend .box-shadow
-	@extend .clear-fix
-	padding: 20px
+
+
 	small
 		display: none
+	.twister-user 
+		
+		background: $bloc-light-color
+		position: relative
+		+transition-property(background)
+		+transition-duration(.1s)
+		&:hover 
+			background: white
 
-
-
+	.twister-user-full, .twister-user-tag
+		padding: 0 0 .5rem 0
+		font-size: 1rem 
+		line-height: 1rem 
+		color: $defaut-font-color
+		font-weight: 500
+		opacity: 1 
+		letter-spacing: 0
+		display: inline-block
+	.twisterday 
+		font-size: 12px
 
 
 /******* LOADER *************/
 
+
+
+
 .postboard-loading, .loading-roller
-	clear: both
-	text-align: center
-	div
-		display: inline-block
-		width: 120px
-		height: 10px
-		background-color: $main-color-light
-		position: relative
-		margin: 10px 0 0 0
-		&:after
-			content: ""
-			position: absolute
-			background-color: white
-			left: 2px
-			top: 2px
-			bottom: 2px
-			z-index: 999
-			animation-name: slide
-			animation-duration: 1.5s
-			animation-easing-function: linear
-			animation-iteration-count: infinite
-			-webkit-animation-name: slide
-			-webkit-animation-duration: 1.5s
-			-webkit-animation-easing-function: linear
-			-webkit-animation-iteration-count: infinite
-			-moz-animation-name: slide
-			-moz-animation-duration: 1.5s
-			-moz-animation-easing-function: linear
-			-moz-animation-iteration-count: infinite
+	font-size: 100px
+	width: .4em
+	height: .4em
+	position: relative
+	list-style: none
+	border-radius: 50%
+	margin:  100px auto
+	display: none
 
-@keyframes slide
-	0%
-		right: 60px
-		left: 2px
-	5%
-		left: 2px
-	50%
-		right: 2px
-		left: 60px
-	55%
-		right: 2px
-	100%
-		right: 60px
-		left: 2px
+	div 
+		width: .1em
+		height: .1em
+		position: absolute
+		border-radius: 50%
+
+		&:nth-child(1) 
+			background: #62839F
+			top: 0
+			left: 50%
+			margin-left: -.05em 
+			transform-origin: 50% 250%
+			animation: rota 1.13s linear infinite, opa 3.67s ease-in-out infinite alternate
 
 
-@-webkit-keyframes slide
-	0%
-		right: 100px
-		left: 2px
-	5%
-		left: 2px
-	50%
-		right: 2px
-		left: 100px
-	55%
-		right: 2px
-	100%
-		right: 100px
-		left: 2px
+		&:nth-child(2) 
+			background: #749294
+			top: 50% 
+			right: 0
+			margin-top: -.05em 
+			transform-origin: -150% 50%
+			animation: rota 1.86s linear infinite, opa 4.29s ease-in-out infinite alternate
 
 
-@-moz-keyframes slide
-	0%
-		right: 60px
-		left: 2px
-	5%
-		left: 2px
-	50%
-		right: 2px
-		left: 60px
-	55%
-		right: 2px
-	100%
-		right: 60px
-		left: 2px
+		&:nth-child(3) 
+			background: #94AC7E
+			bottom: 0
+			left: 50% 
+			margin-left: -.05em 
+			transform-origin: 50% -150%
+			animation:  rota 1.45s linear infinite, opa 5.12s ease-in-out infinite alternate
+
+
+		&:nth-child(4) 
+			background: #B4C669
+			top: 50% 
+			left: 0
+			margin-top: -.05em 
+			transform-origin: 250% 50%
+			animation: rota 1.72s linear infinite,  opa 5.25s ease-in-out infinite alternate
+
+@keyframes rota 
+	to
+		transform: rotate(360deg)
+
+
+@keyframes opa 
+	12.0% 
+		opacity: 0.80
+	19.5% 
+		opacity: 0.88
+	37.2% 
+		opacity: 0.64
+	40.5% 
+		opacity: 0.52
+	52.7% 
+		opacity: 0.69
+	60.2% 
+		opacity: 0.60
+	66.6% 
+		opacity: 0.52
+	70.0% 
+		opacity: 0.63
+	79.9% 
+		opacity: 0.60
+	84.2% 
+		opacity: 0.75
+	91.0% 
+		opacity: 0.87
+
 
 
 /* Options*/

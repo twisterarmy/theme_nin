@@ -9,9 +9,9 @@ $header-modal-height : $menu-height
 
 
 .modal-wrapper
-	background: white
+	background: $bloc-background-color
 	z-index: 3000
-	width: 25%
+	width: 30%
 	position: fixed
 	+box-sizing(border-box)
 	@extend .box-shadow
@@ -19,6 +19,11 @@ $header-modal-height : $menu-height
 	right: 0
 	bottom: 0
 	overflow: hidden
+
+	.postboard
+		border: none
+		padding: 0
+
 	.post-area-new
 		padding: 10px
 
@@ -36,14 +41,15 @@ $header-modal-height : $menu-height
 	overflow: hidden
 	overflow-y: auto
 	.postboard-news
-		position: absolute
+		position: fixed
 		display: block
-		right: 0
-		z-index: 20
+		right: 2px
+		top: $header-modal-height +2
+		z-index: 2000
 		@extend .color-1
 	h2 span 
 		display: none
-	background: $bloc-light-color
+	background:  $bloc-background-color
 
 
 
@@ -51,7 +57,7 @@ $header-modal-height : $menu-height
 
 .modal-header
 	position: relative
-	background: $main-color-dark
+	background: darken(#64676C,12%)
 	height: $header-modal-height 
 	+box-sizing(border-box)
 	@extend .clear-fix
@@ -102,19 +108,12 @@ $header-modal-height : $menu-height
 		position: relative
 		width: 100%
 		margin: auto
-		background: $main-background-color
+		background: $bloc-background-color
+
 		h2 
 			display: block
 
-	.post-text
-		margin: 0 0 0 40px
-	.post-photo
-		width: 30px
-		height: 30px
-		img
-			width: 100% 
-			height: 100%
-			//+border-radius(50%)
+
 
 
 
@@ -132,8 +131,7 @@ $header-modal-height : $menu-height
 	.modal-buttons
 		padding: 10px
 		text-align: right
-		button:last-child
-			padding: 5px 20px
+
 
 /************ FOLLOWING-CONFIG MODAL **********/
 
@@ -167,6 +165,12 @@ $header-modal-height : $menu-height
 
 	.post-expand, .post-interactions
 		display: none
+	.post-info-time 
+		position: static
+		float: right
+	.post-text 
+		margin-top: 10px
+		margin-bottom: 10px
 
 /********* REPLY POSTS MODAL***************/
 
@@ -233,8 +237,9 @@ $header-modal-height : $menu-height
 		width: 100%
 		@extend .clear-fix
 		color: $defaut-font-color
+		background: $bloc-background-color
 		&:hover 
-			background: $bloc-background-color
+			background: $bloc-light-color
 	.mini-profile-photo
 		height: 48px
 		width: 48px
@@ -250,18 +255,21 @@ $header-modal-height : $menu-height
 /******* WHO TO FOLLOW MODAL*******/
 
 .modal-wrapper.who-to-follow-modal
-	.modal-content
-		padding: 15px
-		+box-sizing(border-box)
-	ol
-		margin: 5px
+
 	.open-profile-modal
 		&:hover
 			text-decoration: none
-	.twister-user
-		position: relative
-		padding: 5px
 
+	a.twister-user-name 
+		color: $defaut-font-color
+		span 
+			padding-bottom: .5rem 
+			font-size: 1rem 
+			line-height: 1rem 
+			color: $defaut-font-color
+			font-weight: 500
+			opacity: 1 
+			letter-spacing: 0
 	.twister-user-info
 		text-align: left
 		font-size: .8rem
@@ -275,4 +283,4 @@ $header-modal-height : $menu-height
 	.bio
 		color: rgba(0, 0, 0, 0.6)
 		font-style: italic
-		padding: .5rem
+		padding-bottom: .5rem

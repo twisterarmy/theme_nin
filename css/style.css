@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url(../css/jquery.mCustomScrollbar.css);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -242,14 +243,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* '' */
-.col, .twister-user {
+.col {
   float: left;
   margin: 0 2.5% 0 0;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-.col.last, .last.twister-user, .twister-user:nth-child(4n) {
+.col.last {
   margin-right: 0;
 }
 
@@ -261,7 +262,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   width: 6.25%;
 }
 
-.col-3, .twister-user {
+.col-3 {
   width: 10.625%;
 }
 
@@ -319,14 +320,8 @@ html, body {
 }
 
 html {
-  font-size: 15px;
-  background-color: #dddddd;
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjEuMCIgeDI9IjEuMCIgeTI9IjAuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjZGRkZGRkIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
-  background-size: 100%;
-  background-image: -webkit-gradient(linear, 0% 100%, 100% 0%, color-stop(0%, #ffffff), color-stop(50%, #dddddd), color-stop(100%, #ffffff));
-  background-image: -moz-linear-gradient(bottom, #ffffff, #dddddd, #ffffff);
-  background-image: -webkit-linear-gradient(bottom, #ffffff, #dddddd, #ffffff);
-  background-image: linear-gradient(to top right, #ffffff, #dddddd, #ffffff);
+  font-size: 14px;
+  background-color: #EBEBEB;
   background-attachment: fixed;
 }
 
@@ -335,14 +330,15 @@ body {
   line-height: 1.4rem;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
+  overflow-y: scroll;
 }
 
 a {
   text-decoration: none;
-  color: #B4C669;
+  color: #A1B775;
 }
 a:hover, a:active {
-  color: #B4C669;
+  color: #A1B775;
   text-decoration: none;
 }
 a i {
@@ -359,7 +355,7 @@ strong, b {
 }
 
 img {
-  background: #f6f6f6;
+  background: #FDFCFA;
 }
 
 h1 {
@@ -394,9 +390,23 @@ textarea, input {
   border: none;
 }
 
+samp {
+  background: #eee;
+  font-size: 0.9rem;
+  line-height: 0.9rem;
+  display: inline-block;
+  padding: 5px 8px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  color: #333;
+  font-weight: 500;
+  font-family: monospace;
+}
+
 /* isFollowing */
 .isFollowing:after {
-  color: #B4C669;
+  color: #A1B775;
   content: "";
   font-family: "fontello";
   padding-left: 2px;
@@ -412,13 +422,13 @@ h3 .isFollowing:after {
   display: none;
 }
 
-.box-shadow, .modal-wrapper, .prompt-wrapper, .open, .mini-profile .post-area-new, #postboard-top .post-area .post-area-new, .dialog-modal, .mini-profile, .who-to-follow.module, ol.toptrends-list a, .twistday-reminder, ul.dropdown-menu {
-  -moz-box-shadow: 0 8px 13px rgba(51, 51, 51, 0.1);
-  -webkit-box-shadow: 0 8px 13px rgba(51, 51, 51, 0.1);
-  box-shadow: 0 8px 13px rgba(51, 51, 51, 0.1);
+.box-shadow, .modal-wrapper, .prompt-wrapper, .postboard .post, .dashboard > .module, .dialog-modal, .mini-profile, ol.toptrends-list a, ul.dropdown-menu {
+  -moz-box-shadow: 0 8px 13px rgba(17, 17, 17, 0);
+  -webkit-box-shadow: 0 8px 13px rgba(17, 17, 17, 0);
+  box-shadow: 0 8px 13px rgba(17, 17, 17, 0);
 }
 
-.clear-fix:after, .col:after, .twister-user:after, .userMenu ul:after, .modal-content:after, .modal-header:after, .direct-messages-thread .post:after, .mini-following-info a:after, .twister-user-info:after, .forEdition.profile-card:after, .expanded-content:after, .following .following-list li a:after, .network.singleBlock:after, .options .tab-content:after, .promoted-posts-only:after, ul.userMenu-search-profiles li:after, .mini-profile .post-area:after, .mini-profile-indicators:after, .profile-data:after, #postboard-top:after, #postboard-top .post-area:after, .who-to-follow.module li:after, .who-to-follow ol:after, .twistday-reminder:after {
+.clear-fix:after, .col:after, .userMenu ul:after, .modal-content:after, .modal-header:after, .direct-messages-thread .post:after, .mini-following-info a:after, .forEdition.profile-card:after, .expanded-content:after, .following .following-list li a:after, .network.singleBlock:after, .options .tab-content:after, .promoted-posts-only:after, ul.userMenu-search-profiles li:after, .mini-profile .post-area:after, .mini-profile-indicators:after, .profile-data:after, #postboard-top:after, #postboard-top .post-area:after, .who-to-follow ol:after, .twister-user:after {
   content: "";
   display: table;
   clear: both;
@@ -432,7 +442,6 @@ button, a.button {
   letter-spacing: 0.07rem;
   font-size: 0.75rem;
   position: relative;
-  z-index: 10;
   font-weight: 300;
   margin: 2px;
   text-transform: uppercase;
@@ -456,7 +465,7 @@ button:hover, a.button:hover {
 button.disabled, a.button.disabled {
   opacity: 0.5;
   color: #999;
-  background-color: white;
+  background-color: #EBEBEB;
 }
 button.disabled:hover, a.button.disabled:hover {
   color: #666;
@@ -465,28 +474,28 @@ button.disabled:hover, a.button.disabled:hover {
   box-shadow: 1px 1px 0 rgba(68, 68, 68, 0.3);
 }
 button.color-1, .modal-content button.postboard-news, button.follow, a.button.color-1, .modal-content a.button.postboard-news, a.button.follow {
-  background: #B4C669;
-  border-color: #abbf57;
+  background: #5E80A2;
+  border-color: #547392;
   color: white;
   font-weight: 500;
 }
 button.color-1:hover, .modal-content button.postboard-news:hover, button.follow:hover, a.button.color-1:hover, .modal-content a.button.postboard-news:hover, a.button.follow:hover {
-  border-color: #90a43e;
+  border-color: #425a72;
 }
 button.color-2, button.unfollow, a.button.color-2, a.button.unfollow {
-  background: #C3C3C3;
-  border-color: #b6b6b6;
+  background: #64676C;
+  border-color: #585a5f;
   color: white;
   font-weight: 500;
 }
 button.color-2:hover, button.unfollow:hover, a.button.color-2:hover, a.button.unfollow:hover {
-  border-color: #9d9d9d;
+  border-color: #3f4144;
 }
-button.small, .modal-wrapper.who-to-follow-modal button, a.button.small {
-  padding: 0.3rem 0.5rem;
+button.small, .modal-wrapper.who-to-follow-modal button, .who-to-follow.module li button, a.button.small {
+  padding: 0.5rem;
   font-weight: 700;
-  font-size: 0.6rem;
-  line-height: 0.6rem;
+  font-size: 0.7rem;
+  line-height: 0.7rem;
 }
 
 .userMenu {
@@ -495,7 +504,7 @@ button.small, .modal-wrapper.who-to-follow-modal button, a.button.small {
   height: 50px;
   left: 0;
   margin: 0;
-  background-color: #3c3c3c;
+  background-color: #64676C;
   z-index: 2;
 }
 .userMenu ul {
@@ -503,7 +512,7 @@ button.small, .modal-wrapper.who-to-follow-modal button, a.button.small {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
-  max-width: 75%;
+  max-width: 70%;
   margin: 0;
   background: url('../img/logo.png?1437893891') no-repeat 50% 50%;
   background-size: 20px;
@@ -544,7 +553,7 @@ button.small, .modal-wrapper.who-to-follow-modal button, a.button.small {
   display: none;
   top: 6px;
   right: -6px;
-  background: #B4C669;
+  background: #A1B775;
   color: #fff;
   width: 15px;
   height: 15px;
@@ -593,9 +602,9 @@ button.small, .modal-wrapper.who-to-follow-modal button, a.button.small {
 
 /*********** POPUP MODAL ************* */
 .modal-wrapper {
-  background: white;
+  background: #EBEBEB;
   z-index: 3000;
-  width: 25%;
+  width: 30%;
   position: fixed;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -604,6 +613,10 @@ button.small, .modal-wrapper.who-to-follow-modal button, a.button.small {
   right: 0;
   bottom: 0;
   overflow: hidden;
+}
+.modal-wrapper .postboard {
+  border: none;
+  padding: 0;
 }
 .modal-wrapper .post-area-new {
   padding: 10px;
@@ -622,13 +635,14 @@ button.small, .modal-wrapper.who-to-follow-modal button, a.button.small {
 .modal-content {
   overflow: hidden;
   overflow-y: auto;
-  background: #f6f6f6;
+  background: #EBEBEB;
 }
 .modal-content .postboard-news {
-  position: absolute;
+  position: fixed;
   display: block;
-  right: 0;
-  z-index: 20;
+  right: 2px;
+  top: 52px;
+  z-index: 2000;
 }
 .modal-content h2 span {
   display: none;
@@ -636,7 +650,7 @@ button.small, .modal-wrapper.who-to-follow-modal button, a.button.small {
 
 .modal-header {
   position: relative;
-  background: #222;
+  background: #47494c;
   height: 50px;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -685,21 +699,10 @@ button.small, .modal-wrapper.who-to-follow-modal button, a.button.small {
   position: relative;
   width: 100%;
   margin: auto;
-  background: #dddddd;
+  background: #EBEBEB;
 }
 .modal-content .postboard h2 {
   display: block;
-}
-.modal-content .post-text {
-  margin: 0 0 0 40px;
-}
-.modal-content .post-photo {
-  width: 30px;
-  height: 30px;
-}
-.modal-content .post-photo img {
-  width: 100%;
-  height: 100%;
 }
 
 /*********** POPUP PROMPT ************ */
@@ -715,9 +718,6 @@ button.small, .modal-wrapper.who-to-follow-modal button, a.button.small {
 .prompt-wrapper .modal-buttons {
   padding: 10px;
   text-align: right;
-}
-.prompt-wrapper .modal-buttons button:last-child {
-  padding: 5px 20px;
 }
 
 /************ FOLLOWING-CONFIG MODAL ********* */
@@ -755,6 +755,14 @@ button.small, .modal-wrapper.who-to-follow-modal button, a.button.small {
 .prompt-wrapper.reTwist .post-expand, .prompt-wrapper.reTwist .post-interactions {
   display: none;
 }
+.prompt-wrapper.reTwist .post-info-time {
+  position: static;
+  float: right;
+}
+.prompt-wrapper.reTwist .post-text {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 
 /********* REPLY POSTS MODAL************** */
 .prompt-wrapper.reply.prompt-wrapper {
@@ -772,11 +780,11 @@ button.small, .modal-wrapper.who-to-follow-modal button, a.button.small {
 .modal-wrapper.directMessages .post-area-new {
   display: none;
   z-index: 5;
-  background: #dddddd;
+  background: #222 !important;
   position: absolute;
   bottom: 0;
-  width: 100%;
-  padding: 0 !important;
+  width: 100% !important;
+  padding: 20px !important;
 }
 .modal-wrapper.directMessages .modal-header h3 span {
   display: inline-block !important;
@@ -789,6 +797,7 @@ button.small, .modal-wrapper.who-to-follow-modal button, a.button.small {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
+  background: #f0f0f0;
 }
 .modal-wrapper.directMessages .post-photo {
   height: 48px;
@@ -796,7 +805,7 @@ button.small, .modal-wrapper.who-to-follow-modal button, a.button.small {
 }
 .modal-wrapper.directMessages .post-text {
   margin-left: 58px;
-  font-size: 0.9em;
+  font-size: 0.9rem;
 }
 .modal-wrapper.directMessages .post-info-name {
   float: none;
@@ -834,16 +843,21 @@ button.small, .modal-wrapper.who-to-follow-modal button, a.button.small {
 .direct-messages-list .post:hover:after {
   display: block;
 }
+.direct-messages-list .post:hover {
+  background: white;
+}
 .direct-messages-list li {
   position: relative;
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #EBEBEB;
 }
 
 .direct-messages-thread {
-  padding-bottom: 150px;
+  padding-bottom: 180px;
+  max-width: 420px;
+  margin: auto;
 }
 .direct-messages-thread li {
-  position: relative;
+  position: relative !important;
 }
 .direct-messages-thread .post {
   background: none;
@@ -856,7 +870,8 @@ button.small, .modal-wrapper.who-to-follow-modal button, a.button.small {
   display: block;
   text-align: center;
   font-size: 10px;
-  margin: 10px 0;
+  padding-top: 10px;
+  margin-bottom: 10px;
   cursor: default;
   position: static;
 }
@@ -884,18 +899,18 @@ button.small, .modal-wrapper.who-to-follow-modal button, a.button.small {
   position: relative;
   display: inline-block;
   max-width: 300px;
-  font-size: 0.9em;
+  font-size: 0.9rem;
   padding: 5px 10px;
   z-index: 4;
   float: left;
   word-wrap: break-word;
-  max-width: 60%;
-  min-height: 15px;
+  max-width: 70%;
+  min-height: 48px;
 }
 .direct-messages-thread .post .post-photo {
   position: absolute;
   left: 0;
-  top: 10px;
+  top: 35px;
 }
 .direct-messages-thread .post.sent .post-text:after {
   border-top: solid 7px transparent;
@@ -951,7 +966,7 @@ button.small, .modal-wrapper.who-to-follow-modal button, a.button.small {
 }
 
 .mini-following-info {
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #EBEBEB;
   line-height: 45px;
 }
 .mini-following-info a {
@@ -959,9 +974,10 @@ button.small, .modal-wrapper.who-to-follow-modal button, a.button.small {
   padding: 10px;
   width: 100%;
   color: #444;
+  background: #EBEBEB;
 }
 .mini-following-info a:hover {
-  background: white;
+  background: #FDFCFA;
 }
 .mini-following-info .mini-profile-photo {
   height: 48px;
@@ -975,21 +991,20 @@ button.small, .modal-wrapper.who-to-follow-modal button, a.button.small {
 }
 
 /******* WHO TO FOLLOW MODAL****** */
-.modal-wrapper.who-to-follow-modal .modal-content {
-  padding: 15px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-.modal-wrapper.who-to-follow-modal ol {
-  margin: 5px;
-}
 .modal-wrapper.who-to-follow-modal .open-profile-modal:hover {
   text-decoration: none;
 }
-.modal-wrapper.who-to-follow-modal .twister-user {
-  position: relative;
-  padding: 5px;
+.modal-wrapper.who-to-follow-modal a.twister-user-name {
+  color: #444;
+}
+.modal-wrapper.who-to-follow-modal a.twister-user-name span {
+  padding-bottom: 0.5rem;
+  font-size: 1rem;
+  line-height: 1rem;
+  color: #444;
+  font-weight: 500;
+  opacity: 1;
+  letter-spacing: 0;
 }
 .modal-wrapper.who-to-follow-modal .twister-user-info {
   text-align: left;
@@ -1005,7 +1020,7 @@ button.small, .modal-wrapper.who-to-follow-modal button, a.button.small {
 .modal-wrapper.who-to-follow-modal .bio {
   color: rgba(0, 0, 0, 0.6);
   font-style: italic;
-  padding: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 /*************************************
@@ -1022,12 +1037,12 @@ button.small, .modal-wrapper.who-to-follow-modal button, a.button.small {
 .profile-modal .modal-content .postboard {
   width: 100%;
   height: 100%;
-  position: relative;
+  position: absolute;
 }
 .profile-modal .modal-content .postboard-posts {
   display: block;
   height: 100%;
-  overflow-y: auto;
+  overflow: auto;
 }
 .profile-modal .modal-content .postboard-posts .post {
   padding: 0;
@@ -1039,6 +1054,9 @@ button.small, .modal-wrapper.who-to-follow-modal button, a.button.small {
 .profile-modal .modal-content .profile-card {
   margin: 0;
   padding: 0;
+}
+.profile-modal .modal-content .profile-data {
+  background: none;
 }
 
 .profile-modal h2.profile-screen-name {
@@ -1055,7 +1073,7 @@ button.small, .modal-wrapper.who-to-follow-modal button, a.button.small {
 /* Profile card */
 .profile-card {
   width: 100%;
-  background: white;
+  background: #FDFCFA;
   padding: 15px;
 }
 
@@ -1120,12 +1138,6 @@ button.small, .modal-wrapper.who-to-follow-modal button, a.button.small {
   position: absolute;
 }
 
-.twister-user-info {
-  text-align: center;
-  width: 100%;
-  padding: 0;
-}
-
 .known-followers {
   text-align: center;
   clear: both;
@@ -1155,7 +1167,7 @@ button.small, .modal-wrapper.who-to-follow-modal button, a.button.small {
   color: #222;
 }
 .bitmessage-ctc:hover, .tox-ctc:hover {
-  color: #B4C669;
+  color: #A1B775;
 }
 
 .bitmessage-ctc:after, .tox-ctc:after {
@@ -1179,7 +1191,7 @@ button.small, .modal-wrapper.who-to-follow-modal button, a.button.small {
   font-size: 13px;
 }
 .profile-modal .profile-tox:hover, .profile-modal .profile-bitmessage:hover {
-  color: #B4C669;
+  color: #A1B775;
 }
 
 .profile-modal .modal-buttons {
@@ -1247,7 +1259,8 @@ button.small, .modal-wrapper.who-to-follow-modal button, a.button.small {
 
 /************* POST BOARD ************ */
 .postboard {
-  width: 100%;
+  width: 40%;
+  margin-left: 30%;
   padding: 20px;
 }
 .postboard h2 {
@@ -1262,17 +1275,17 @@ button.small, .modal-wrapper.who-to-follow-modal button, a.button.small {
   display: none;
 }
 .postboard .post {
-  background: white;
+  background: #FDFCFA;
   position: relative;
   margin-bottom: 1px;
   -moz-transition-property: margin;
   -o-transition-property: margin;
   -webkit-transition-property: margin;
   transition-property: margin;
-  -moz-transition-duration: 0.4s;
-  -o-transition-duration: 0.4s;
-  -webkit-transition-duration: 0.4s;
-  transition-duration: 0.4s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
   -moz-transition-timing-function: ease-out;
   -o-transition-timing-function: ease-out;
   -webkit-transition-timing-function: ease-out;
@@ -1298,9 +1311,17 @@ button.small, .modal-wrapper.who-to-follow-modal button, a.button.small {
   margin-bottom: 1px;
 }
 
+.postboard-posts > .post {
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
 .postboard-posts > .post.open, .mini-profile .postboard-posts > .post.post-area-new, #postboard-top .post-area .postboard-posts > .post.post-area-new {
   margin-top: 1rem;
   margin-bottom: 1rem;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
 }
 .postboard-posts > .post:after {
   content: "";
@@ -1328,13 +1349,11 @@ button.small, .modal-wrapper.who-to-follow-modal button, a.button.small {
   display: inline-block;
   float: left;
   vertical-align: middle;
-  width: 48px;
-  height: 48px;
-  overflow: hidden;
+  width: 45px;
 }
 .post-photo img {
   width: 100%;
-  height: 100%;
+  height: auto !important;
 }
 
 .post-info-name {
@@ -1372,23 +1391,10 @@ button.small, .modal-wrapper.who-to-follow-modal button, a.button.small {
 }
 
 .post-text {
-  margin: 0 0 0 58px;
+  margin: 0 0 0 55px;
   word-wrap: break-word;
-  min-height: 48px;
+  min-height: 25px;
   padding: 0;
-}
-.post-text samp {
-  background: #eee;
-  font-size: 0.9rem;
-  line-height: 0.9rem;
-  display: inline-block;
-  padding: 5px 8px;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-  border-radius: 2px;
-  color: #333;
-  font-weight: 500;
-  font-family: monospace;
 }
 
 .post-context {
@@ -1400,7 +1406,7 @@ button.small, .modal-wrapper.who-to-follow-modal button, a.button.small {
 .post-context:before {
   display: block;
   float: left;
-  background: #B4C669;
+  background: #A1B775;
   text-align: center;
   padding: 1px 2px 2px 2px;
   line-height: 9px;
@@ -1501,13 +1507,13 @@ button.small, .modal-wrapper.who-to-follow-modal button, a.button.small {
 }
 
 .image-preview {
-  width: 100%;
+  max-width: 100%;
+  width: auto;
   display: block;
   margin: auto;
 }
 
 .preview-container {
-  max-height: 500px;
   width: 100%;
   text-align: center;
   overflow-y: auto;
@@ -1570,8 +1576,7 @@ button.small, .modal-wrapper.who-to-follow-modal button, a.button.small {
 }
 
 .post-replies .sub-replies {
-  border-left: solid 3px #B4C669;
-  margin-left: 1px;
+  border-left: solid 18px #EBEBEB;
 }
 
 .following {
@@ -1582,9 +1587,9 @@ button.small, .modal-wrapper.who-to-follow-modal button, a.button.small {
   display: none;
 }
 .following .following-list li {
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #EBEBEB;
   line-height: 45px;
-  background: #f6f6f6;
+  background: #FDFCFA;
   position: relative;
   -moz-transition-property: background;
   -o-transition-property: background;
@@ -1670,7 +1675,7 @@ button.small, .modal-wrapper.who-to-follow-modal button, a.button.small {
 .login .module input:focus, .login .module select:focus {
   background: white;
   transition: background-color 100ms linear;
-  border-bottom: solid 2px #B4C669;
+  border-bottom: solid 2px #A1B775;
 }
 .login .module select {
   height: 30px;
@@ -1707,19 +1712,19 @@ button.small, .modal-wrapper.who-to-follow-modal button, a.button.small {
   padding: 2rem;
 }
 .network.singleBlock .module {
-  background: white;
+  background: #EBEBEB;
   -moz-box-shadow: 0 1px 1px rgba(85, 85, 85, 0.1);
   -webkit-box-shadow: 0 1px 1px rgba(85, 85, 85, 0.1);
   box-shadow: 0 1px 1px rgba(85, 85, 85, 0.1);
   margin-bottom: 50px;
 }
 .network.singleBlock .module:last-child h2 {
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2I0YzY2OSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzVlODBhMiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ExYjc3NSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzVlODBhMiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #b4c669), color-stop(100%, #5e80a2));
-  background-image: -moz-linear-gradient(left, #b4c669, #5e80a2);
-  background-image: -webkit-linear-gradient(left, #b4c669, #5e80a2);
-  background-image: linear-gradient(to right, #b4c669, #5e80a2);
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #a1b775), color-stop(100%, #5e80a2));
+  background-image: -moz-linear-gradient(left, #a1b775, #5e80a2);
+  background-image: -webkit-linear-gradient(left, #a1b775, #5e80a2);
+  background-image: linear-gradient(to right, #a1b775, #5e80a2);
 }
 .network .spam-msg {
   resize: none;
@@ -1750,26 +1755,26 @@ button.small, .modal-wrapper.who-to-follow-modal button, a.button.small {
   color: white;
 }
 .network span.connection-status.connected:before {
-  background: #B4C669;
+  background: #A1B775;
 }
 .network .character-limit {
   float: right;
   margin-right: 1rem;
 }
 .network .connections span, .network .known-peers, .network .dht-nodes, .network .blocks, .network .last-block-time, .network .mining-difficulty {
-  color: #B4C669;
+  color: #A1B775;
   font-weight: 700;
   font-family: Arial;
   font-size: 95%;
 }
 .network h2 {
   font-weight: 400;
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjEuMCIgeTE9IjAuNSIgeDI9IjAuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2I0YzY2OSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzVlODBhMiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjEuMCIgeTE9IjAuNSIgeDI9IjAuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ExYjc3NSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzVlODBhMiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
-  background-image: -webkit-gradient(linear, 100% 50%, 0% 50%, color-stop(0%, #b4c669), color-stop(100%, #5e80a2));
-  background-image: -moz-linear-gradient(right, #b4c669, #5e80a2);
-  background-image: -webkit-linear-gradient(right, #b4c669, #5e80a2);
-  background-image: linear-gradient(to left, #b4c669, #5e80a2);
+  background-image: -webkit-gradient(linear, 100% 50%, 0% 50%, color-stop(0%, #a1b775), color-stop(100%, #5e80a2));
+  background-image: -moz-linear-gradient(right, #a1b775, #5e80a2);
+  background-image: -webkit-linear-gradient(right, #a1b775, #5e80a2);
+  background-image: linear-gradient(to left, #a1b775, #5e80a2);
   padding: 1rem 2rem;
   color: white;
 }
@@ -1819,7 +1824,7 @@ button.small, .modal-wrapper.who-to-follow-modal button, a.button.small {
   margin: 5px 0px 5px 12px;
 }
 .options .tab-content {
-  background: white;
+  background: #EBEBEB;
   position: relative;
   padding: 20px;
 }
@@ -1851,7 +1856,7 @@ button.small, .modal-wrapper.who-to-follow-modal button, a.button.small {
   color: #222;
 }
 .options input:checked + label.tabs {
-  background: white;
+  background: #EBEBEB;
   color: #222;
 }
 
@@ -1882,7 +1887,7 @@ button.small, .modal-wrapper.who-to-follow-modal button, a.button.small {
 
 /* Wrapper and blocks */
 .wrapper {
-  width: 50%;
+  width: 100%;
   max-width: 100%;
   margin: auto;
   padding-top: 50px;
@@ -1891,19 +1896,35 @@ button.small, .modal-wrapper.who-to-follow-modal button, a.button.small {
 }
 
 .dashboard.left {
-  position: fixed;
+  position: absolute;
   top: 50px;
   left: 0;
-  height: 100vh;
-  overflow: hidden;
-  width: 25%;
+  width: 30%;
+}
+.dashboard.left > .module {
+  float: right;
 }
 .dashboard.right {
   position: fixed;
   right: 0;
   top: 50px;
   overflow: hidden;
-  width: 25%;
+  width: 30%;
+}
+.dashboard > .module {
+  max-width: 320px;
+  margin-bottom: 20px;
+  background: #FDFCFA;
+  width: 100%;
+}
+.dashboard > .module h3 {
+  float: left;
+  padding: 20px;
+}
+.dashboard > .module h4 {
+  clear: left;
+  border-top: 1px solid #EBEBEB;
+  padding: 10px;
 }
 
 /********** CONFIG SUBMENU & SEARCH RESULTS *********** */
@@ -1937,7 +1958,7 @@ ul.userMenu-search-profiles li {
   display: block;
   padding: 5px 10px;
   margin: 0;
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #EBEBEB;
 }
 ul.userMenu-search-profiles .mini-profile-name {
   font-size: 12px;
@@ -1971,7 +1992,7 @@ ul.userMenu-search-profiles button .follow .unfollow:hover {
   background-color: #aaa;
 }
 ul.userMenu-search-profiles button .follow {
-  background-color: #B4C669;
+  background-color: #A1B775;
 }
 ul.userMenu-search-profiles button .unfollow {
   background-color: #222;
@@ -1982,7 +2003,7 @@ ul.userMenu-search-profiles button .unfollow {
   padding: 3px 10px;
   margin: 9px 20px 0 0;
   border: none;
-  background: white;
+  background: #EBEBEB;
   box-sizing: border-box;
 }
 
@@ -1994,12 +2015,6 @@ ul.userMenu-search-profiles button .unfollow {
 }
 
 /***************** MINI PROFILE ****************************** */
-.mini-profile .mini-profile-info {
-  position: relative;
-  text-align: center;
-  background: white;
-  padding: 20px 0;
-}
 .mini-profile a.button {
   background: #aaa;
   margin: 1em auto;
@@ -2023,8 +2038,8 @@ ul.userMenu-search-profiles button .unfollow {
 .mini-profile-indicators {
   margin: 0;
   text-align: center;
-  border-top: 1px solid #dddddd;
-  border-bottom: 1px solid #dddddd;
+  border-top: 1px solid #EBEBEB;
+  border-bottom: 1px solid #EBEBEB;
   background: white;
 }
 .mini-profile-indicators li {
@@ -2036,18 +2051,24 @@ ul.userMenu-search-profiles button .unfollow {
   font-size: 0.8em;
   width: 25%;
   float: left;
-  border-right: 1px solid #dddddd;
+  text-align: center;
+  border-right: 1px solid #EBEBEB;
 }
 .mini-profile-indicators li:last-child {
   border: none;
 }
 .mini-profile-indicators li a {
-  color: #444;
+  color: #777777;
   display: block;
-  padding: 1em 0;
+  padding: 1rem 0;
 }
 .mini-profile-indicators li a:hover {
-  text-decoration: underline;
+  color: #444;
+}
+.mini-profile-indicators li a:before {
+  display: block !important;
+  width: 100% !important;
+  font-size: 1.4rem !important;
 }
 
 .messages-qtd {
@@ -2055,7 +2076,7 @@ ul.userMenu-search-profiles button .unfollow {
   top: 50%;
   margin-top: -11px;
   right: 11px;
-  background: #B4C669;
+  background: #A1B775;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
   color: #fff;
   width: 25px;
@@ -2104,7 +2125,7 @@ ul.userMenu-search-profiles button .unfollow {
   clear: both;
   padding: 0 0 1em 0;
   text-align: center;
-  background: white;
+  background: #EBEBEB;
 }
 .mini-profile .profile-data {
   display: none;
@@ -2182,15 +2203,15 @@ ul.userMenu-search-profiles button .unfollow {
   -moz-transition: height 0.3s linear;
   -o-transition: height 0.3s linear;
   -ms-transition: height 0.3s linear;
-  height: 28px;
+  height: 48px;
   border: none;
   background: white;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 3px;
+  padding: 5px;
   margin: 5px 0;
 }
 .post-area-new textarea:focus {
-  border-bottom: solid 1px #B4C669;
+  border-bottom: solid 1px #A1B775;
 }
 
 #postboard-top {
@@ -2240,6 +2261,21 @@ ul.userMenu-search-profiles button .unfollow {
   margin: 0 0 10px 0;
 }
 
+#post-preview {
+  background: #EBEBEB;
+  border: 1px solid #EBEBEB;
+  padding: 15px;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.1s;
+  -o-transition-duration: 0.1s;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  width: 100% !important;
+}
+
 .post-area-new.open textarea, .mini-profile .post-area-new textarea, #postboard-top .post-area .post-area-new textarea {
   height: 80px;
 }
@@ -2276,33 +2312,24 @@ textarea.splited-post {
 }
 
 /******** WHO TO FOLLOW ******* */
-.who-to-follow.module {
-  margin-bottom: 20px;
-  background: white;
-  padding: 20px;
-  width: 100%;
-}
-.who-to-follow.module li {
-  width: 100%;
-  min-height: auto;
-  border-bottom: 1px solid #dddddd;
-  margin: 0;
-  padding-bottom: 10px;
-  margin-top: 10px;
-}
-.who-to-follow.module li:last-child {
-  border: none;
-}
 .who-to-follow.module li button {
   position: absolute;
-  right: 0;
-  top: 20%;
+  right: 10px;
+  top: 10px;
+  display: none;
+}
+.who-to-follow.module li:hover button {
+  display: block;
+}
+.who-to-follow.module .bio {
+  text-align: left !important;
 }
 .who-to-follow small {
   display: none;
 }
 .who-to-follow h3 {
   float: left;
+  padding: 20px;
 }
 .who-to-follow ol {
   clear: both;
@@ -2311,24 +2338,33 @@ textarea.splited-post {
 .twister-user {
   position: relative;
   box-sizing: border-box;
-  background: white;
+  background: #FDFCFA;
+  border-top: 1px solid #EBEBEB;
   width: 100%;
   min-height: auto;
+  padding: 10px 0;
+  clear: left;
+  -moz-transition-property: background;
+  -o-transition-property: background;
+  -webkit-transition-property: background;
+  transition-property: background;
+  -moz-transition-duration: 0.1s;
+  -o-transition-duration: 0.1s;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+}
+.twister-user:hover {
+  background: white;
 }
 
 img.twister-user-photo {
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
   float: left;
-  vertical-align: middle;
   display: block;
   float: left;
-  vertical-align: middle;
   width: 48px;
-  height: 48px;
-  margin: 10px;
-  background: #dddddd;
+  height: auto;
+  margin: 0 10px;
+  background: #EBEBEB;
 }
 
 .followers {
@@ -2410,7 +2446,7 @@ img.twister-user-photo {
 }
 
 .refresh-toptrends:hover, .twistday-reminder .refresh:hover, .refresh-users:hover, .view-all-users:hover {
-  color: #B4C669;
+  color: #A1B775;
   text-decoration: none;
   background-color: transparent;
 }
@@ -2451,108 +2487,126 @@ ol.toptrends-list a:hover {
 }
 
 /********* TWISTDAY REMINDER ****** */
-.twistday-reminder {
-  width: 100%;
-  background: white;
-  padding: 20px;
-}
 .twistday-reminder small {
   display: none;
+}
+.twistday-reminder .twister-user {
+  background: #FDFCFA;
+  position: relative;
+  -moz-transition-property: background;
+  -o-transition-property: background;
+  -webkit-transition-property: background;
+  transition-property: background;
+  -moz-transition-duration: 0.1s;
+  -o-transition-duration: 0.1s;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+}
+.twistday-reminder .twister-user:hover {
+  background: white;
+}
+.twistday-reminder .twister-user-full, .twistday-reminder .twister-user-tag {
+  padding: 0 0 0.5rem 0;
+  font-size: 1rem;
+  line-height: 1rem;
+  color: #444;
+  font-weight: 500;
+  opacity: 1;
+  letter-spacing: 0;
+  display: inline-block;
+}
+.twistday-reminder .twisterday {
+  font-size: 12px;
 }
 
 /******* LOADER ************ */
 .postboard-loading, .loading-roller {
-  clear: both;
-  text-align: center;
+  font-size: 100px;
+  width: 0.4em;
+  height: 0.4em;
+  position: relative;
+  list-style: none;
+  border-radius: 50%;
+  margin: 100px auto;
+  display: none;
 }
 .postboard-loading div, .loading-roller div {
-  display: inline-block;
-  width: 120px;
-  height: 10px;
-  background-color: #aaa;
-  position: relative;
-  margin: 10px 0 0 0;
-}
-.postboard-loading div:after, .loading-roller div:after {
-  content: "";
+  width: 0.1em;
+  height: 0.1em;
   position: absolute;
-  background-color: white;
-  left: 2px;
-  top: 2px;
-  bottom: 2px;
-  z-index: 999;
-  animation-name: slide;
-  animation-duration: 1.5s;
-  animation-easing-function: linear;
-  animation-iteration-count: infinite;
-  -webkit-animation-name: slide;
-  -webkit-animation-duration: 1.5s;
-  -webkit-animation-easing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation-name: slide;
-  -moz-animation-duration: 1.5s;
-  -moz-animation-easing-function: linear;
-  -moz-animation-iteration-count: infinite;
+  border-radius: 50%;
+}
+.postboard-loading div:nth-child(1), .loading-roller div:nth-child(1) {
+  background: #62839F;
+  top: 0;
+  left: 50%;
+  margin-left: -0.05em;
+  transform-origin: 50% 250%;
+  animation: rota 1.13s linear infinite, opa 3.67s ease-in-out infinite alternate;
+}
+.postboard-loading div:nth-child(2), .loading-roller div:nth-child(2) {
+  background: #749294;
+  top: 50%;
+  right: 0;
+  margin-top: -0.05em;
+  transform-origin: -150% 50%;
+  animation: rota 1.86s linear infinite, opa 4.29s ease-in-out infinite alternate;
+}
+.postboard-loading div:nth-child(3), .loading-roller div:nth-child(3) {
+  background: #94AC7E;
+  bottom: 0;
+  left: 50%;
+  margin-left: -0.05em;
+  transform-origin: 50% -150%;
+  animation: rota 1.45s linear infinite, opa 5.12s ease-in-out infinite alternate;
+}
+.postboard-loading div:nth-child(4), .loading-roller div:nth-child(4) {
+  background: #B4C669;
+  top: 50%;
+  left: 0;
+  margin-top: -0.05em;
+  transform-origin: 250% 50%;
+  animation: rota 1.72s linear infinite, opa 5.25s ease-in-out infinite alternate;
 }
 
-@keyframes slide {
-  0% {
-    right: 60px;
-    left: 2px;
-  }
-  5% {
-    left: 2px;
-  }
-  50% {
-    right: 2px;
-    left: 60px;
-  }
-  55% {
-    right: 2px;
-  }
-  100% {
-    right: 60px;
-    left: 2px;
+@keyframes rota {
+  to {
+    transform: rotate(360deg);
   }
 }
-@-webkit-keyframes slide {
-  0% {
-    right: 100px;
-    left: 2px;
+@keyframes opa {
+  12.0% {
+    opacity: 0.8;
   }
-  5% {
-    left: 2px;
+  19.5% {
+    opacity: 0.88;
   }
-  50% {
-    right: 2px;
-    left: 100px;
+  37.2% {
+    opacity: 0.64;
   }
-  55% {
-    right: 2px;
+  40.5% {
+    opacity: 0.52;
   }
-  100% {
-    right: 100px;
-    left: 2px;
+  52.7% {
+    opacity: 0.69;
   }
-}
-@-moz-keyframes slide {
-  0% {
-    right: 60px;
-    left: 2px;
+  60.2% {
+    opacity: 0.6;
   }
-  5% {
-    left: 2px;
+  66.6% {
+    opacity: 0.52;
   }
-  50% {
-    right: 2px;
-    left: 60px;
+  70.0% {
+    opacity: 0.63;
   }
-  55% {
-    right: 2px;
+  79.9% {
+    opacity: 0.6;
   }
-  100% {
-    right: 60px;
-    left: 2px;
+  84.2% {
+    opacity: 0.75;
+  }
+  91.0% {
+    opacity: 0.87;
   }
 }
 /* Options */
