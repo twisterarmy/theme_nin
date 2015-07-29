@@ -66,14 +66,15 @@ $modal-postboard-post-height: 100%
 	padding: $modal-gut
 .profile-card-main
 	position: relative
-	text-align: center
+	text-align: left
 	word-wrap: break-word
 	transition: all .2s linear
 	background: none!important
-	padding: 10px
-
-
-
+	padding: 10px 
+	h1, h2 
+		display: inline !important
+		b 
+			font-weight: 400
 	&:before
 		content: ""
 		border: solid 0px #fff
@@ -91,18 +92,17 @@ $modal-postboard-post-height: 100%
 .profile-card-photo
 	height: auto
 	width: $usr-img
-	margin: 0 auto
+	margin: 0 10px 10px 0
 	display: block
 	float: left
 .profile-card-photo.forEdition
 	float: none
 
 .profile-bio
-	padding: 10px
 	font-style: italic
-	text-align: center
-	font-size: .8em
-
+	text-align: left
+	font-size: 1rem
+	margin-left:  $usr-img + 10
 .profile-card-buttons 
 	text-align: center
 	padding: 0 0 $space 0
@@ -116,13 +116,6 @@ $modal-postboard-post-height: 100%
 	@extend .color-1
 .unfollow
 	@extend .color-2
-
-
-
-
-
-
-
 
 
 .known-followers

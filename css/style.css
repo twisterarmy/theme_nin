@@ -1048,11 +1048,17 @@ button.light:hover, a.button.light:hover {
 
 .profile-card-main {
   position: relative;
-  text-align: center;
+  text-align: left;
   word-wrap: break-word;
   transition: all 0.2s linear;
   background: none !important;
   padding: 10px;
+}
+.profile-card-main h1, .profile-card-main h2 {
+  display: inline !important;
+}
+.profile-card-main h1 b, .profile-card-main h2 b {
+  font-weight: 400;
 }
 .profile-card-main:before {
   content: "";
@@ -1073,7 +1079,7 @@ button.light:hover, a.button.light:hover {
 .profile-card-photo {
   height: auto;
   width: 64px;
-  margin: 0 auto;
+  margin: 0 10px 10px 0;
   display: block;
   float: left;
 }
@@ -1083,10 +1089,10 @@ button.light:hover, a.button.light:hover {
 }
 
 .profile-bio {
-  padding: 10px;
   font-style: italic;
-  text-align: center;
-  font-size: 0.8em;
+  text-align: left;
+  font-size: 1rem;
+  margin-left: 74px;
 }
 
 .profile-card-buttons {
@@ -2227,7 +2233,7 @@ ul.userMenu-search-profiles button {
   transition-timing-function: ease-out;
   z-index: 120;
 }
-#postboard-top.on, #postboard-top {
+#postboard-top.on {
   -moz-box-shadow: 0 8px 13px rgba(17, 17, 17, 0.2);
   -webkit-box-shadow: 0 8px 13px rgba(17, 17, 17, 0.2);
   box-shadow: 0 8px 13px rgba(17, 17, 17, 0.2);
