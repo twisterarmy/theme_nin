@@ -3,7 +3,6 @@
 
 // vars for postboard 
 
-$avatar-width : 45px
 
 
 .postboard
@@ -80,7 +79,7 @@ $avatar-width : 45px
 	display: inline-block
 	float: left
 	vertical-align: middle
-	width: $avatar-width
+	width: $mini-usr-img
 	img
 		width: 100%
 		height: auto!important
@@ -116,11 +115,12 @@ $avatar-width : 45px
 		color: lighten($dark-grey,5%)
 
 .post-text
-	margin: 0 0 0 ($avatar-width +10)
+	margin: 0 0 0 ($mini-usr-img +10)
 	word-wrap: break-word
-	min-height: $avatar-width - 20
+	min-height: $mini-usr-img - 20
 	padding: 0
-
+	a:hover 
+		text-decoration: underline
 
 
 .post-context

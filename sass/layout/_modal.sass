@@ -19,7 +19,8 @@ $header-modal-height : $menu-height
 	right: 0
 	bottom: 0
 	overflow: hidden
-
+	+border-radius(20px 0 0 0)
+	+box-shadow(-8px 0 13px rgba(#111, 0.2))
 	.postboard
 		border: none
 		padding: 0
@@ -231,7 +232,7 @@ $header-modal-height : $menu-height
 		display: none
 .mini-following-info
 	border-bottom: 1px solid $main-background-color
-	line-height: 45px
+	line-height: $mini-usr-img
 
 	a 
 		display: block 
@@ -239,12 +240,11 @@ $header-modal-height : $menu-height
 		width: 100%
 		@extend .clear-fix
 		color: $defaut-font-color
-		background: $bloc-background-color
+		background: $bloc-light-color
 		&:hover 
-			background: $bloc-light-color
+			background: white
 	.mini-profile-photo
-		height: 48px
-		width: 48px
+		width: $mini-usr-img
 		line-height: 0
 		margin: 0 $space 0 0
 		float: left
@@ -277,10 +277,11 @@ $header-modal-height : $menu-height
 		font-size: .8rem
 		line-height: 1rem
 		width: 80%
+		padding-left: $mini-usr-img + 20
 	button 
 		position: absolute 
-		right: 0
-		top: 5%
+		right: 10px
+		top: 10px
 		@extend .small	
 	.bio
 		color: rgba(0, 0, 0, 0.6)

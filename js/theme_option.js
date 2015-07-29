@@ -25,7 +25,7 @@ $(document).ready(function()
     $('.modal-back').html('');
     $('.twister-user-remove').html('');
     $('.profile-card-main').attr('style', '');
-    $('.userMenu-search-profiles button').html('').attr('title',polyglot.t('Follow'));
+    $('.userMenu-search-profiles button').html('+').attr('title',polyglot.t('Follow'));
     $('.mini-profile-actions span').html('');
     $('.promoted-posts-only').detach().appendTo($('.dashboard.left'));
     $('.mini-profile-indicators').detach().insertAfter($('.dashboard.left .profile-data'));
@@ -47,21 +47,21 @@ $(document).ready(function()
         //active promoted posts tab
         $(this).children('.promoted-posts').addClass(promotedPostsOnly ? "active" : "disabled");
         $(this).children('.normal-posts').addClass(promotedPostsOnly ? "disabled" : "active");
-        $('#postboard-top').removeClass(promotedPostsOnly ? "show" : "hide");
+        //$('#postboard-top').removeClass(promotedPostsOnly ? "show" : "hide");
         //active normal posts
         $(this).children('.promoted-posts').removeClass(promotedPostsOnly ? "disabled" : "active");
         $(this).children('.normal-posts').removeClass(promotedPostsOnly ? "active" : "disabled");
-        $('#postboard-top').addClass(promotedPostsOnly ? "hide" : "show");
+        //$('#postboard-top').addClass(promotedPostsOnly ? "hide" : "show");
     });
 
 
 
     $(".userMenu-search-profiles .follow")
         .on("eventToggleFollow", function() {
-            $(this).text('').attr('title', polyglot.t('Follow'));
+            $(this).text('+').attr('title', polyglot.t('Follow'));
         })
         .on("eventToggleUnfollow", function() {
-            $(this).text('').attr('title', polyglot.t('Unfollow'));
+            $(this).text('-').attr('title', polyglot.t('Unfollow'));
         });
 
     if (/\/options.html$/i.test(document.location))

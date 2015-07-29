@@ -32,8 +32,8 @@
 
 	li
 		cursor: pointer
-		display: inline-block
-		margin: 0 0 0 5px
+		display: block
+		margin: 0
 		padding: 5px 15px
 		font-size: .9em
 		transition: color .1s linear
@@ -102,9 +102,9 @@
 	display: none
 	background: $main-color-dark
 	position: absolute
-	top: 45px
-	right: -10px
-	width: 250px
+	top: $menu-height - 4
+	right: 0
+	width: 320px
 	overflow: hidden
 	+box-shadow(0 8px 33px rgba(#000, .3))
 
@@ -122,22 +122,41 @@
 ul.userMenu-search-profiles
 	width: 100%
 	padding: 0
-	background: $bloc-light-color
+	
 	
 	li
 		float: none
 		display: block
 		margin: 0
 		@extend .clear-fix
+		cursor: pointer
+		background: $bloc-light-color
 		border-bottom: 1px solid $main-background-color
-	.mini-profile-name
-		font-size: 12px
-		display: block
-		margin: 0
-		padding: 0
+		&:hover 
+			background: white
+
+		a
+			display: block 
+			width: 100%
+			font-size: 12px
+			font-weight: 400
+			line-height: $mini-usr-img
+			display: block
+			margin: 0
+			padding: 0
+			color: $defaut-font-color
+			span, b 
+				display: inline-block
+				color: $defaut-font-color
+				font-weight: 400
+				font-size: 12px
+
+	.mini-screen-name b,  
+	.mini-screen-name
+		font-weight: 500
 	.mini-profile-photo
-		width: 30px
-		height: 30px
+		width: $mini-usr-img
+		height: auto
 		margin: 10px
 		float: left
 	.mini-profile-info
@@ -145,15 +164,18 @@ ul.userMenu-search-profiles
 		float: none
 
 	button
-		padding: 3px 5px
+		font-size: 1.4rem
+		line-height: $mini-usr-img - 15
+		height: $mini-usr-img - 10
+		width: $mini-usr-img
+		text-align: center
+		font-weight: 500
+		padding: 0
 		+border-radius(2px)
 		@extend .extend-icon
-		&:after
-			content: ''
-			font-family: $symbol-font-family
-			font-size: 1.1rem
+
 		position: absolute
-		bottom: 10px
+		top: 10px 
 		right: 10px
 
 
@@ -161,7 +183,7 @@ ul.userMenu-search-profiles
 .userMenu-search input[type="text"]
 	float: right
 	padding: 3px 10px
-	margin: 9px 20px 0 0
+	margin: 10px 20px 0 0
 	border: none
 	background: $bloc-background-color
 	box-sizing: border-box
@@ -271,16 +293,12 @@ ul.userMenu-search-profiles
 
 
 .mini-profile-photo
-	width: 70px
-	height: 70px
-	overflow: hidden
-	+border-radius(50%)
+	width: $usr-img
+	height: auto
 	display: block
 	margin: auto
 	img
-		min-width: 100%
-		min-height: 100%
-		border-radius: (50%)
+		width: 100%
 
 
 
@@ -356,7 +374,7 @@ ul.userMenu-search-profiles
 		-moz-transition: height 0.3s linear
 		-o-transition: height 0.3s linear
 		-ms-transition: height 0.3s linear
-		height: 48px
+		height: $mini-usr-img
 		border: none
 		background: rgba(255, 255, 255, 1)
 		border: 1px solid rgba(0, 0, 0, 0.1)
@@ -367,14 +385,18 @@ ul.userMenu-search-profiles
 
 #postboard-top
 	clear: both
-	position: relative
+	position: fixed 
+	top: $menu-height
+	width: 30%
 	@extend .clear-fix
 	margin-bottom: 1px
+	left: 0
 	transition: height .3s linear
 	padding: 10px 10px 5px 10px
 	background: white
 	overflow: hidden
 	display: none
+	z-index: 120
 	&.hide
 		display: none!important
 	&.show
@@ -384,9 +406,7 @@ ul.userMenu-search-profiles
 		position: absolute
 		top: 10px
 		left: 10px
-		width: 48px
-		height: 48px
-		overflow: hidden
+		width: $mini-usr-img
 		img
 			width: 100%
 	.post-area
@@ -497,8 +517,7 @@ img.twister-user-photo
 	float: left
 	display: block
 	float: left
-
-	width: 48px
+	width: $mini-usr-img
 	height: auto
 	margin: 0 10px
 	background: $main-background-color
