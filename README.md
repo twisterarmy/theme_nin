@@ -1,7 +1,7 @@
 Theme Nin v2 for twister-html
 =============================
 
-Nin is a clean and flat theme for the P2P microblogging plateform [Twister](http://twister.net.co) [(twister-core on github)](https://github.com/miguelfreitas/twister-core) based on the html client [twister-html](https://github.com/miguelfreitas/twister-html)
+Nin is a clean and flat theme for the P2P microblogging platform [Twister](http://twister.net.co) [(twister-core on github)](https://github.com/miguelfreitas/twister-core) based on the html client [twister-html](https://github.com/miguelfreitas/twister-html)
 
 ### Install
 
@@ -14,7 +14,7 @@ Homepage
 ![homepage](https://raw.githubusercontent.com/myleneb/theme_nin/nin-v2/captures/home.jpg)
 
 
-Exemple with hashtag search results in sidebar:
+Example with hashtag search results in sidebar:
 ![hashtag-search](https://raw.githubusercontent.com/myleneb/theme_nin/nin-v2/captures/search-hashtag.jpg)
 
 
