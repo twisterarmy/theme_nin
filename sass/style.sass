@@ -27,25 +27,25 @@
 
 .promoted-posts-only
 	margin: 0 0
-	@extend .clear-fix
-	float: right
-
+	
 	li
 		cursor: pointer
 		display: block
 		margin: 0
-		padding: 5px 15px
+		padding: 5px 
+		border-bottom: 1px solid $main-background-color
+		text-align: center
 		font-size: .9em
 		transition: color .1s linear
-		&.active
-			color: $main-color-dark
-			background: white
+		&.disabled 
+			background: #F4F3F2 
+		&.active, &.active span
+			color: $defaut-font-color
 			cursor: default
-		&:hover, &.disabled:hover
-			color: $main-color-dark
-		&.disabled
-			color: $main-color-light
-			background: $light-grey
+		&:hover span, &.disabled:hover span
+			color: $defaut-font-color
+		&.disabled span
+			color: rgba($defaut-font-color, .3)
 
 
 
@@ -66,9 +66,10 @@
 		position: absolute 
 		top: $menu-height 
 		left: 0
-		width: 30%
+		width: 15%
 		> .module
 			float: right
+			width: $usr-img * 2
 	&.right 
 		position: fixed 
 		right: 0
@@ -82,6 +83,7 @@
 		background: $bloc-light-color
 		width: 100%
 		@extend .box-shadow
+		@extend .clear-fix
 		h3
 			float: left
 			padding: 20px
@@ -145,7 +147,7 @@ ul.userMenu-search-profiles
 			margin: 0
 			padding: 0
 			color: $defaut-font-color
-			span, b 
+			span, b, span:hover, b:hover
 				display: inline-block
 				color: $defaut-font-color
 				font-weight: 400
@@ -154,7 +156,7 @@ ul.userMenu-search-profiles
 	.mini-screen-name b,  
 	.mini-screen-name
 		font-weight: 500
-	.mini-profile-photo
+	.mini-profile-photo 
 		width: $mini-usr-img
 		height: auto
 		margin: 10px
@@ -203,9 +205,7 @@ ul.userMenu-search-profiles
 
 .mini-profile
 	@extend .box-shadow
-	.mini-profile-info
-
-		
+	
 	a.button
 		background: $main-color-light
 		margin: 1em auto
@@ -227,20 +227,15 @@ ul.userMenu-search-profiles
 	text-align: center
 	@extend .clear-fix
 	border-top: 1px solid $main-background-color
-	border-bottom: 1px solid $main-background-color
-	background: white 
+	background: #F4F3F2 
 
 	li
 		+box-sizing(border-box)
 		display: block
 		position: relative
 		font-size: .8em
-		width: 25%
-		float: left
 		text-align: center
-		border-right: 1px solid $main-background-color
-		&:last-child 
-			border: none
+		border-bottom: 1px solid $main-background-color
 
 		a
 			color: lighten($dark-grey,20%)
@@ -248,6 +243,7 @@ ul.userMenu-search-profiles
 			padding: 1rem 0
 			&:hover
 				color: $dark-grey
+				background: $bloc-light-color
 			&:before 
 				display: block!important
 				width: 100%!important
@@ -283,22 +279,21 @@ ul.userMenu-search-profiles
 
 .mini-profile-name
 	color: $dark-grey
-	font-size: 1.3em
-	font-weight: 700
+	font-size: 1em
+	font-weight: 500
 	padding: 10px  0
 	display: block
+	text-align: center
 	margin: auto
 	&:hover
 		color: $main-color-light
 
 
-.mini-profile-photo
+.mini-profile-photo img
 	width: $usr-img
 	height: auto
 	display: block
-	margin: auto
-	img
-		width: 100%
+	margin: 32px auto 0 auto
 
 
 
@@ -325,7 +320,15 @@ ul.userMenu-search-profiles
 				&.posts-count, &.following-count, &.followers-count
 					display: inline-block
 					padding-right: 5px
-
+.mini-profile
+	a
+		span.following-count
+			display: block 
+			font-weight: 900
+			font-size: 1.2rem
+			color: lighten($dark-grey,20%)
+		&:hover span.following-count
+			color: $dark-grey
 
 .mini-profile-info a:hover
 	text-decoration: none
@@ -364,6 +367,7 @@ ul.userMenu-search-profiles
 /***************** POST AREA ***************/
 
 .post-area-new
+	
 	textarea
 		resize: none
 		+box-sizing(border-box)
@@ -383,19 +387,26 @@ ul.userMenu-search-profiles
 		&:focus
 			border-bottom: solid 1px $main-color-color
 
+.mini-profile .post-area
+	display: none
+
 #postboard-top
 	clear: both
-	position: fixed 
-	top: $menu-height
-	width: 30%
+	position: relative 
 	@extend .clear-fix
-	margin-bottom: 1px
-	left: 0
+	margin-bottom: 10px
 	transition: height .3s linear
-	padding: 10px 10px 5px 10px
+	padding: 10px
 	background: white
 	overflow: hidden
-	display: none
+	background: $bloc-light-color
+	+box-shadow(0 0 13px rgba(#111, 0))
+	+transition-property(box-shadow)
+	+transition-duration(.2s)
+	+transition-timing-function(ease-out)	
+	@extend .on
+	&.on 
+		+box-shadow(0 8px 13px rgba(#111, 0.2))
 	z-index: 120
 	&.hide
 		display: none!important
@@ -417,6 +428,7 @@ ul.userMenu-search-profiles
 		padding-right: 0
 		display: inline
 		+box-sizing(border-box)
+		background: none
 		float: right
 		.post-area-new
 			@extend .open
@@ -580,8 +592,7 @@ img.twister-user-photo
 	letter-spacing: 0
 	float: right
 	display: block
-	padding: 4px
-	margin: 0 0 0 15px
+	margin:  5px
 	position: relative
 
 .view-all-users
@@ -593,8 +604,7 @@ img.twister-user-photo
 	letter-spacing: 0
 	float: right
 	display: block
-	padding: 4px
-	margin: 0 0 0 15px
+	margin: 5px
 	position: relative
 
 .refresh-toptrends:hover, .twistday-reminder .refresh:hover, .refresh-users:hover, .view-all-users:hover
@@ -604,13 +614,11 @@ img.twister-user-photo
 
 /***********TOP TRENDS***************/
 
-.toptrends
-
-
-ol.toptrends-list
+.toptrends-list
 	margin: 0
-	margin-bottom: 10px
 	clear: both
+	border-top: 1px solid $main-background-color
+	padding: 10px
 
 	li
 		display: inline-block
@@ -624,9 +632,8 @@ ol.toptrends-list
 		margin: 3px
 		font-weight: 500
 		background: white
-		@extend .box-shadow
+		+box-shadow(0 5px 8px rgba(#555, 0.2))
 		&:hover
-			background: rgba(white,.4)
 			color: $main-color-dark
 
 /********* TWISTDAY REMINDER *******/

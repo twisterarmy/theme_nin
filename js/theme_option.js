@@ -4,30 +4,34 @@
 
 $(window).resize(function()
 {
-
+    $('.module.toptrends').detach().appendTo($('.dashboard.right'));
     $('.module.who-to-follow').detach().appendTo($('.dashboard.right'));
     $('.module.twistday-reminder').detach().appendTo($('.dashboard.right'));
 });
 
 
 
-
-
 $(document).ready(function()
 {
-
+    $('.module.toptrends').detach().appendTo($('.dashboard.right'));
     $('.module.who-to-follow').detach().appendTo($('.dashboard.right'));
     $('.module.twistday-reminder').detach().appendTo($('.dashboard.right'));
+
+    $('#postboard-top textarea').on('blur',function(){$('#postboard-top').removeClass('on');});
+    $('#postboard-top textarea').on('focus',function(){$('#postboard-top').addClass('on');});
+
+
+
     var windowHeight = $(window).height();
     $('.modal-close').html('');
-    //$('.mini-profile .open-following-page').parent('li').detach().appendTo($('.mini-profile-indicators'));
+    $('.mini-profile .open-following-page').parent('li').detach().appendTo($('.mini-profile-indicators'));
 
     $('.modal-back').html('');
     $('.twister-user-remove').html('');
     $('.profile-card-main').attr('style', '');
     $('.userMenu-search-profiles button').html('+').attr('title',polyglot.t('Follow'));
     $('.mini-profile-actions span').html('');
-    $('.promoted-posts-only').detach().appendTo($('.dashboard.left'));
+    $('.promoted-posts-only').detach().appendTo($('.left .mini-profile'));
     $('.mini-profile-indicators').detach().insertAfter($('.dashboard.left .profile-data'));
     $('.post-context').each(function(){
         $(this).prependTo($(this).parent());
@@ -47,11 +51,11 @@ $(document).ready(function()
         //active promoted posts tab
         $(this).children('.promoted-posts').addClass(promotedPostsOnly ? "active" : "disabled");
         $(this).children('.normal-posts').addClass(promotedPostsOnly ? "disabled" : "active");
-        //$('#postboard-top').removeClass(promotedPostsOnly ? "show" : "hide");
+        $('#postboard-top').removeClass(promotedPostsOnly ? "show" : "hide");
         //active normal posts
         $(this).children('.promoted-posts').removeClass(promotedPostsOnly ? "disabled" : "active");
         $(this).children('.normal-posts').removeClass(promotedPostsOnly ? "active" : "disabled");
-        //$('#postboard-top').addClass(promotedPostsOnly ? "hide" : "show");
+        $('#postboard-top').addClass(promotedPostsOnly ? "hide" : "show");
     });
 
 
