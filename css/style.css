@@ -2281,6 +2281,7 @@ ul.userMenu-search-profiles button {
   -webkit-transition-duration: 0.1s;
   transition-duration: 0.1s;
   width: 100% !important;
+  word-wrap: break-word;
 }
 
 .post-area-new.open textarea, .mini-profile .post-area-new textarea, #postboard-top .post-area .post-area-new textarea {
