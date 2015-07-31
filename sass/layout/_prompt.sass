@@ -1,0 +1,73 @@
+/*********** POPUP PROMPT *************/
+
+.prompt-wrapper
+	background: $bloc-light-color
+
+	z-index: 5
+	position: fixed
+	top: 50%
+	left: 50%
+	width: 600px
+	margin-left: -300px
+	+box-shadow(0 8px 33px rgba(#000, .3))
+	.modal-buttons, .following-config-method-buttons
+		padding: 0 20px 20px 0
+		float: right
+	.modal-content
+		padding: 20px
+	.post-data
+		border: 1px solid $bloc-background-color
+		position: relative
+		padding: 10px 
+		background: white
+	.modal-header
+		@extend .modal-header 
+		h3 span 
+			padding-left: 5px 
+			color: white 
+			&:hover 
+				cursor: default
+
+
+ 
+/************ FOLLOWING-CONFIG MODAL **********/
+
+.prompt-wrapper.following-config-modal
+	margin-top: -100px
+	.modal-buttons
+		display: none
+	h2
+		text-transform: none
+		display: inline-block!important
+		font-size: 1rem 
+		font-weight: 400
+		padding: $space
+		span
+			display: inline-block!important
+			b
+				font-weight: 400
+
+
+
+/************ RETWIST POSTS MODAL **********/
+
+.prompt-wrapper.reTwist
+	&.prompt-wrapper
+		margin-top: -110px
+
+	.post-expand, .post-interactions
+		display: none
+	.post-info-time 
+		position: static
+		float: right
+
+
+/********* REPLY POSTS MODAL***************/
+
+.prompt-wrapper.reply
+	&.prompt-wrapper
+		margin-top: -110px
+	.modal-buttons, .post-expand, .post-interactions
+		display: none
+	.post-area
+		padding-bottom: 6px

@@ -1,41 +1,16 @@
-
-
-
-
 $(window).resize(function()
 {
-    $('.module.toptrends').detach().appendTo($('.dashboard.right'));
-    $('.module.who-to-follow').detach().appendTo($('.dashboard.right'));
-    $('.module.twistday-reminder').detach().appendTo($('.dashboard.right'));
+    reAppendModules();
 });
-
-
 
 $(document).ready(function()
 {
-    $('.module.toptrends').detach().appendTo($('.dashboard.right'));
-    $('.module.who-to-follow').detach().appendTo($('.dashboard.right'));
-    $('.module.twistday-reminder').detach().appendTo($('.dashboard.right'));
+    var windowHeight = $(window).height();
+
+    reOrganizeTemplates()
 
     $('#postboard-top textarea').on('blur',function(){$('#postboard-top').removeClass('on');});
     $('#postboard-top textarea').on('focus',function(){$('#postboard-top').addClass('on');});
-
-
-
-    var windowHeight = $(window).height();
-    $('.modal-close').html('');
-    $('.mini-profile .open-following-page').parent('li').detach().appendTo($('.mini-profile-indicators'));
-
-    $('.modal-back').html('');
-    $('.twister-user-remove').html('');
-    $('.profile-card-main').attr('style', '');
-    $('.userMenu-search-profiles button').html('+').attr('title',polyglot.t('Follow'));
-    $('.mini-profile-actions span').html('');
-    $('.promoted-posts-only').detach().appendTo($('.left .mini-profile'));
-    $('.mini-profile-indicators').detach().insertAfter($('.dashboard.left .profile-data'));
-    $('.post-context').each(function(){
-        $(this).prependTo($(this).parent());
-    });
 
 
     $( '.userMenu-home.current a' ).on( 'click', function() {
@@ -45,9 +20,8 @@ $(document).ready(function()
 
 
 
-    
-    $( ".promoted-posts-only").click(function() {
     // modify the way promoted posts are shown
+    $( ".promoted-posts-only").click(function() {
         //active promoted posts tab
         $(this).children('.promoted-posts').addClass(promotedPostsOnly ? "active" : "disabled");
         $(this).children('.normal-posts').addClass(promotedPostsOnly ? "disabled" : "active");
@@ -72,16 +46,58 @@ $(document).ready(function()
         $(document).ready(localizeLabels);
 
 
+
+
+    $(window).scroll(function(){
+        window_scrollY = window.pageYOffset; // declare variable here for screen not to scroll when closing modals
+    });
+       /*
+    $(window).scroll(function(){
+        window_scrollY = window.pageYOffset; // declare variable here for screen not to scroll when closing modals
+
+        if ($(document).scrollTop() >= 142) {
+            if (this.css('position') === 'relative')
+                this.addClass('onTop'); 
+        }else if (this.css('position') === 'fixed')
+            this.removeClass('onTop'); 
+    }).bind($('#postboard-top')));*/
+}
+);
+
+function reOrganizeTemplates() { // for nin's templating
+
+    reAppendModules();
+
+    //removes unused html
+    $('.modal-close').html('');
+    $('.modal-back').html('');
+    $('.twister-user-remove').html('');
+    $('.profile-card-main').attr('style', '');
+    $('.userMenu-search-profiles button').html('+').attr('title',polyglot.t('Follow'));
+    $('.mini-profile-actions span').html('');
+
+    //re-organizes
+    $('.promoted-posts-only').detach().appendTo($('.left .mini-profile'));
+    $('.mini-profile .open-following-page').parent('li').detach().appendTo($('.mini-profile-indicators'));
+    $('.mini-profile-indicators').detach().insertAfter($('.dashboard.left .profile-data'));
+    $('.post-context').each(function(){ $(this).prependTo($(this).parent()); }); // puts context on top of post
+
+    //loader
+    newLoader()
+}
+
+function reAppendModules() { // avoid w1200 things
+    $('.module.toptrends').detach().appendTo($('.dashboard.right'));
+    $('.module.who-to-follow').detach().appendTo($('.dashboard.right'));
+    $('.module.twistday-reminder').detach().appendTo($('.dashboard.right'));
+}
+
+
+function newLoader() { // create divs for new loader
     $('<div></div>').appendTo('.postboard-loading');
     $('<div></div>').appendTo('.postboard-loading');
     $('<div></div>').appendTo('.postboard-loading');
-
-
-
-});
-
-
-
+}
 
 function localizeLabels() {
     $("label[for=tab_language]").text(polyglot.t("Language"));
@@ -93,8 +109,8 @@ function localizeLabels() {
 }
 
 function openModal(modal) {
-    window_scrollY = window.pageYOffset;
-
+    
+    var windowHeight = $(window).height();
     if (!modal.classBase)
         modal.classBase = '.modal-wrapper';
 
@@ -118,7 +134,6 @@ function openModal(modal) {
     if (modal.classBase === '.modal-wrapper') {
         modal.content.outerHeight(modal.self.height() - modal.self.find('.modal-header').outerHeight());
 
-        var windowHeight = $(window).height();
         if (modal.self.outerHeight() > windowHeight) {
             modal.content.outerHeight(modal.content.outerHeight() - modal.self.outerHeight() + windowHeight);
             modal.self.outerHeight(windowHeight);
@@ -129,3 +144,4 @@ function openModal(modal) {
 
     return modal;
 }
+

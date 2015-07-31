@@ -10,6 +10,7 @@
 
 // layout
 @import 'layout/_menu'
+@import 'layout/_wrapper'
 @import 'layout/_modal'
 @import 'layout/_profile'
 @import 'layout/_postboard'
@@ -38,7 +39,7 @@
 		font-size: .9em
 		transition: color .1s linear
 		&.disabled 
-			background: #F4F3F2 
+			background: $bloc-background-color
 		&.active, &.active span
 			color: $defaut-font-color
 			cursor: default
@@ -49,50 +50,6 @@
 
 
 
-
-
-
-/* Wrapper and blocks */
-.wrapper
-	width: 100%
-	max-width: 100%
-	margin: auto
-	padding-top: $menu-height
-	position: relative
-	z-index: 1
-
-.dashboard
-	&.left
-		position: absolute 
-		top: $menu-height 
-		left: 0
-		width: 15%
-		> .module
-			float: right
-			width: $usr-img * 2
-	&.right 
-		position: fixed 
-		right: 0
-		top: $menu-height 
-		overflow: hidden
-		width: 30%
-
-	> .module
-		max-width: 320px
-		margin-bottom: 20px
-		background: $bloc-light-color
-		width: 100%
-		@extend .box-shadow
-		@extend .clear-fix
-		h3
-			float: left
-			padding: 20px
-		h4 
-			clear: left
-			border-top: 1px solid $main-background-color
-			padding: 10px
-		small
-			display: none
 
 
 
@@ -159,8 +116,10 @@ ul.userMenu-search-profiles
 	.mini-profile-photo 
 		width: $mini-usr-img
 		height: auto
-		margin: 10px
+		min-height: $mini-usr-img
+		margin: 5px
 		float: left
+		overflow-x: hidden
 	.mini-profile-info
 		width: 100%
 		float: none
@@ -204,8 +163,10 @@ ul.userMenu-search-profiles
 /***************** MINI PROFILE *******************************/
 
 .mini-profile
-	@extend .box-shadow
-	
+
+	a:hover 
+		text-decoration: none 
+
 	a.button
 		background: $main-color-light
 		margin: 1em auto
@@ -227,7 +188,7 @@ ul.userMenu-search-profiles
 	text-align: center
 	@extend .clear-fix
 	border-top: 1px solid $main-background-color
-	background: #F4F3F2 
+	background: $bloc-background-color
 
 	li
 		+box-sizing(border-box)
@@ -261,9 +222,8 @@ ul.userMenu-search-profiles
 
 .messages-qtd
 	position: absolute
-	top: 50%
-	margin-top: -11px
-	right: 11px
+	top: 5px
+	right: 5px
 	background: $main-color-color
 	+text-shadow(1px 1px 0 rgba(#000,.2))
 	color: #fff
@@ -276,6 +236,8 @@ ul.userMenu-search-profiles
 
 .mini-profile-view
 	display: none
+.left .mini-profile-info
+	padding-top: 32px
 
 .mini-profile-name
 	color: $dark-grey
@@ -293,7 +255,7 @@ ul.userMenu-search-profiles
 	width: $usr-img
 	height: auto
 	display: block
-	margin: 32px auto 0 auto
+	margin: auto
 
 
 
@@ -350,14 +312,14 @@ ul.userMenu-search-profiles
 	float: right
 	color: $dark-grey
 
-.mini-follower-link
+.mini-follower-link, .followed-by
 	display: inline-block
 	margin: 1px
 	line-height: 12px
 	&.isFollowing:after
 		display: none
 	&:after
-		content: '·'
+		content: ''
 		font-weight: 900
 		color: $main-color-dark
 		margin-left: 1px
@@ -390,60 +352,19 @@ ul.userMenu-search-profiles
 .mini-profile .post-area
 	display: none
 
-#postboard-top
-	clear: both
-	position: relative 
-	@extend .clear-fix
-	margin-bottom: 10px
-	transition: height .3s linear
-	padding: 10px
-	background: white
-	overflow: hidden
-	background: $bloc-light-color
-	+box-shadow(0 0 13px rgba(#111, 0))
-	+transition-property(box-shadow)
-	+transition-duration(.2s)
-	+transition-timing-function(ease-out)	
-	&.on 
-		+box-shadow(0 8px 13px rgba(#111, 0.2))
-	z-index: 120
-	&.hide
-		display: none!important
-	&.show
-		display: block
 
-	.profile-photo
-		position: absolute
-		top: 10px
-		left: 10px
-		width: $mini-usr-img
-		img
-			width: 100%
-	.post-area
-		overflow: hidden
-		@extend .clear-fix
-		width: 100%
-		padding-left: 58px
-		padding-right: 0
-		display: inline
-		+box-sizing(border-box)
-		background: none
-		float: right
-		.post-area-new
-			@extend .open
-			+box-shadow(none)
-			textarea
-				margin: 0 0 10px 0
 
 
 #post-preview 
-	background: $bloc-background-color 
 	border: 1px solid $main-background-color 
-	padding: 15px
+	border-bottom: 0
+	padding: 5px
 	+transition-property(all)
 	+transition-duration(.1s)
 	width: 100%!important
+	font-size: 90%
 	word-wrap: break-word
+	clear: left
 
 
 
@@ -494,9 +415,6 @@ textarea.splited-post
 				display: none 
 			&:hover button 
 				display: block
-		.bio 
-			text-align: left!important
-
 
 	small
 		display: none
@@ -507,21 +425,6 @@ textarea.splited-post
 		@extend .clear-fix
 		clear: both
 
-.twister-user
-	position: relative
-	box-sizing: border-box
-	background: $bloc-light-color
-	@extend .clear-fix
-	border-top: 1px solid $main-background-color
-	width: 100%
-	min-height: auto
-	padding: 10px 0
-	clear: left
-	+transition-property(background)
-	+transition-duration(.1s)
-	@extend .clear-fix
-	&:hover 
-		background: white
 
 
 
@@ -531,29 +434,29 @@ img.twister-user-photo
 	float: left
 	width: $mini-usr-img
 	height: auto
-	margin: 0 10px
-	background: $main-background-color
+	margin: 0 10px 0 0
 
 
 
 
 .followers
 	font-size: 12px
-	color: $dark-grey
 	label, a
 		display: inline-block
 
 .followed-by
-	color: $main-color-light
 	font-size: 12px
 	cursor: pointer
 	display: block
 
 .twister-user-name, .twister-by-user-name
-	font-weight: bold
+	font-weight: 500
 	font-size: 14px
-	color: $main-color-light
 	text-decoration: none
+	color: $main-color-dark
+.twister-user-name
+	font-weight: 700
+
 
 .twister-user-tag
 	font-size: 12px
@@ -665,9 +568,6 @@ img.twister-user-photo
 
 
 /******* LOADER *************/
-
-
-
 
 .postboard-loading, .loading-roller
 	font-size: 100px

@@ -1,15 +1,23 @@
 
-@media (max-width:1200px)
-
+@media (max-width: $site-width)
 	.right 
 		display: none 
 	.userMenu 
 		ul 
 			padding: 0
-	.postboard 
-		width: 85%
+	.postboard, #postboard-top.onTop
+		position: absolute
+		left: 135px
+		right: 20px
+		width: auto
+
 	.modal-wrapper
 		width: 85%
+		.postboard
+			width: $postboardWidth
+			float: left
+			position: relative 
+			left: 0
 
 @media (max-width: 600px)
 
