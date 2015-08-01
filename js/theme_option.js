@@ -6,19 +6,16 @@ $(window).resize(function()
 $(document).ready(function()
 {
     var windowHeight = $(window).height();
-
+    prout();
     reOrganizeTemplates()
 
     $('#postboard-top textarea').on('blur',function(){$('#postboard-top').removeClass('on');});
     $('#postboard-top textarea').on('focus',function(){$('#postboard-top').addClass('on');});
 
-
     $( '.userMenu-home.current a' ).on( 'click', function() {
         $('html, body').animate({scrollTop:0},300);
         return false
     });
-
-
 
     // modify the way promoted posts are shown
     $( ".promoted-posts-only").click(function() {
@@ -32,8 +29,6 @@ $(document).ready(function()
         $('#postboard-top').addClass(promotedPostsOnly ? "hide" : "show");
     });
 
-
-
     $(".userMenu-search-profiles .follow")
         .on("eventToggleFollow", function() {
             $(this).text('+').attr('title', polyglot.t('Follow'));
@@ -45,9 +40,6 @@ $(document).ready(function()
     if (/\/options.html$/i.test(document.location))
         $(document).ready(localizeLabels);
 
-
-
-
     $(window).scroll(function(){
         window_scrollY = window.pageYOffset; // declare variable here for screen not to scroll when closing modals
     });
@@ -55,14 +47,28 @@ $(document).ready(function()
     $(window).scroll(function(){
         window_scrollY = window.pageYOffset; // declare variable here for screen not to scroll when closing modals
 
-        if ($(document).scrollTop() >= 142) {
+        if ($(document).scrollTop() >= 142) { // fixe the textarea on top while scrolling (could be useful)
             if (this.css('position') === 'relative')
                 this.addClass('onTop'); 
         }else if (this.css('position') === 'fixed')
             this.removeClass('onTop'); 
     }).bind($('#postboard-top')));*/
+});
+
+
+function prout() {
+
+    var modulWrap = 
+
+    $(document).on( 'click', 'h3', function() {
+        var thisList = $(this).parents('.module').find('ol');
+        var thisListTitle = $(this).parents('.module').find('h4');
+        if (thisList.css('display') === 'none') {thisList.slideDown();thisListTitle.slideDown()}
+        else {thisList.slideUp();thisListTitle.slideUp()}
+    });
 }
-);
+
+
 
 function reOrganizeTemplates() { // for nin's templating
 
@@ -81,6 +87,12 @@ function reOrganizeTemplates() { // for nin's templating
     $('.mini-profile .open-following-page').parent('li').detach().appendTo($('.mini-profile-indicators'));
     $('.mini-profile-indicators').detach().insertAfter($('.dashboard.left .profile-data'));
     $('.post-context').each(function(){ $(this).prependTo($(this).parent()); }); // puts context on top of post
+
+    // menu 
+    $('.userMenu li > a').wrapInner('<span class="inner"></span>');
+
+    ///// page following 
+    $('.forEdition h2').detach().prependTo($('.forEdition'));
 
     //loader
     newLoader()
@@ -128,7 +140,7 @@ function openModal(modal) {
         modal.content = modal.self.find('.modal-content');
         modal.postboard = modal.self.find('.postboard-posts');
 
-        modal.self.prependTo('body').fadeIn('slow');
+        modal.self.prependTo('body').slideDown();
      
 
     if (modal.classBase === '.modal-wrapper') {

@@ -23,7 +23,10 @@ $header-modal-height : $menu-height
 	bottom: 0
 	overflow: hidden
 	+box-shadow(-8px 0 13px rgba(#111, 0.2))
-
+	+transition-property(top, bottom)
+	+transition-duration(1s)
+	&.remove 
+		bottom: 300%
 	// NEW USER MODAL //
 
 	&.new-user
@@ -151,7 +154,8 @@ $header-modal-height : $menu-height
 		font-size: 1rem
 		color: white
 	span 
-		@extend .extend-icon
+		
+		@extend .ion
 		position: absolute
 		top: 0
 		line-height: $header-modal-height
@@ -166,14 +170,13 @@ $header-modal-height : $menu-height
 			display: none
 
 		&.modal-close
-			@extend .icon-cancel
+			@extend .ion-close
 			right: 10px
 		&.mark-all-as-read
-			display: none
-			@extend .icon-ok
+			@extend .ion-checkmark
 			right: 70px
 		&.modal-back
-			@extend .icon-left
+			@extend .ion-back
 			right: 35px
 
 
@@ -188,12 +191,18 @@ $header-modal-height : $menu-height
 	box-sizing: border-box
 	background: $bloc-light-color
 	@extend .clear-fix
-	border-top: 1px solid $main-background-color
+	border-bottom: 1px solid $main-background-color
 	width: 100%
 	min-height: auto
 	padding: 7px 
 	clear: left
-
+	&:first-child 
+		border-top: 1px solid $main-background-color
+		border-bottom: 1px solid $main-background-color !important
+	&:last-child 
+		border-bottom: 0
+	small 
+		display: none
 
 /*********** POPUP PROMPT *************/
 

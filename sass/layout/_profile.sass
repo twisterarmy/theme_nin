@@ -64,7 +64,6 @@ $modal-postboard-post-height: 100%
 	position: relative
 	text-align: left
 	word-wrap: break-word
-	transition: all .2s linear
 	background: none!important
 	padding: 10px 
 	h1, h2 
@@ -74,7 +73,6 @@ $modal-postboard-post-height: 100%
 	&:before
 		content: ""
 		border: solid 0px #fff
-		transition: all .2s linear
 		position: absolute
 		left: 1px
 		top: 1px
@@ -95,9 +93,10 @@ $modal-postboard-post-height: 100%
 	float: none
 
 .profile-bio
-	font-style: italic
+	@extend i
 	text-align: left
-	font-size: 1rem
+	font-size: .9rem
+
 	margin-left:  $usr-img + 10
 .profile-card-buttons 
 	text-align: center
@@ -171,46 +170,58 @@ $modal-postboard-post-height: 100%
 	/* EDITION PROFILE*/
 
 .forEdition.profile-card
-	+box-sizing(border-box)
 	@extend .clear-fix
-	width: auto
+	margin: 0
+	width: $postboardWidth 
+	background: none
+	padding: 0
 	.profile-card-main
-		margin: 0
-		width: 330px
-		+box-sizing(border-box)
-		padding: 10px
+		padding: 10px 0
 		input
 			display: block
-			margin: 5px auto
-			background: white
-			border: 1px solid  lighten($dark-grey, 50%)
+			margin: 0 0 10px 100px 
+			width: 600px 
+
+			background: $bloc-background-color
+			border: 1px solid  $bloc-light-color
 			padding: 6px 4px
 			margin-bottom: 4px
-			text-align: center
-			transition: all .2s linear
+			font-size: 1rem 
+			font-weight: 400
 			&:hover, &:focus
 				background: white
 				border-color: $main-color-light
 
-.input-description
-	width: 90%
+	img 
+		width: 70px 
+		float: left
+	h2 
+		font-weight: 400 
+		padding: 1rem 2rem
+		color: white
 
-.input-name
-	font-size: 20px
 
-.forEdition .profile-card-main
-	.input-website, .input-city
-		display: inline-block
-	.input-tox, .input-bitmessage
-		width: 90%
-		margin-top: 10px
-	h2
-		text-transform: none
-		font-weight: 700
-		font-size: .9em
-
-.profile-edition-buttons
-	text-align: right
-
-.selectable_theme.theme_calm
-	display: none
+	button
+		float: right 
+		margin: 10px 
+		&.last-child 
+			margin-right: 0
+		&.submit-changes
+			@extend button.color-1
+		&.toggle-priv-key
+			@extend button.color-2
+	.secret-key-container
+		text-align: left !important
+		font-size: 1rem!important
+	.secret-key
+		clear: both 
+		margin: 20px 0 
+		background: white
+		text-align: left !important
+		font-size: 1rem!important
+		padding: 10px
+	.label 
+		clear: both  
+		display: block
+		font-weight: 500
+		margin: 20px 0 

@@ -26,13 +26,15 @@ button, a.button
 	text-transform: uppercase
 	+transition-property(background, border-color)
 	+transition-duration(.1s)
-	color: #444
+	color: $dark-grey
 	background: #F8F8F8 
 	border: 1px solid darken( #F8F8F8 , 5%)
 	font-family: $symbol-font-family, $main-font-family
 	cursor: pointer
 	&:hover
 		border-color: darken( #F8F8F8 , 15%)
+		text-decoration: none
+		color: $dark-grey
 	&.disabled
 		opacity: .5
 		color: #999

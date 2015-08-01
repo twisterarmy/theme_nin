@@ -12,6 +12,7 @@
 	+transition-property( top)
 	+transition-duration(.1s)
 	+transition-timing-function(ease-out)	
+	+border-radius(11px)
 	top: 0
 	&.on 
 		+box-shadow(1px 2px 2px rgba(#111, 0.1))
@@ -69,7 +70,7 @@
 		+transition-property(margin)
 		+transition-duration(.5s)
 		+transition-timing-function(ease-out)
-		color: lighten($defaut-font-color, 10%)
+		color: $defaut-font-color
 		cursor: pointer
 		&:hover 
 			color: #000
@@ -77,23 +78,23 @@
 		.show-more
 			display: inline-block
 			float: right
-			font-size: 12px
+			font-size: .8rem
 			color: lighten($dark-grey,30%)
-			@extend .extend-icon
-			@extend .icon-chat
+
 			&:hover
 				color: lighten($dark-grey,5%)
 		.post-expand
 			color: lighten($dark-grey,30%)
+			background: $bloc-light-color
 			cursor: pointer
-			font-size: 12px
+			font-size: .8rem
 			position: absolute
 			left: 10px
 			bottom: 10px
 			&:hover
 				color: lighten($dark-grey,5%)		
 		.post-data
-			padding: 10px
+			padding: 12px 15px 
 			background: $bloc-light-color
 
 
@@ -116,11 +117,6 @@
 					.post-expand
 						display: none
 						margin: 0			
-	
-
-
-
-
 
 .post-photo
 	margin: 0
@@ -145,18 +141,18 @@
 		color: black
 
 .post-info-tag
-	font-size: 12px
+	font-size: .8rem
 	opacity: .6
 	margin-top: 4px
 	display: inline-block
 
 .post-info-time
 	position: absolute
-	font-size: 11px
-	line-height: 14px
+	font-size: .8rem
+	line-height: .8rem
 	text-decoration: none
-	top: 11px
-	right: 11px
+	top: 12px
+	right: 15px
 	color: lighten($dark-grey,30%)
 	&:hover
 		color: lighten($dark-grey,5%)
@@ -171,23 +167,21 @@
 
 
 .post-context
-	font-size: 11px
-	line-height: 11px
-	margin: 0 0 1em 0
+	font-size: .8rem
+	line-height: .8rem
+	margin: 0 0 .8rem 0
 	color: lighten($dark-grey,30%)
 	span
-		@extend .icon-twistagain
-		@extend .extend-icon
+		@extend .ion-shuffle
+		@extend .ion
 		&:before
 			display: block
 			float: left
-			background: $main-color-color
-			text-align: center
-			padding: 1px 2px 2px 2px
-			line-height: 9px
-			font-size: 9px
-			+border-radius(3px)
-			color: white
+			color: $main-color-color
+
+			line-height: .8rem
+			font-size: .8rem
+
 			margin-right: .4em
 
 
@@ -197,31 +191,36 @@
 .post-interactions
 	margin: 10px 0 3px 0
 	text-align: right
-	height: 12px
-	line-height: 12px
+	height: .8rem
+	line-height: .8rem
 	span
 		color: lighten($dark-grey,30%)
 		cursor: pointer
-		font-size: 12px
-		line-height: 12px
-		@extend .extend-icon
+		font-size: .8rem
+		line-height: .8rem
+		@extend .ion
 		position: relative
 		margin-left: 7px
 		display: none
+		.open .original & 
+			display: inline-block!important
+
 		&:hover
 			color: lighten($dark-grey,5%)
-
+		&:before 
+			padding: 3px
 		&.post-reply
-			@extend .icon-comment
+			@extend .ion-plus
 		&.post-propagate
-			@extend .icon-twistagain
+			@extend .ion-shuffle
 		&.post-favorite
 			display: none!important //maybe one day
-			@extend .icon-star
+			@extend .ion-alert
 
 	.post:hover &
 		.post-reply, .post-propagate //, .post-favorite maybe one day
 			display: inline-block
+
 
 .open .related
 	.post-reply, 
@@ -252,6 +251,7 @@
 	text-align: center
 	overflow-y: auto
 	background: black
+	clear: both
 
 .post-stats
 	float: left
@@ -261,8 +261,8 @@
 			font-size: 12px
 			float: left
 			line-height: 20px
-			@extend .extend-icon
-			@extend .icon-twistagain
+			@extend .ion-shuffle
+			@extend .ion
 			&:before 
 				margin-right: 0
 			span:last-child 

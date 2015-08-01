@@ -1,8 +1,8 @@
 // vars for the menu
 
-$menu-height : 42px
+$menu-height : 52px
 $menu-font-color: white
-$menuBgColor : #67686C
+$menuBgColor : $dark-grey
 .userMenu
 	width: 100%
 	position: fixed
@@ -22,22 +22,27 @@ $menuBgColor : #67686C
 		background: image-url("logo.png") no-repeat 50% 50% 
 		background-size: 20px
 		li
-			float: left
-			margin: 0 20px 0 0
 			position: relative
-			display: block
+			display: inline-block
+			margin-right: 20px
 			> a
-				line-height: $menu-height
-				padding: 0 .5em
+				line-height: $menu-height 
 				display: inline-block
-				color: rgba($menu-font-color, 0.7)!important
-				font-size: 1.1em
+				color: rgba($menu-font-color, 0.5)!important
+				font-size: 1rem
 				position: relative
-				font-weight: 400
-				+box-sizing(border-box)
+				font-size: 1rem
+				@extend .ion 
 				&:hover
 					color: $menu-font-color!important
 					text-decoration: none
+				
+				&:before
+					padding-right: 5px
+					font-size: 1.5rem
+					line-height: 1rem
+				span 
+					display: inline-block 
 
 
 			&.current  a
@@ -49,28 +54,35 @@ $menuBgColor : #67686C
 .userMenu li
 
 	&.userMenu-home 
-		a span.label
-			display: block!important
-			text-align: center
+		a 
+			@extend .ion-home
+			.label 
+				display: inline-block!important
+
 		.menu-news
 			position: absolute
 			text-align: center
 			display: none
-			top: 4px
-			right: -7px
+			top: 5px
+			right: -12px
 			background: $main-color-color
 			width: 15px 
 			height: 15px
 			line-height: 15px
 			font-size: 10px
 			padding: 1px
+			margin: 0
 			font-weight: 900
 			+border-radius(50%)
-			letter-spacing: -0.01em
 			+box-sizing(content-box)
 			color: white
 			&.show 
 				display: block
+	&.userMenu-network 	a 
+		@extend .ion-network
+
+	&.userMenu-profile 	a 
+		@extend .ion-profile
 
 	&.userMenu-dhtindicator, &.userMenu-connections, &.userMenu-messages
 		display: none!important
@@ -84,15 +96,16 @@ $menuBgColor : #67686C
 			color: $main-color-dark 
 	&.userMenu-search
 		> input 
-			border: 1px solid #dedede
+			border: 1px solid rgba(white,.3)
 			line-height: $menu-height/2
 			font-size: 12px
 			padding: 0 7px
-			background: white
+			background: rgba(white,.1)
+			color: white
+			+border-radius(7px)
 			&:focus 
-				border-color: $main-color-dark
+				border-color: rgba(white,.7)
 	&.userMenu-config > a
-		@extend .icon-cog
-		@extend .extend-icon
+		@extend .ion-gear
 		font-size: 1.5rem
 
