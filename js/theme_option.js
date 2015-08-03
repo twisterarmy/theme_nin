@@ -6,7 +6,10 @@ $(window).resize(function()
 $(document).ready(function()
 {
     var windowHeight = $(window).height();
-    prout();
+    
+    // make right modules expendables
+    //slideUpModules();
+    
     reOrganizeTemplates()
 
     $('#postboard-top textarea').on('blur',function(){$('#postboard-top').removeClass('on');});
@@ -56,9 +59,7 @@ $(document).ready(function()
 });
 
 
-function prout() {
-
-    var modulWrap = 
+function slideUpModules() {
 
     $(document).on( 'click', 'h3', function() {
         var thisList = $(this).parents('.module').find('ol');
@@ -89,9 +90,9 @@ function reOrganizeTemplates() { // for nin's templating
     $('.post-context').each(function(){ $(this).prependTo($(this).parent()); }); // puts context on top of post
 
     // menu 
-    $('.userMenu li > a').wrapInner('<span class="inner"></span>');
+    //$('.userMenu li > a').wrapInner('<span class="inner"></span>');
 
-    ///// page following 
+    ///// page profile 
     $('.forEdition h2').detach().prependTo($('.forEdition'));
 
     //loader

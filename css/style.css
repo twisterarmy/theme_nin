@@ -107,7 +107,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-weight: normal;
   font-style: normal;
 }
-.ion:before, .userMenu > ul li > a:before, .modal-header span:before, .prompt-wrapper .modal-header span:before, .post-context span:before, .post-interactions span:before, .post-stats li.stat-count:before, ul.userMenu-search-profiles button:before, ul.userMenu-search-profiles .show-more-followers:before, .mini-profile-indicators .userMenu-connections a:before, .mini-profile-indicators .userMenu-messages a:before, .mini-profile-indicators .userMenu-user a:before, .twister-user-remove:before, .refresh-toptrends:before, .twistday-reminder .refresh:before, .refresh-users:before, .ion-after:after, .isFollowing:after {
+.ion:before, .userMenu li.userMenu-config > a:before, .modal-header span:before, .prompt-wrapper .modal-header span:before, .bitmessage-ctc:before, .tox-ctc:before, .profile-modal .profile-tox:before, .profile-modal .profile-bitmessage:before, .post-context span:before, .post-interactions span:before, .post-stats li.stat-count:before, ul.userMenu-search-profiles button:before, ul.userMenu-search-profiles .show-more-followers:before, .mini-profile-indicators .userMenu-connections a:before, .mini-profile-indicators .userMenu-messages a:before, .mini-profile-indicators .userMenu-user a:before, .twister-user-remove:before, .refresh-toptrends:before, .twistday-reminder .refresh:before, .refresh-users:before, .view-all-users:before, .ion-after:after, .isFollowing:after {
   display: inline-block;
   font-family: "Ionicons";
   speak: none;
@@ -121,11 +121,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -moz-osx-font-smoothing: grayscale;
 }
 
-.ion:after, .userMenu > ul li > a:after, .modal-header span:after, .prompt-wrapper .modal-header span:after, .post-context span:after, .post-interactions span:after, .post-stats li.stat-count:after, ul.userMenu-search-profiles button:after, ul.userMenu-search-profiles .show-more-followers:after, .mini-profile-indicators .userMenu-connections a:after, .mini-profile-indicators .userMenu-messages a:after, .mini-profile-indicators .userMenu-user a:after, .twister-user-remove:after, .refresh-toptrends:after, .twistday-reminder .refresh:after, .refresh-users:after, .ion-after:before, .isFollowing:before {
+.ion:before, .userMenu li.userMenu-config > a:before, .modal-header span:before, .prompt-wrapper .modal-header span:before, .bitmessage-ctc:before, .tox-ctc:before, .profile-modal .profile-tox:before, .profile-modal .profile-bitmessage:before, .post-context span:before, .post-interactions span:before, .post-stats li.stat-count:before, ul.userMenu-search-profiles button:before, ul.userMenu-search-profiles .show-more-followers:before, .mini-profile-indicators .userMenu-connections a:before, .mini-profile-indicators .userMenu-messages a:before, .mini-profile-indicators .userMenu-user a:before, .twister-user-remove:before, .refresh-toptrends:before, .twistday-reminder .refresh:before, .refresh-users:before, .view-all-users:before {
+  padding: 0 3px;
+}
+
+.ion:after, .userMenu li.userMenu-config > a:after, .modal-header span:after, .prompt-wrapper .modal-header span:after, .bitmessage-ctc:after, .tox-ctc:after, .profile-modal .profile-tox:after, .profile-modal .profile-bitmessage:after, .post-context span:after, .post-interactions span:after, .post-stats li.stat-count:after, ul.userMenu-search-profiles button:after, ul.userMenu-search-profiles .show-more-followers:after, .mini-profile-indicators .userMenu-connections a:after, .mini-profile-indicators .userMenu-messages a:after, .mini-profile-indicators .userMenu-user a:after, .twister-user-remove:after, .refresh-toptrends:after, .twistday-reminder .refresh:after, .refresh-users:after, .view-all-users:after, .ion-after:before, .isFollowing:before {
   display: none;
 }
 
-.ion-alert:before, .post-interactions span.post-favorite:before, .refresh-toptrends:before, .twistday-reminder .refresh:before, .refresh-users:before {
+.ion-alert:before, .post-interactions span.post-favorite:before {
   content: "";
 }
 
@@ -137,7 +141,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   content: "";
 }
 
-.ion-shuffle:before, .post-context span:before, .post-interactions span.post-propagate:before, .post-stats li.stat-count:before {
+.ion-shuffle:before, .post-context span:before, .post-interactions span.post-propagate:before, .post-stats li.stat-count:before, .refresh-toptrends:before, .twistday-reminder .refresh:before, .refresh-users:before {
   content: "";
 }
 
@@ -149,7 +153,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   content: "";
 }
 
-.ion-profile:before, .userMenu li.userMenu-profile a:before, .mini-profile-indicators .userMenu-user a:before {
+.ion-profile:before, .mini-profile-indicators .userMenu-user a:before {
   content: "";
 }
 
@@ -177,12 +181,28 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   content: "";
 }
 
-.ion-home:before, .userMenu li.userMenu-home a:before {
+.ion-home:before {
   content: "";
 }
 
-.ion-network:before, .userMenu li.userMenu-network a:before {
+.ion-network:before {
   content: "";
+}
+
+.ion-eye:before, .view-all-users:before {
+  content: "";
+}
+
+.ion-tox:before, .profile-modal .profile-tox:before, .profile-modal .profile-bitmessage:before {
+  content: "";
+}
+
+.ion-copy:before, .bitmessage-ctc:before, .tox-ctc:before {
+  content: "";
+}
+
+.ion-search:after {
+  content: "";
 }
 
 /* FONTS */
@@ -204,6 +224,8 @@ html, body {
 html {
   font-size: 15px;
   background-color: #ddd;
+  background-image: url('../img/bg.png?1438449671');
+  background-attachment: fixed;
 }
 
 body {
@@ -212,8 +234,6 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   overflow-y: scroll !important;
-  background-image: url('../img/bg.png?1438449671');
-  background-attachment: fixed;
 }
 
 a {
@@ -311,7 +331,7 @@ h3 .isFollowing:after {
   box-shadow: 0 8px 13px rgba(17, 17, 17, 0);
 }
 
-.clear-fix:after, .userMenu > ul:after, .wrapper:after, .dashboard > .module:after, .dashboard > .module ol:after, .modal-wrapper.following-modal a:after, .modal-wrapper .modal-content:after, .modal-header:after, .prompt-wrapper .modal-header:after, .twister-user:after, .direct-messages-thread .post:after, .forEdition.profile-card:after, #postboard-top:after, #postboard-top .post-area:after, .expanded-content:after, .following .following-list li a:after, .network.singleBlock:after, .options .tab-content:after, ul.userMenu-search-profiles li:after, .mini-profile .post-area:after, .mini-profile-indicators:after, .profile-data:after {
+.clear-fix:after, .userMenu > ul:after, .wrapper:after, .dashboard > .module:after, .dashboard > .module ol:after, .modal-wrapper.following-modal a:after, .modal-wrapper .modal-content:after, .modal-header:after, .prompt-wrapper .modal-header:after, .twister-user:after, .direct-messages-thread .post:after, .forEdition.profile-card:after, #postboard-top:after, #postboard-top .post-area:after, .expanded-content:after, .following .following-list li a:after, .network.singleBlock:after, .network.singleBlock .module:after, .options .tab-content:after, ul.userMenu-search-profiles li:after, .mini-profile .post-area:after, .mini-profile-indicators:after, .profile-data:after {
   content: "";
   display: table;
   clear: both;
@@ -398,7 +418,7 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   left: 0;
   margin: 0;
   background-color: #3E3C42;
-  z-index: 2;
+  z-index: 40;
 }
 .userMenu > ul {
   -moz-box-sizing: border-box;
@@ -407,13 +427,13 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   max-width: 100%;
   width: 1200px;
   margin: auto;
-  background: url('../img/logo.png?1437893891') no-repeat 50% 50%;
+  background: url('../img/logo.png?1438462463') no-repeat 50% 50%;
   background-size: 20px;
 }
 .userMenu > ul li {
   position: relative;
   display: inline-block;
-  margin-right: 20px;
+  margin: 0 10px;
 }
 .userMenu > ul li > a {
   line-height: 52px;
@@ -429,8 +449,6 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
 }
 .userMenu > ul li > a:before {
   padding-right: 5px;
-  font-size: 1.5rem;
-  line-height: 1rem;
 }
 .userMenu > ul li > a span {
   display: inline-block;
@@ -474,7 +492,6 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
 .userMenu li.userMenu-config, .userMenu li.userMenu-search {
   float: right;
   position: relative;
-  margin-right: 0;
   color: white;
 }
 .userMenu li.userMenu-config + a, .userMenu li.userMenu-search + a {
@@ -483,6 +500,7 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
 .userMenu li.userMenu-search > input {
   border: 1px solid rgba(255, 255, 255, 0.3);
   line-height: 26px;
+  margin-top: 13px;
   font-size: 12px;
   padding: 0 7px;
   background: rgba(255, 255, 255, 0.1);
@@ -503,7 +521,7 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   width: 1200px;
   max-width: 100%;
   margin: auto;
-  padding-top: 62px;
+  padding-top: 70px;
   position: relative;
   z-index: 1;
 }
@@ -511,20 +529,20 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
 .dashboard.left {
   top: 52px;
   float: left;
-  width: 170px;
+  width: 168px;
   min-height: 700px;
 }
 .dashboard.left > .module {
   width: 150px;
   position: fixed;
-  top: 62px;
+  top: 70px;
 }
 .dashboard.right {
   float: left;
   top: 52px;
   overflow: hidden;
-  width: 330px;
-  padding-left: 20px;
+  width: 362px;
+  padding-left: 18px;
   padding-right: 3px;
 }
 .dashboard > .module {
@@ -704,6 +722,7 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   line-height: 52px;
   font-weight: 500;
   font-size: 1rem;
+  float: left;
   color: white;
 }
 .modal-header span, .prompt-wrapper .modal-header span {
@@ -725,7 +744,10 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   right: 10px;
 }
 .modal-header span.mark-all-as-read {
-  right: 70px;
+  position: static;
+  float: left;
+  margin-left: 10px;
+  display: none;
 }
 .modal-header span.modal-back {
   right: 35px;
@@ -929,6 +951,7 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   left: 0;
   margin: 0px 10px 20px 10px;
   cursor: default;
+  position: relative;
 }
 .direct-messages-thread .post .post-info-time {
   float: none;
@@ -959,8 +982,8 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
 }
 .direct-messages-thread .post .post-text {
   background: white;
-  margin-right: 60px;
-  margin-left: 60px;
+  margin-right: 58px;
+  margin-left: 58px;
   position: relative;
   display: inline-block;
   max-width: 300px;
@@ -975,7 +998,9 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
 .direct-messages-thread .post .post-photo {
   position: absolute;
   left: 0;
-  top: 35px;
+  top: 30px;
+  float: none;
+  margin: 0;
 }
 .direct-messages-thread .post.sent .post-text:after {
   border-top: solid 7px transparent;
@@ -1120,28 +1145,12 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
 }
 
 .bitmessage-ctc, .tox-ctc {
-  font-size: 13px;
-  line-height: 15px;
-  cursor: pointer;
-  color: #222;
-}
-.bitmessage-ctc:hover, .tox-ctc:hover {
-  color: #A1B775;
-}
-
-.bitmessage-ctc:after, .tox-ctc:after {
-  font-family: "Ionicons";
-  content: "";
-  font-style: normal;
-  font-weight: normal;
-  speak: none;
+  background: #999;
+  color: white;
+  font-size: 1rem;
   display: inline-block;
-  text-decoration: inherit;
-  width: 1em;
-  text-align: center;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1em;
+  padding: 10px;
+  line-height: 1rem;
 }
 
 .profile-modal .profile-tox, .profile-modal .profile-bitmessage {
@@ -1151,6 +1160,7 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
 }
 .profile-modal .profile-tox:hover, .profile-modal .profile-bitmessage:hover {
   color: #A1B775;
+  text-decoration: none;
 }
 
 .profile-modal .modal-buttons {
@@ -1160,7 +1170,7 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
 
 .forEdition.profile-card {
   margin: 0;
-  width: 700px;
+  width: 670px;
   background: none;
   padding: 0;
 }
@@ -1222,7 +1232,7 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   position: relative;
   margin-bottom: 10px;
   transition: height 0.3s linear;
-  padding: 10px;
+  padding: 15px;
   background: white;
   overflow: hidden;
   background: #FDFCFA;
@@ -1238,9 +1248,6 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   -o-transition-timing-function: ease-out;
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
-  -moz-border-radius: 11px;
-  -webkit-border-radius: 11px;
-  border-radius: 11px;
   top: 0;
   z-index: 120;
 }
@@ -1251,7 +1258,7 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
 }
 #postboard-top.fixed {
   position: fixed;
-  width: 330px;
+  width: 362px;
   top: 52px;
 }
 #postboard-top .profile-photo {
@@ -1286,7 +1293,7 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
 
 /*************  POSTBOARD ************ */
 .postboard {
-  width: 700px;
+  width: 670px;
   float: left;
 }
 .postboard h2, .postboard .postboard-news {
@@ -1342,7 +1349,7 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   color: #4b484f;
 }
 .postboard-posts .post .post-data {
-  padding: 12px 15px;
+  padding: 15px;
   background: #FDFCFA;
 }
 .postboard-posts > .post {
@@ -1376,6 +1383,7 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   vertical-align: middle;
   overflow: hidden;
   width: 48px;
+  margin: 0 15px 15px 0;
 }
 .post-photo img {
   width: 100%;
@@ -1383,12 +1391,12 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
 }
 
 .post-info-name {
-  font-weight: 600;
+  font-weight: 500;
   color: inherit;
   text-decoration: none;
   display: inline-block;
+  font-size: 1rem;
   float: left;
-  margin-left: 10px;
 }
 .post-info-name:hover {
   text-decoration: none;
@@ -1400,6 +1408,14 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   opacity: 0.6;
   margin-top: 4px;
   display: inline-block;
+}
+
+.post-info-sent {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 3px;
+  font-size: 15px;
 }
 
 .post-info-time {
@@ -1464,10 +1480,7 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
 .post-interactions span:before {
   padding: 3px;
 }
-.post-interactions span.post-favorite {
-  display: none !important;
-}
-.post:hover .post-interactions .post-reply, .post:hover .post-interactions .post-propagate {
+.post:hover .post-interactions .post-reply, .post:hover .post-interactions .post-propagate, .post:hover .post-interactions .post-favorite {
   display: inline-block;
 }
 
@@ -1579,7 +1592,7 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
 }
 
 .following {
-  width: 700px;
+  width: 670px;
   float: left;
 }
 .following h2 {
@@ -1707,7 +1720,7 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
 /********** LOGIN AND NETWORK PAGES ****** */
 .network.singleBlock ul {
   line-height: 2rem;
-  padding: 2rem;
+  padding: 1rem 2rem;
 }
 .network.singleBlock .module {
   background: #F3F2F0;
@@ -1715,6 +1728,12 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   -webkit-box-shadow: 0 1px 1px rgba(85, 85, 85, 0.1);
   box-shadow: 0 1px 1px rgba(85, 85, 85, 0.1);
   margin-bottom: 50px;
+  width: 49%;
+  float: left;
+  margin-right: 1%;
+}
+.network.singleBlock .module:last-child {
+  margin-right: 0;
 }
 .network.singleBlock .module:last-child h2 {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ExYjc3NSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzVlODBhMiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
@@ -1976,15 +1995,6 @@ ul.userMenu-search-profiles button, ul.userMenu-search-profiles .show-more-follo
   position: absolute;
   top: 5px;
   right: 5px;
-}
-
-.userMenu-search input[type="text"] {
-  float: right;
-  padding: 3px 10px;
-  margin: 10px 20px 0 0;
-  border: none;
-  background: #F3F2F0;
-  box-sizing: border-box;
 }
 
 .userMenu-search-sugestions a {
@@ -2264,7 +2274,7 @@ img.twister-user-photo {
   float: left;
   display: block;
   float: left;
-  width: 32px;
+  width: 36px;
   height: auto;
   margin: 0 10px 0 0;
 }
@@ -2322,28 +2332,28 @@ img.twister-user-photo {
 }
 
 .refresh-toptrends, .twistday-reminder .refresh, .refresh-users {
-  color: #222;
+  color: #6f6f6f;
   cursor: pointer;
-  font-size: 11px;
+  font-size: 0.7rem;
   font-weight: 500;
   text-transform: none;
   letter-spacing: 0;
   float: right;
   display: block;
-  margin: 5px;
+  margin: 10px;
   position: relative;
 }
 
 .view-all-users {
-  color: #222;
+  color: #6f6f6f;
   cursor: pointer;
-  font-size: 11px;
+  font-size: 0.7rem;
   font-weight: 500;
   text-transform: none;
   letter-spacing: 0;
   float: right;
   display: block;
-  margin: 5px;
+  margin: 10px;
   position: relative;
 }
 
@@ -2568,7 +2578,7 @@ ul.dropdown-menu li > li > a {
 
   .postboard, #postboard-top.onTop {
     position: absolute;
-    left: 135px;
+    left: 168px;
     right: 20px;
     width: auto;
   }
@@ -2577,9 +2587,76 @@ ul.dropdown-menu li > li > a {
     width: 85%;
   }
   .modal-wrapper .postboard {
-    width: 700px;
+    width: 670px;
     float: left;
     position: relative;
     left: 0;
+  }
+}
+@media (max-width: 700px) {
+  .network.singleBlock .module {
+    margin-bottom: 50px;
+    width: 98%;
+    margin: 0 auto 50px auto;
+    float: none;
+    margin-right: auto;
+  }
+
+  .dashboard.left {
+    top: 52px;
+    float: none;
+    width: 100%;
+  }
+  .dashboard.left > .module {
+    width: 100%;
+    position: fixed;
+    top: 52px;
+    z-index: 2;
+  }
+
+  .promoted-posts-only {
+    display: none;
+  }
+
+  .postboard {
+    float: none;
+    width: 100%;
+    margin: 0;
+    top: 122px;
+    left: 0;
+    z-index: 1;
+  }
+  .modal-wrapper .postboard {
+    top: auto;
+  }
+
+  .mini-profile-info {
+    display: none;
+  }
+
+  .mini-profile-indicators li {
+    width: 25%;
+    float: left;
+    position: relative;
+    z-index: 2;
+  }
+
+  #postboard-top {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    top: auto;
+    margin: 0;
+    -moz-box-shadow: 0px -5px 13px rgba(17, 17, 17, 0.2);
+    -webkit-box-shadow: 0px -5px 13px rgba(17, 17, 17, 0.2);
+    box-shadow: 0px -5px 13px rgba(17, 17, 17, 0.2);
+  }
+
+  .userMenu .userMenu-profile {
+    display: none;
+  }
+
+  .userMenu ul {
+    background-image: none;
   }
 }

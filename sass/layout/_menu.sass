@@ -12,7 +12,7 @@ $menuBgColor : $dark-grey
 	//background-color: #FFAF1C
 	//+background-image(linear-gradient(to right , $color-green, #5E80A2) )
 	background-color: $menuBgColor
-	z-index: 2
+	z-index: 40
 	> ul
 		@extend .clear-fix
 		+box-sizing(border-box)
@@ -24,7 +24,7 @@ $menuBgColor : $dark-grey
 		li
 			position: relative
 			display: inline-block
-			margin-right: 20px
+			margin: 0 10px
 			> a
 				line-height: $menu-height 
 				display: inline-block
@@ -32,15 +32,12 @@ $menuBgColor : $dark-grey
 				font-size: 1rem
 				position: relative
 				font-size: 1rem
-				@extend .ion 
 				&:hover
 					color: $menu-font-color!important
 					text-decoration: none
 				
 				&:before
 					padding-right: 5px
-					font-size: 1.5rem
-					line-height: 1rem
 				span 
 					display: inline-block 
 
@@ -55,7 +52,6 @@ $menuBgColor : $dark-grey
 
 	&.userMenu-home 
 		a 
-			@extend .ion-home
 			.label 
 				display: inline-block!important
 
@@ -78,11 +74,7 @@ $menuBgColor : $dark-grey
 			color: white
 			&.show 
 				display: block
-	&.userMenu-network 	a 
-		@extend .ion-network
 
-	&.userMenu-profile 	a 
-		@extend .ion-profile
 
 	&.userMenu-dhtindicator, &.userMenu-connections, &.userMenu-messages
 		display: none!important
@@ -90,7 +82,6 @@ $menuBgColor : $dark-grey
 	&.userMenu-config, &.userMenu-search
 		float: right
 		position: relative
-		margin-right: 0
 		color: $menu-font-color
 		+ a 
 			color: $main-color-dark 
@@ -98,6 +89,7 @@ $menuBgColor : $dark-grey
 		> input 
 			border: 1px solid rgba(white,.3)
 			line-height: $menu-height/2
+			margin-top: $menu-height/4
 			font-size: 12px
 			padding: 0 7px
 			background: rgba(white,.1)
@@ -106,6 +98,7 @@ $menuBgColor : $dark-grey
 			&:focus 
 				border-color: rgba(white,.7)
 	&.userMenu-config > a
+		@extend .ion
 		@extend .ion-gear
 		font-size: 1.5rem
 

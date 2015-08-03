@@ -79,8 +79,7 @@
 	display: block
 	padding: 10px
 
-
-
+	
 
 ul.userMenu-search-profiles
 	width: 100%
@@ -146,13 +145,7 @@ ul.userMenu-search-profiles
 
 
 
-.userMenu-search input[type="text"]
-	float: right
-	padding: 3px 10px
-	margin: 10px 20px 0 0
-	border: none
-	background: $bloc-background-color
-	box-sizing: border-box
+
 
 .userMenu-search-sugestions a
 	color: rgba(0, 0, 0, 0.7)
@@ -478,31 +471,32 @@ img.twister-user-photo
 	opacity: 1
 
 .refresh-toptrends, .twistday-reminder .refresh, .refresh-users
-	@extend .ion-alert
+	@extend .ion-shuffle
 	@extend .ion
-	color: $main-color-dark
+	color: lighten($main-color-dark,30%)
 	cursor: pointer
-	font-size: 11px
+	font-size: .7rem
 	font-weight: 500
 	text-transform: none
 	letter-spacing: 0
 	float: right
 	display: block
-	margin:  5px
+	margin:  10px 
 	position: relative
 
 .view-all-users
-	color: $main-color-dark
+	color: lighten($main-color-dark,30%)
 	cursor: pointer
-	font-size: 11px
+	font-size: .7rem
 	font-weight: 500
 	text-transform: none
 	letter-spacing: 0
 	float: right
 	display: block
-	margin: 5px
+	margin:  10px 
 	position: relative
-
+	@extend .ion-eye
+	@extend .ion
 .refresh-toptrends:hover, .twistday-reminder .refresh:hover, .refresh-users:hover, .view-all-users:hover
 	color: $main-color-color
 	text-decoration: none

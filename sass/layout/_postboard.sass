@@ -4,7 +4,7 @@
 	@extend .clear-fix
 	margin-bottom: 10px
 	transition: height .3s linear
-	padding: 10px
+	padding: 15px
 	background: white
 	overflow: hidden
 	background: $bloc-light-color
@@ -12,7 +12,6 @@
 	+transition-property( top)
 	+transition-duration(.1s)
 	+transition-timing-function(ease-out)	
-	+border-radius(11px)
 	top: 0
 	&.on 
 		+box-shadow(1px 2px 2px rgba(#111, 0.1))
@@ -94,7 +93,7 @@
 			&:hover
 				color: lighten($dark-grey,5%)		
 		.post-data
-			padding: 12px 15px 
+			padding:  15px 
 			background: $bloc-light-color
 
 
@@ -125,17 +124,18 @@
 	vertical-align: middle
 	overflow: hidden
 	width: $mini-usr-img
+	margin: 0 15px 15px 0
 	img
 		width: 100%
 		height: auto!important
 
 .post-info-name
-	font-weight: 600
+	font-weight: 500
 	color: inherit
 	text-decoration: none
 	display: inline-block
+	font-size: 1rem
 	float: left
-	margin-left: 10px
 	&:hover
 		text-decoration: none
 		color: black
@@ -145,6 +145,14 @@
 	opacity: .6
 	margin-top: 4px
 	display: inline-block
+
+.post-info-sent
+	display: block
+	position: absolute 
+	top: 0 
+	left: 3px
+	font-size: 15px
+
 
 .post-info-time
 	position: absolute
@@ -214,11 +222,10 @@
 		&.post-propagate
 			@extend .ion-shuffle
 		&.post-favorite
-			display: none!important //maybe one day
 			@extend .ion-alert
 
 	.post:hover &
-		.post-reply, .post-propagate //, .post-favorite maybe one day
+		.post-reply, .post-propagate , .post-favorite 
 			display: inline-block
 
 

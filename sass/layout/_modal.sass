@@ -152,6 +152,7 @@ $header-modal-height : $menu-height
 		line-height: $header-modal-height
 		font-weight: 500 
 		font-size: 1rem
+		float: left
 		color: white
 	span 
 		
@@ -174,7 +175,10 @@ $header-modal-height : $menu-height
 			right: 10px
 		&.mark-all-as-read
 			@extend .ion-checkmark
-			right: 70px
+			position: static 
+			float: left
+			margin-left: 10px
+			display: none
 		&.modal-back
 			@extend .ion-back
 			right: 35px

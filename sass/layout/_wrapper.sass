@@ -6,7 +6,7 @@
 	width: $site-width
 	max-width: 100%
 	margin: auto
-	padding-top: $menu-height + $gut/2
+	padding-top: $menu-height + $gut
 	position: relative
 	z-index: 1
 	@extend .clear-fix
@@ -19,14 +19,14 @@
 		> .module
 			width: $miniProfileWidth
 			position: fixed
-			top: $menu-height + $gut/2
+			top: $menu-height + $gut
 			
 	&.right 
 		float: left
 		top: $menu-height 
 		overflow: hidden
 		width: $rightWidth
-		padding-left: 20px
+		padding-left: $gut 
 		padding-right: 3px
 	> .module
 		width: 100%

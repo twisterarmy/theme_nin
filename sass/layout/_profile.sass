@@ -133,27 +133,18 @@ $modal-postboard-post-height: 100%
 	+border-radius(2px)
 
 
-.bitmessage-ctc, .tox-ctc
-	font-size: 13px
-	line-height: 15px
-	cursor: pointer
-	color: $main-color-dark
-	&:hover
-		color: $main-color-color
 
-.bitmessage-ctc:after, .tox-ctc:after
-	font-family: $symbol-font-family
-	content: ''
-	font-style: normal
-	font-weight: normal
-	speak: none
+.bitmessage-ctc, .tox-ctc
+	background: #999
+	color: white 
+	font-size: 1rem
 	display: inline-block
-	text-decoration: inherit
-	width: 1em
-	text-align: center
-	font-variant: normal
-	text-transform: none
-	line-height: 1em
+	padding: 10px
+	line-height: 1rem
+	@extend .ion-copy
+	@extend .ion 
+
+
 
 .profile-modal
 	.profile-tox, .profile-bitmessage
@@ -162,7 +153,9 @@ $modal-postboard-post-height: 100%
 		font-size: 13px
 		&:hover
 			color: $main-color-color
-
+			text-decoration: none
+		@extend .ion-tox
+		@extend .ion 
 
 .profile-modal .modal-buttons
 	display: none
