@@ -12,8 +12,7 @@ $(document).ready(function()
     
     reOrganizeTemplates()
 
-    $('#postboard-top textarea').on('blur',function(){$('#postboard-top').removeClass('on');});
-    $('#postboard-top textarea').on('focus',function(){$('#postboard-top').addClass('on');});
+
 
     $( '.userMenu-home.current a' ).on( 'click', function() {
         $('html, body').animate({scrollTop:0},300);

@@ -107,7 +107,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-weight: normal;
   font-style: normal;
 }
-.ion:before, .userMenu li.userMenu-config > a:before, .modal-header span:before, .prompt-wrapper .modal-header span:before, .bitmessage-ctc:before, .tox-ctc:before, .profile-modal .profile-tox:before, .profile-modal .profile-bitmessage:before, .post-context span:before, .post-interactions span:before, .post-stats li.stat-count:before, ul.userMenu-search-profiles button:before, ul.userMenu-search-profiles .show-more-followers:before, .mini-profile-indicators .userMenu-connections a:before, .mini-profile-indicators .userMenu-messages a:before, .mini-profile-indicators .userMenu-user a:before, .twister-user-remove:before, .refresh-toptrends:before, .twistday-reminder .refresh:before, .refresh-users:before, .view-all-users:before, .ion-after:after, .isFollowing:after {
+.ion:before, .userMenu li.userMenu-config > a:before, .modal-header span:before, .prompt-wrapper .modal-header span:before, .bitmessage-ctc:before, .tox-ctc:before, .profile-modal .profile-tox:before, .profile-modal .profile-bitmessage:before, .post-context span:before, .post-interactions span:before, .post-stats li.stat-count:before, ul.userMenu-search-profiles button:before, ul.userMenu-search-profiles .show-more-followers:before, .mini-profile-indicators .userMenu-connections a:before, .mini-profile-indicators .userMenu-messages a:before, .mini-profile-indicators .userMenu-user a:before, .twister-user-remove:before, .refresh-toptrends:before, .twistday-reminder .refresh:before, .refresh-users:before, .view-all-users:before, .ion-after:after, .isFollowing:after, .direct-messages-list .post:after {
   display: inline-block;
   font-family: "Ionicons";
   speak: none;
@@ -125,7 +125,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   padding: 0 3px;
 }
 
-.ion:after, .userMenu li.userMenu-config > a:after, .modal-header span:after, .prompt-wrapper .modal-header span:after, .bitmessage-ctc:after, .tox-ctc:after, .profile-modal .profile-tox:after, .profile-modal .profile-bitmessage:after, .post-context span:after, .post-interactions span:after, .post-stats li.stat-count:after, ul.userMenu-search-profiles button:after, ul.userMenu-search-profiles .show-more-followers:after, .mini-profile-indicators .userMenu-connections a:after, .mini-profile-indicators .userMenu-messages a:after, .mini-profile-indicators .userMenu-user a:after, .twister-user-remove:after, .refresh-toptrends:after, .twistday-reminder .refresh:after, .refresh-users:after, .view-all-users:after, .ion-after:before, .isFollowing:before {
+.ion:after, .userMenu li.userMenu-config > a:after, .modal-header span:after, .prompt-wrapper .modal-header span:after, .bitmessage-ctc:after, .tox-ctc:after, .profile-modal .profile-tox:after, .profile-modal .profile-bitmessage:after, .post-context span:after, .post-interactions span:after, .post-stats li.stat-count:after, ul.userMenu-search-profiles button:after, ul.userMenu-search-profiles .show-more-followers:after, .mini-profile-indicators .userMenu-connections a:after, .mini-profile-indicators .userMenu-messages a:after, .mini-profile-indicators .userMenu-user a:after, .twister-user-remove:after, .refresh-toptrends:after, .twistday-reminder .refresh:after, .refresh-users:after, .view-all-users:after, .ion-after:before, .isFollowing:before, .direct-messages-list .post:before {
   display: none;
 }
 
@@ -203,6 +203,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 .ion-search:after {
   content: "";
+}
+
+.ion-right:after, .direct-messages-list .post:after {
+  content: "";
 }
 
 /* FONTS */
@@ -418,7 +422,7 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   left: 0;
   margin: 0;
   background-color: #3E3C42;
-  z-index: 40;
+  z-index: 20;
 }
 .userMenu > ul {
   -moz-box-sizing: border-box;
@@ -583,7 +587,7 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
 
 .modal-wrapper {
   background: #F3F2F0;
-  z-index: 4;
+  z-index: 100;
   width: 34%;
   position: fixed;
   -moz-box-sizing: border-box;
@@ -779,7 +783,7 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
 /*********** POPUP PROMPT ************ */
 .prompt-wrapper {
   background: #FDFCFA;
-  z-index: 5;
+  z-index: 200;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -915,19 +919,30 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   cursor: pointer;
 }
 .direct-messages-list .post:after {
-  content: "";
-  font-family: "Ionicons";
   position: absolute;
-  right: 5px;
+  right: 25px;
   top: 50%;
   font-size: 1.1em;
   margin: -6px 0 0 0;
   color: rgba(0, 0, 0, 0.4);
-  display: none;
+  opacity: 0;
+  -moz-transition-property: right, opacity;
+  -o-transition-property: right, opacity;
+  -webkit-transition-property: right, opacity;
+  transition-property: right, opacity;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -moz-transition-timing-function: ease-out;
+  -o-transition-timing-function: ease-out;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
 }
 
 .direct-messages-list .post:hover:after {
-  display: block;
+  opacity: 1;
+  right: 5px;
 }
 .direct-messages-list .post:hover {
   background: white;
@@ -1249,17 +1264,10 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
   top: 0;
-  z-index: 120;
-}
-#postboard-top.on, #postboard-top, #postboard-top.fixed {
   -moz-box-shadow: 1px 2px 2px rgba(17, 17, 17, 0.1);
   -webkit-box-shadow: 1px 2px 2px rgba(17, 17, 17, 0.1);
   box-shadow: 1px 2px 2px rgba(17, 17, 17, 0.1);
-}
-#postboard-top.fixed {
-  position: fixed;
-  width: 362px;
-  top: 52px;
+  z-index: 120;
 }
 #postboard-top .profile-photo {
   position: absolute;
@@ -2602,61 +2610,93 @@ ul.dropdown-menu li > li > a {
     margin-right: auto;
   }
 
+  .userMenu > ul {
+    background-image: none;
+  }
+  .userMenu .userMenu-profile {
+    display: none;
+  }
+
+  .userMenu li.userMenu-search > input {
+    width: 150px;
+  }
+
+  .prompt-wrapper {
+    width: 98%;
+    left: 1%;
+    margin-left: 0;
+  }
+
   .dashboard.left {
-    top: 52px;
-    float: none;
+    top: 0;
+    margin-top: 0;
+    min-height: 122px;
     width: 100%;
   }
   .dashboard.left > .module {
+    top: 52px;
+    float: none;
     width: 100%;
     position: fixed;
-    top: 52px;
-    z-index: 2;
+    z-index: 10;
+  }
+  .dashboard.left .mini-profile-info {
+    display: none;
+  }
+
+  .mini-profile-indicators li {
+    width: 25%;
+    margin: 0;
+    float: left;
+  }
+
+  .who-follow {
+    display: none;
   }
 
   .promoted-posts-only {
     display: none;
   }
 
+  .wrapper {
+    padding-top: 0;
+  }
+
   .postboard {
-    float: none;
     width: 100%;
-    margin: 0;
-    top: 122px;
+    float: none;
     left: 0;
-    z-index: 1;
+    z-index: 5;
+    top: 0;
+    position: relative;
+    margin-top: 0;
   }
   .modal-wrapper .postboard {
     top: auto;
   }
 
-  .mini-profile-info {
-    display: none;
-  }
-
-  .mini-profile-indicators li {
-    width: 25%;
-    float: left;
-    position: relative;
-    z-index: 2;
-  }
-
   #postboard-top {
     position: fixed;
     bottom: 0;
-    width: 100%;
     top: auto;
     margin: 0;
-    -moz-box-shadow: 0px -5px 13px rgba(17, 17, 17, 0.2);
-    -webkit-box-shadow: 0px -5px 13px rgba(17, 17, 17, 0.2);
-    box-shadow: 0px -5px 13px rgba(17, 17, 17, 0.2);
+    width: 100%;
+    -moz-box-shadow: 0 -5px 13px rgba(17, 17, 17, 0.2);
+    -webkit-box-shadow: 0 -5px 13px rgba(17, 17, 17, 0.2);
+    box-shadow: 0 -5px 13px rgba(17, 17, 17, 0.2);
   }
 
-  .userMenu .userMenu-profile {
-    display: none;
+  .modal-wrapper {
+    width: 90%;
+  }
+}
+@media (max-width: 360px) {
+  .userMenu li.userMenu-search > input {
+    width: 100px;
   }
 
-  .userMenu ul {
-    background-image: none;
+  .dialog-modal {
+    right: -50px;
+    width: 290px;
   }
 }

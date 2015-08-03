@@ -29,42 +29,75 @@
 				margin: 0 auto 50px auto 
 				float: none
 				margin-right: auto 
+
+	.userMenu 
+		> ul 
+			background-image: none
+
+		.userMenu-profile 
+			display: none
+
+	.userMenu li.userMenu-search > input
+		width: 150px
+
+	.prompt-wrapper
+		width: 98%
+		left: 1%
+		margin-left: 0
+
 	.dashboard
 		&.left
-			top: $menu-height 
-			float: none
-			width:  100%
+			top: 0
+			margin-top: 0
+			min-height: $menu-height + 70px
+			width: 100%
 			> .module
-				width: 100%
-				position: fixed
 				top: $menu-height 
-				z-index: 2
-	.promoted-posts-only
-		display: none
-	.postboard 
-		float: none 
-		width: 100%
+				float: none
+				width:  100%
+				position: fixed
+				z-index: 10
+
+			.mini-profile-info 
+				display: none
+	.mini-profile-indicators li
+		width: 25%
 		margin: 0
-		top: $menu-height +70
+		float: left
+	.who-follow 
+		display: none
+	.promoted-posts-only 
+		display: none
+
+	.wrapper 
+		padding-top: 0
+	.postboard 
+		width: 100%
+		float: none 
 		left: 0
-		z-index: 1
+		z-index: 5
+		top: 0
+		position: relative
+		margin-top: 0
 		.modal-wrapper & 
 			top: auto
-	.mini-profile-info
-		display: none 
-	.mini-profile-indicators li 
-		width: 25% 
-		float: left
-		position: relative 
-		z-index: 2
 	#postboard-top 
-		position: fixed 
+		position: fixed
 		bottom: 0
-		width: 100%
-		top: auto
+		top: auto 
 		margin: 0
-		+box-shadow(0px -5px 13px rgba(17, 17, 17, 0.2))
-	.userMenu .userMenu-profile 
-		display: none
-	.userMenu ul 
-		background-image: none
+		width: 100%
+		+box-shadow(0 -5px 13px rgba(#111, 0.2))
+	.modal-wrapper
+		width: 90%
+
+
+
+@media (max-width: 360px)
+
+
+	.userMenu li.userMenu-search > input
+		width: 100px
+	.dialog-modal	
+		right: -50px
+		width: 290px
