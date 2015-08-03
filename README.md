@@ -11,16 +11,21 @@ After dowloading the folder, create a symlink to it in your `.twister/html/` dir
 ####  Captures
 
 Homepage
+
 ![homepage](https://raw.githubusercontent.com/myleneb/theme_nin/nin-v2/captures/home.jpg)
 
 
-Example with hashtag search results in sidebar:
+Example with profile in sidebar:
+
 ![hashtag-search](https://raw.githubusercontent.com/myleneb/theme_nin/nin-v2/captures/search-hashtag.jpg)
+
+Responsive view:
+
+![mobile](https://raw.githubusercontent.com/myleneb/theme_nin/nin-v2/captures/mobile.jpg)
 
 
 ####  To do
 
-+ responsive 
 + options to change basis colors
 + refresh modals when they're already opened
 + UI for group chat rooms 
