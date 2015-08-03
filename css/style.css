@@ -2602,12 +2602,13 @@ ul.dropdown-menu li > li > a {
   }
 }
 @media (max-width: 700px) {
+  .network.singleBlock {
+    margin-top: 52px;
+  }
   .network.singleBlock .module {
-    margin-bottom: 50px;
-    width: 98%;
-    margin: 0 auto 50px auto;
+    width: 100%;
+    margin: 0 !important;
     float: none;
-    margin-right: auto;
   }
 
   .userMenu > ul {
