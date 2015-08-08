@@ -1,0 +1,79 @@
+// PAGE PROFILE
+
+.forEdition.profile-card
+
+	padding: 0 
+	background: none
+	background: $bloc-light-color
+	+box-shadow(1px 2px 2px rgba(#111, 0.1))
+
+	@extend .clear-fix
+	.profile-card-main
+
+		@extend .clear-fix
+		
+		padding: 20px
+		margin: 0 0 1px 0
+
+		input
+			display: block
+			margin: 0 0 10px 100px 
+			width: 600px 
+
+			background: $bloc-background-color
+			border: 1px solid  $bloc-light-color
+			padding: 6px 4px
+			margin-bottom: 4px
+			font-size: 1rem 
+			font-weight: 400
+			&:hover, &:focus
+				background: white
+				border-color: $main-color-light
+
+	img 
+		width: 70px 
+		float: left
+	h2 
+		font-weight: 400 
+		+background-image(linear-gradient(to left , $color-green, #5E80A2) )
+		padding: 1rem 2rem
+		color: white
+
+
+	h3 
+		font-weight: 600
+		margin-top: 2*$space
+		padding: 0 1.5rem
+		+box-sizing(content-box)
+		&:after 
+			display: block 
+			content: ''
+			height: 1px 
+			width: 100%
+			background: rgba(#5F81A1,.5)
+			margin-top: $space
+
+	button
+		float: right 
+		margin: 10px 
+		&.last-child 
+			margin-right: 0
+		&.submit-changes
+			@extend button.color-1
+		&.toggle-priv-key
+			@extend button.color-2
+	.secret-key-container
+		text-align: left !important
+		font-size: 1rem!important
+		clear: both
+		padding: 10px
+
+		
+		.label 
+			clear: both  
+			display: block
+			float: left
+			font-weight: 700
+			margin-right: 20px
+		.secret-key 
+			@extend samp

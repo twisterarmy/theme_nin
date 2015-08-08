@@ -92,7 +92,7 @@ function reOrganizeTemplates() { // for nin's templating
     //$('.userMenu li > a').wrapInner('<span class="inner"></span>');
 
     ///// page profile 
-    $('.forEdition h2').detach().prependTo($('.forEdition'));
+    $('.profile-card-main h2').detach().insertBefore($('.profile-card-main'));
 
     //loader
     newLoader()
