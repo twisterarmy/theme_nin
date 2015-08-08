@@ -1,6 +1,6 @@
 @charset "UTF-8";
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+h1, h2, h3, .login .module p span, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -281,7 +281,7 @@ h2 {
   line-height: 1.1em;
 }
 
-h3 {
+h3, .login .module p span {
   font-size: 1.1em;
   font-weight: 400;
   line-height: 1.1em;
@@ -322,10 +322,10 @@ samp {
   line-height: 10px;
 }
 
-h3 .isFollowing:before {
+h3 .isFollowing:before, .login .module p span .isFollowing:before {
   display: none !important;
 }
-h3 .isFollowing:after {
+h3 .isFollowing:after, .login .module p span .isFollowing:after {
   display: none !important;
 }
 
@@ -335,7 +335,7 @@ h3 .isFollowing:after {
   box-shadow: 0 8px 13px rgba(17, 17, 17, 0);
 }
 
-.clear-fix:after, .userMenu > ul:after, .wrapper:after, .dashboard > .module:after, .dashboard > .module ol:after, .modal-wrapper.following-modal a:after, .modal-wrapper .modal-content:after, .modal-header:after, .prompt-wrapper .modal-header:after, .twister-user:after, .direct-messages-thread .post:after, .forEdition.profile-card:after, #postboard-top:after, #postboard-top .post-area:after, .expanded-content:after, .following .following-list li a:after, .network.singleBlock:after, .network.singleBlock .module:after, .options .tab-content:after, ul.userMenu-search-profiles li:after, .mini-profile .post-area:after, .mini-profile-indicators:after, .profile-data:after {
+.clear-fix:after, .userMenu > ul:after, .wrapper:after, .dashboard > .module:after, .dashboard > .module ol:after, .modal-wrapper.following-modal a:after, .modal-wrapper .modal-content:after, .modal-header:after, .prompt-wrapper .modal-header:after, .twister-user:after, .direct-messages-thread .post:after, .forEdition.profile-card:after, #postboard-top:after, #postboard-top .post-area:after, .expanded-content:after, .following .following-list li a:after, .login .module:after, .network.singleBlock:after, .network.singleBlock .module:after, .options .tab-content:after, ul.userMenu-search-profiles li:after, .mini-profile .post-area:after, .mini-profile-indicators:after, .profile-data:after {
   content: "";
   display: table;
   clear: both;
@@ -563,7 +563,7 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   border-radius: 3px;
   overflow: hidden;
 }
-.dashboard > .module h3 {
+.dashboard > .module h3, .login .dashboard > .module p span {
   float: left;
   padding: 10px;
 }
@@ -721,7 +721,7 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-.modal-header h3, .prompt-wrapper .modal-header h3 {
+.modal-header h3, .prompt-wrapper .modal-header h3, .modal-header .login .module p span, .login .module p .modal-header span {
   padding-left: 20px;
   line-height: 52px;
   font-weight: 500;
@@ -806,11 +806,11 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   padding: 10px;
   background: white;
 }
-.prompt-wrapper .modal-header h3 span {
+.prompt-wrapper .modal-header h3 span, .prompt-wrapper .modal-header .login .module p span span, .login .module p .prompt-wrapper .modal-header span span {
   padding-left: 5px;
   color: white;
 }
-.prompt-wrapper .modal-header h3 span:hover {
+.prompt-wrapper .modal-header h3 span:hover, .prompt-wrapper .modal-header .login .module p span span:hover, .login .module p .prompt-wrapper .modal-header span span:hover {
   cursor: default;
 }
 
@@ -878,7 +878,7 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   padding: 5px;
   width: 100% !important;
 }
-.modal-wrapper.directMessages .modal-header h3 span {
+.modal-wrapper.directMessages .modal-header h3 span, .modal-wrapper.directMessages .modal-header .login .module p span span, .login .module p .modal-wrapper.directMessages .modal-header span span {
   display: inline-block !important;
   padding-left: 5px;
   color: white;
@@ -1672,17 +1672,49 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   display: none !important;
 }
 
-.login .header-bold {
+.login h2 {
+  font-weight: 400;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjEuMCIgeTE9IjAuNSIgeDI9IjAuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ExYjc3NSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzVlODBhMiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 100% 50%, 0% 50%, color-stop(0%, #a1b775), color-stop(100%, #5e80a2));
+  background-image: -moz-linear-gradient(right, #a1b775, #5e80a2);
+  background-image: -webkit-linear-gradient(right, #a1b775, #5e80a2);
+  background-image: linear-gradient(to left, #a1b775, #5e80a2);
+  padding: 1rem 2rem;
+  color: white;
+}
+.login h3, .login .module p span {
+  font-weight: 600;
+  margin-top: 2rem;
+  padding: 0 1.5rem;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.login h3:after, .login .module p span:after {
   display: block;
-  width: 720px;
-  margin: 0px auto 12px auto;
+  content: "";
+  height: 1px;
+  width: 100%;
+  background: rgba(95, 129, 161, 0.5);
+  margin-top: 1rem;
 }
 .login .module {
-  background: white;
-  padding: 1rem;
+  background: #FDFCFA;
+  -moz-box-shadow: 1px 2px 2px rgba(17, 17, 17, 0.1);
+  -webkit-box-shadow: 1px 2px 2px rgba(17, 17, 17, 0.1);
+  box-shadow: 1px 2px 2px rgba(17, 17, 17, 0.1);
+  padding: 20px;
+  margin-bottom: 1px;
+  clear: none;
 }
 .login .module p {
   margin-bottom: 5px;
+}
+.login .module p span {
+  margin-bottom: 20px;
+  display: block;
+  padding: 0;
 }
 .login .module input {
   padding: 5px 10px;
@@ -1690,6 +1722,11 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   border: solid 1px #dcdcdc;
   transition: box-shadow 0.3s, border 0.3s;
   font-size: 14px;
+  max-width: 100%;
+}
+.login .module input.new-username, .login .module input.username-import {
+  float: left;
+  margin-right: 10px;
 }
 .login .module input:focus, .login .module select:focus {
   background: white;
@@ -1707,22 +1744,9 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   margin-left: 10px;
   color: #45474d;
 }
-.login .module:nth-child(2) div,
-.login .module:nth-child(3) div:nth-child(2),
-.login .secret-key-import,
-.login .username-import {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 16px;
-}
-.login .create-user,
-.login .import-secret-key {
-  display: block;
-  margin-left: auto;
-  margin-right: 16px;
-}
-.login .with-nickname, .login .import-secret-key, .login .create-user {
-  margin-top: 10px;
+.login .module .create-user {
+  clear: both;
+  margin: 20px 0;
 }
 
 /********** LOGIN AND NETWORK PAGES ****** */
@@ -1803,7 +1827,7 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   padding: 1rem 2rem;
   color: white;
 }
-.network h3 {
+.network h3, .network .login .module p span, .login .module p .network span {
   font-weight: 600;
   margin-top: 2rem;
   padding: 0 1.5rem;
@@ -1811,7 +1835,7 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
-.network h3:after {
+.network h3:after, .network .login .module p span:after, .login .module p .network span:after {
   display: block;
   content: "";
   height: 1px;
