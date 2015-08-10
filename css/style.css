@@ -729,6 +729,9 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   float: left;
   color: white;
 }
+.modal-header h3 span, .prompt-wrapper .modal-header h3 span, .modal-header .login .module p span span, .login .module p .modal-header span span {
+  position: relative;
+}
 .modal-header span, .prompt-wrapper .modal-header span {
   position: absolute;
   top: 0;
