@@ -2634,7 +2634,7 @@ ul.dropdown-menu li > li > a {
     position: absolute;
     left: 168px;
     right: 20px;
-    width: auto;
+    width: auto !important;
   }
 
   .modal-wrapper {

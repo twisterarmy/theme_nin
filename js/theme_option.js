@@ -1,12 +1,9 @@
 $(window).resize(function()
 {
+    testRightSide();
     reAppendModules();
 });
 
-$(window).load(function()
-{
-    testRightSide();
-});
 
 
 $(document).ready(function()
