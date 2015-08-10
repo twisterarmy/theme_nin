@@ -94,7 +94,7 @@ function reOrganizeTemplates() { // for nin's templating
     $('.post-context').each(function(){ $(this).prependTo($(this).parent()); }); // puts context on top of post
 
     ///// page profile 
-    $('.profile-card-main h2').detach().insertBefore($('.profile-card-main'));
+    $('.forEdition .profile-card-main h2').detach().insertBefore($('.profile-card-main'));
 
     //loader
     newLoader()
