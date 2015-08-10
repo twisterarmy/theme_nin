@@ -3,6 +3,12 @@ $(window).resize(function()
     reAppendModules();
 });
 
+$(window).load(function()
+{
+    testRightSide();
+});
+
+
 $(document).ready(function()
 {
     var windowHeight = $(window).height();
@@ -10,9 +16,8 @@ $(document).ready(function()
     // make right modules expendables
     //slideUpModules();
     
-    reOrganizeTemplates()
-
-
+    reOrganizeTemplates();
+    testRightSide();
 
     $( '.userMenu-home.current a' ).on( 'click', function() {
         $('html, body').animate({scrollTop:0},300);
@@ -58,15 +63,25 @@ $(document).ready(function()
 });
 
 
-function slideUpModules() {
 
-    $(document).on( 'click', 'h3', function() {
-        var thisList = $(this).parents('.module').find('ol');
-        var thisListTitle = $(this).parents('.module').find('h4');
-        if (thisList.css('display') === 'none') {thisList.slideDown();thisListTitle.slideDown()}
-        else {thisList.slideUp();thisListTitle.slideUp()}
-    });
+function testRightSide() { // if rightside is empty, don't show it and engarge postboard
+
+
+
+    if( ( $('.toptrends').html() == '' ) && ($('.who-to-follow').html() == '') && ( $('.twistday-reminder').html() == '' ) ){
+        $('.dashboard.right').css('display: none');
+        $('.wrapper .postboard').addClass('large');
+
+    }
+
+    else {
+        $('.dashboard.right').css('display: block');
+        $('.wrapper .postboard').removeClass('large');
+    }
+
 }
+
+
 
 
 

@@ -1247,6 +1247,9 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
 .postboard h2, .postboard .postboard-news {
   display: none;
 }
+.postboard.large {
+  width: 1032px;
+}
 
 .postboard-posts {
   position: relative;
