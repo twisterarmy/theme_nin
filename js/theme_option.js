@@ -4,17 +4,19 @@ $(window).resize(function()
     reAppendModules();
 });
 
+$(window).load(function()
+{
+    testRightSide();
+});
 
 
 $(document).ready(function()
 {
     var windowHeight = $(window).height();
     
-    // make right modules expendables
-    //slideUpModules();
-    
-    reOrganizeTemplates();
     testRightSide();
+    reOrganizeTemplates();
+    
 
     $( '.userMenu-home.current a' ).on( 'click', function() {
         $('html, body').animate({scrollTop:0},300);
@@ -47,16 +49,7 @@ $(document).ready(function()
     $(window).scroll(function(){
         window_scrollY = window.pageYOffset; // declare variable here for screen not to scroll when closing modals
     });
-       /*
-    $(window).scroll(function(){
-        window_scrollY = window.pageYOffset; // declare variable here for screen not to scroll when closing modals
 
-        if ($(document).scrollTop() >= 142) { // fixe the textarea on top while scrolling (could be useful)
-            if (this.css('position') === 'relative')
-                this.addClass('onTop'); 
-        }else if (this.css('position') === 'fixed')
-            this.removeClass('onTop'); 
-    }).bind($('#postboard-top')));*/
 });
 
 
@@ -99,9 +92,6 @@ function reOrganizeTemplates() { // for nin's templating
     $('.mini-profile .open-following-page').parent('li').detach().appendTo($('.mini-profile-indicators'));
     $('.mini-profile-indicators').detach().insertAfter($('.dashboard.left .profile-data'));
     $('.post-context').each(function(){ $(this).prependTo($(this).parent()); }); // puts context on top of post
-
-    // menu 
-    //$('.userMenu li > a').wrapInner('<span class="inner"></span>');
 
     ///// page profile 
     $('.profile-card-main h2').detach().insertBefore($('.profile-card-main'));
