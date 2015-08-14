@@ -99,6 +99,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-weight: 700;
   font-style: italic;
 }
+/* S Y M B O L A */
+@font-face {
+  font-family: "Symbola";
+  src: url("Symbola.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
 /* ICONS */
 @font-face {
   font-family: "Ionicons";
@@ -235,7 +242,7 @@ html {
 body {
   font-size: 1rem;
   line-height: 1.3rem;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif, "Symbola";
   font-weight: 400;
   overflow-y: scroll !important;
 }
@@ -495,7 +502,6 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
 }
 .userMenu li.userMenu-config, .userMenu li.userMenu-search {
   float: right;
-  position: relative;
   color: white;
 }
 .userMenu li.userMenu-config + a, .userMenu li.userMenu-search + a {
@@ -518,6 +524,22 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
 }
 .userMenu li.userMenu-config > a {
   font-size: 1.5rem;
+}
+.userMenu li .config-menu.dialog-modal a {
+  background: #FDFCFA;
+  border-top: 1px solid #eee;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  font-weight: 400;
+  line-height: 32px;
+  display: block;
+  margin: 0;
+  padding: 5px;
+  color: #3E3C42 !important;
+}
+.userMenu li .config-menu.dialog-modal a:hover {
+  background: white;
 }
 
 /* Wrapper and blocks */

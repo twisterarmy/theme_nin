@@ -81,7 +81,6 @@ $menuBgColor : $dark-grey
 
 	&.userMenu-config, &.userMenu-search
 		float: right
-		position: relative
 		color: $menu-font-color
 		+ a 
 			color: $main-color-dark 
@@ -101,4 +100,18 @@ $menuBgColor : $dark-grey
 		@extend .ion
 		@extend .ion-gear
 		font-size: 1.5rem
-
+	.config-menu.dialog-modal
+		a
+			background: $bloc-light-color
+			border-top: 1px solid $main-background-color
+			&:hover 
+				background: white
+			text-decoration: none
+			display: block 
+			width: 100%
+			font-weight: 400
+			line-height: $mini-usr-img / 1.5
+			display: block
+			margin: 0
+			padding: 5px
+			color: $defaut-font-color!important
