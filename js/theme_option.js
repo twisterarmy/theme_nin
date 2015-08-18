@@ -16,7 +16,9 @@ $(document).ready(function()
     
     testRightSide();
     reOrganizeTemplates();
-    
+
+    $.globalEval(postToElem.toString().replace(/postContext.append\(_templatePostRtBy/,
+        'postContext.addClass(\'post-retransmited-by-container\').prependTo(postContext.parent()).append(_templatePostRtBy'));
 
     $( '.userMenu-home.current a' ).on( 'click', function() {
         $('html, body').animate({scrollTop:0},300);
@@ -91,7 +93,6 @@ function reOrganizeTemplates() { // for nin's templating
     $('.promoted-posts-only').detach().appendTo($('.left .mini-profile'));
     $('.mini-profile .open-following-page').parent('li').detach().appendTo($('.mini-profile-indicators'));
     $('.mini-profile-indicators').detach().insertAfter($('.dashboard.left .profile-data'));
-    $('.post-context').each(function(){ $(this).prependTo($(this).parent()); }); // puts context on top of post
 
     ///// page profile 
     $('.forEdition .profile-card-main h2').detach().insertBefore($('.profile-card-main'));
