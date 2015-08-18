@@ -2303,6 +2303,26 @@ ul.userMenu-search-profiles button, ul.userMenu-search-profiles .show-more-follo
   clear: left;
 }
 
+#opt-form-post-preview {
+  width: 100%;
+}
+
+#opt-form-post-preview #post-preview {
+  background-color: #FCFFF3;
+  width: 76% !important;
+  margin-left: 16px;
+  padding: 8px;
+}
+
+#opt-form-post-preview #post-preview .preview-container {
+  background-color: rgba(0,0,0, 0.05);
+  margin-top: 8px;
+}
+
+#opt-form-post-preview #post-preview .image-preview {
+  width: auto;
+}
+
 .post-area-new.open textarea, #postboard-top .post-area .post-area-new textarea, .mini-profile .post-area-new textarea {
   height: 80px;
 }
