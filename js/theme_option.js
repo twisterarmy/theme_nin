@@ -50,6 +50,9 @@ $(document).ready(function()
 
     $(window).scroll(function(){
         window_scrollY = window.pageYOffset; // declare variable here for screen not to scroll when closing modals
+        if ( (window_scrollY >= 300) && (!$('#postboard-top').hasClass('.onTop')) )  {$('#postboard-top').addClass('onTop')} // switch #postboard-top when scrolling
+            else
+                {$('#postboard-top').removeClass('onTop')}
     });
 
 });
