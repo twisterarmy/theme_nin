@@ -1389,8 +1389,8 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
 .post-info-sent {
   display: block;
   position: absolute;
-  top: 0;
-  left: 3px;
+  top: -10px;
+  right: 0;
   font-size: 15px;
 }
 
@@ -1400,7 +1400,9 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   line-height: 0.8rem;
   text-decoration: none;
   top: 12px;
-  right: 15px;
+  right: 0;
+  padding-right: 15px;
+  text-align: right;
   color: #8a8691;
 }
 .post-info-time:hover {
@@ -1420,7 +1422,7 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
 .post-context {
   font-size: 0.8rem;
   line-height: 0.8rem;
-  margin: 2px 10px 4px 60px;
+  margin: 2px 0 4px 60px;
   color: #8a8691;
 }
 .post-context.post-retransmited-by-container {
@@ -1576,7 +1578,6 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   margin-top: 10px;
   position: relative;
   border: 1px solid #eee;
-  font-size: 11px !important;
 }
 .post-rt-reference:hover {
   background-color: #FFF;
@@ -1593,17 +1594,19 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   height: auto;
 }
 .post-rt-reference .post-info-name {
-  font-size: 11px;
+  font-size: 12px;
 }
 .post-rt-reference .post-text {
   margin: 0;
   clear: both;
+  font-size: 12px;
+  line-height: 130%;
 }
 .post-rt-reference .post-info-time {
-  font-size: 9px;
   color: #B3B5B7;
   top: 5px;
   right: 5px;
+  font-size: 12px;
 }
 
 .forEdition.profile-card {
