@@ -782,13 +782,6 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   right: 35px;
 }
 
-.switch-mode {
-  cursor: pointer;
-  color: #A1B775;
-  position: absolute;
-  left: 0;
-}
-
 /* Composants */
 .twister-user {
   position: relative;
