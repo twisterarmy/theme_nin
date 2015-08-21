@@ -818,7 +818,7 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   -webkit-box-shadow: 0 8px 33px rgba(0, 0, 0, 0.3);
   box-shadow: 0 8px 33px rgba(0, 0, 0, 0.3);
 }
-.prompt-wrapper .modal-buttons, .prompt-wrapper .following-config-method-buttons {
+.prompt-wrapper .following-config-method-buttons {
   padding: 0 20px 20px 0;
   float: right;
 }
@@ -838,13 +838,23 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
 .prompt-wrapper .modal-header h3 span:hover, .prompt-wrapper .modal-header .login .module p span span:hover, .login .module p .prompt-wrapper .modal-header span span:hover {
   cursor: default;
 }
+.prompt-wrapper .modal-buttons {
+	margin: 4px 0;
+	text-align: right;
+}
+.prompt-wrapper .switch-mode {
+	display: inline-block;
+	float: left;
+	margin: 12px 4px 4px;
+  color: #8a8691;
+  cursor: pointer;
+  font-size: 0.8rem;
+  line-height: 0.8rem;
+}
 
 /************ FOLLOWING-CONFIG MODAL ********* */
 .prompt-wrapper.following-config-modal {
   margin-top: -100px;
-}
-.prompt-wrapper.following-config-modal .modal-buttons {
-  display: none;
 }
 .prompt-wrapper.following-config-modal h2 {
   text-transform: none;
@@ -876,7 +886,7 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
 .prompt-wrapper.reply.prompt-wrapper {
   margin-top: -110px;
 }
-.prompt-wrapper.reply .modal-buttons, .prompt-wrapper.reply .post-expand, .prompt-wrapper.reply .post-interactions {
+.prompt-wrapper.reply .post-expand, .prompt-wrapper.reply .post-interactions {
   display: none;
 }
 .prompt-wrapper.reply .post-area {
@@ -1201,10 +1211,6 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
 .profile-modal .profile-tox:hover, .profile-modal .profile-bitmessage:hover {
   color: #A1B775;
   text-decoration: none;
-}
-
-.profile-modal .modal-buttons {
-  display: none;
 }
 
 /*************  TOP TEXTAREA ************ */
