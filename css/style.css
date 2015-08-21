@@ -132,7 +132,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   padding: 0 3px;
 }
 
-.ion:after, .userMenu li.userMenu-config > a:after, .modal-header span:after, .prompt-wrapper .modal-header span:after, .bitmessage-ctc:after, .tox-ctc:after, .profile-modal .profile-tox:after, .profile-modal .profile-bitmessage:after, .post-context span:after, .post-interactions span:after, .post-stats li.stat-count:after, ul.userMenu-search-profiles button:after, ul.userMenu-search-profiles .show-more-followers:after, .mini-profile-indicators .userMenu-connections a:after, .mini-profile-indicators .userMenu-messages a:after, .mini-profile-indicators .userMenu-user a:after, .twister-user-remove:after, .refresh-toptrends:after, .twistday-reminder .refresh:after, .refresh-users:after, .view-all-users:after, .ion-after:before, .isFollowing:before, .direct-messages-list .post:before {
+.ion:after, .userMenu li.userMenu-config > a:after, .modal-header span:after, .prompt-wrapper .modal-header span:after, .bitmessage-ctc:after, .tox-ctc:after, .profile-modal .profile-tox:after, .profile-modal .profile-bitmessage:after, .post-retransmited-icon:after, .post-interactions span:after, .post-stats li.stat-count:after, ul.userMenu-search-profiles button:after, ul.userMenu-search-profiles .show-more-followers:after, .mini-profile-indicators .userMenu-connections a:after, .mini-profile-indicators .userMenu-messages a:after, .mini-profile-indicators .userMenu-user a:after, .twister-user-remove:after, .refresh-toptrends:after, .twistday-reminder .refresh:after, .refresh-users:after, .view-all-users:after, .ion-after:before, .isFollowing:before, .direct-messages-list .post:before {
   display: none;
 }
 
@@ -235,7 +235,7 @@ html, body {
 html {
   font-size: 15px;
   background-color: #ddd;
-  background-image: url('../img/bg.png?1438449671');
+  background-image: url('../img/bg.png?1440120416');
   background-attachment: fixed;
 }
 
@@ -438,7 +438,7 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   max-width: 100%;
   width: 1200px;
   margin: auto;
-  background: url('../img/logo.png?1438462463') no-repeat 50% 50%;
+  background: url('../img/logo.png?1440120416') no-repeat 50% 50%;
   background-size: 20px;
 }
 .userMenu > ul li {
@@ -1423,6 +1423,9 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   margin: 2px 10px 4px 60px;
   color: #8a8691;
 }
+.post-context.post-retransmited-by-container {
+  margin: 0 0 1em;
+}
 
 .post-retransmited-icon:before {
   display: block;
@@ -1431,10 +1434,6 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   line-height: 0.8rem;
   font-size: 0.8rem;
   margin-right: 0.4em;
-}
-
-.post-context.post-retransmited-by-container {
-    margin: 0 0 1em;
 }
 
 .post-interactions {
@@ -1570,6 +1569,41 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
 
 .post-replies .sub-replies {
   border-left: solid 18px transparent;
+}
+
+.post-rt-reference {
+  padding: 5px;
+  margin-top: 10px;
+  position: relative;
+  border: 1px solid #eee;
+  font-size: 11px !important;
+}
+.post-rt-reference:hover {
+  background-color: #FFF;
+  cursor: pointer;
+}
+.post-rt-reference .post-photo {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  margin-bottom: 4px;
+}
+.post-rt-reference .post-photo img {
+  width: 16px;
+  height: auto;
+}
+.post-rt-reference .post-info-name {
+  font-size: 11px;
+}
+.post-rt-reference .post-text {
+  margin: 0;
+  clear: both;
+}
+.post-rt-reference .post-info-time {
+  font-size: 9px;
+  color: #B3B5B7;
+  top: 5px;
+  right: 5px;
 }
 
 .forEdition.profile-card {
@@ -2311,19 +2345,16 @@ ul.userMenu-search-profiles button, ul.userMenu-search-profiles .show-more-follo
 #opt-form-post-preview {
   width: 100%;
 }
-
 #opt-form-post-preview #post-preview {
   background-color: #FCFFF3;
   width: 76% !important;
   margin-left: 16px;
   padding: 8px;
 }
-
 #opt-form-post-preview #post-preview .preview-container {
-  background-color: rgba(0,0,0, 0.05);
+  background-color: rgba(0, 0, 0, 0.05);
   margin-top: 8px;
 }
-
 #opt-form-post-preview #post-preview .image-preview {
   width: auto;
 }
@@ -2797,42 +2828,3 @@ ul.dropdown-menu li > li > a {
     width: 290px;
   }
 }
-
-
-.post-rt-reference {
-    background-color: #FAFAFA;
-    border: 1px solid #ccc;
-    padding: 2px;
-}
-
-.post-rt-reference:hover {
-    background-color: #FFF;
-    cursor: pointer;
-}
-
-.post-rt-reference .post-photo {
-    width: 24px;
-    height: 24px;
-    margin-right: 4px;
-}
-
-.post-rt-reference .post-photo img {
-    width: 24px;
-    height: auto;
-}
-
-.post-rt-reference .post-info-name {
-    font-size: 11px;
-    padding-left: 0px;
-}
-
-.post-rt-reference .post-text {
-    font-size: 11px;
-    margin: 4px 4px 4px 28px;
-}
-
-.post-rt-reference .post-info-time {
-    font-size: 9px;
-    color: #B3B5B7;
-}
-
