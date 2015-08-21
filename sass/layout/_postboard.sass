@@ -38,6 +38,21 @@
 			textarea
 				margin: 0 0 10px 0
 
+	&.onTop 
+		position: fixed
+		bottom: 0
+		left: 0 
+		top: auto
+		z-index: 2000
+		+box-shadow(0 -5px 13px rgba(#111, 0.2))
+		width: 320px
+		max-width: 100%
+		.profile-photo 
+			display: none!important
+		.post-area 
+			padding-left: 0
+
+
 
 /*************  POSTBOARD *************/
 
