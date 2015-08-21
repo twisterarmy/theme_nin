@@ -114,7 +114,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-weight: normal;
   font-style: normal;
 }
-.ion:before, .userMenu li.userMenu-config > a:before, .modal-header span:before, .prompt-wrapper .modal-header span:before, .bitmessage-ctc:before, .tox-ctc:before, .profile-modal .profile-tox:before, .profile-modal .profile-bitmessage:before, .post-context span:before, .post-interactions span:before, .post-stats li.stat-count:before, ul.userMenu-search-profiles button:before, ul.userMenu-search-profiles .show-more-followers:before, .mini-profile-indicators .userMenu-connections a:before, .mini-profile-indicators .userMenu-messages a:before, .mini-profile-indicators .userMenu-user a:before, .twister-user-remove:before, .refresh-toptrends:before, .twistday-reminder .refresh:before, .refresh-users:before, .view-all-users:before, .ion-after:after, .isFollowing:after, .direct-messages-list .post:after {
+.ion:before, .userMenu li.userMenu-config > a:before, .modal-header span:before, .prompt-wrapper .modal-header span:before, .bitmessage-ctc:before, .tox-ctc:before, .profile-modal .profile-tox:before, .profile-modal .profile-bitmessage:before, .post-retransmited-icon:before, .post-interactions span:before, .post-stats li.stat-count:before, ul.userMenu-search-profiles button:before, ul.userMenu-search-profiles .show-more-followers:before, .mini-profile-indicators .userMenu-connections a:before, .mini-profile-indicators .userMenu-messages a:before, .mini-profile-indicators .userMenu-user a:before, .twister-user-remove:before, .refresh-toptrends:before, .twistday-reminder .refresh:before, .refresh-users:before, .view-all-users:before, .ion-after:after, .isFollowing:after, .direct-messages-list .post:after {
   display: inline-block;
   font-family: "Ionicons";
   speak: none;
@@ -128,7 +128,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -moz-osx-font-smoothing: grayscale;
 }
 
-.ion:before, .userMenu li.userMenu-config > a:before, .modal-header span:before, .prompt-wrapper .modal-header span:before, .bitmessage-ctc:before, .tox-ctc:before, .profile-modal .profile-tox:before, .profile-modal .profile-bitmessage:before, .post-context span:before, .post-interactions span:before, .post-stats li.stat-count:before, ul.userMenu-search-profiles button:before, ul.userMenu-search-profiles .show-more-followers:before, .mini-profile-indicators .userMenu-connections a:before, .mini-profile-indicators .userMenu-messages a:before, .mini-profile-indicators .userMenu-user a:before, .twister-user-remove:before, .refresh-toptrends:before, .twistday-reminder .refresh:before, .refresh-users:before, .view-all-users:before {
+.ion:before, .userMenu li.userMenu-config > a:before, .modal-header span:before, .prompt-wrapper .modal-header span:before, .bitmessage-ctc:before, .tox-ctc:before, .profile-modal .profile-tox:before, .profile-modal .profile-bitmessage:before, .post-retransmited-icon:before, .post-interactions span:before, .post-stats li.stat-count:before, ul.userMenu-search-profiles button:before, ul.userMenu-search-profiles .show-more-followers:before, .mini-profile-indicators .userMenu-connections a:before, .mini-profile-indicators .userMenu-messages a:before, .mini-profile-indicators .userMenu-user a:before, .twister-user-remove:before, .refresh-toptrends:before, .twistday-reminder .refresh:before, .refresh-users:before, .view-all-users:before {
   padding: 0 3px;
 }
 
@@ -148,7 +148,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   content: "";
 }
 
-.ion-shuffle:before, .post-context span:before, .post-interactions span.post-propagate:before, .post-stats li.stat-count:before, .refresh-toptrends:before, .twistday-reminder .refresh:before, .refresh-users:before {
+.ion-shuffle:before, .post-retransmited-icon:before, .post-interactions span.post-propagate:before, .post-stats li.stat-count:before, .refresh-toptrends:before, .twistday-reminder .refresh:before, .refresh-users:before {
   content: "";
 }
 
@@ -862,7 +862,7 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
 
 /************ RETWIST POSTS MODAL ********* */
 .prompt-wrapper.reTwist.prompt-wrapper {
-  margin-top: -110px;
+  margin-top: -150px;
 }
 .prompt-wrapper.reTwist .post-expand, .prompt-wrapper.reTwist .post-interactions {
   display: none;
@@ -1420,16 +1420,21 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
 .post-context {
   font-size: 0.8rem;
   line-height: 0.8rem;
-  margin: 0 0 0.8rem 0;
+  margin: 2px 10px 4px 60px;
   color: #8a8691;
 }
-.post-context span:before {
+
+.post-retransmited-icon:before {
   display: block;
   float: left;
   color: #A1B775;
   line-height: 0.8rem;
   font-size: 0.8rem;
   margin-right: 0.4em;
+}
+
+.post-context.post-retransmited-by-container {
+    margin: 0 0 1em;
 }
 
 .post-interactions {
@@ -1853,9 +1858,8 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
 .network span.connection-status.connected:before {
   background: #A1B775;
 }
-.network .character-limit {
-  float: right;
-  margin-right: 1rem;
+.network .post-area-extras {
+  margin-right: 20px;
 }
 .network .connections span, .network .known-peers, .network .dht-nodes, .network .blocks, .network .last-block-time, .network .mining-difficulty {
   color: #A1B775;
@@ -2299,8 +2303,29 @@ ul.userMenu-search-profiles button, ul.userMenu-search-profiles .show-more-follo
   transition-duration: 0.1s;
   width: 100% !important;
   font-size: 90%;
+  line-height: normal;
   word-wrap: break-word;
   clear: left;
+}
+
+#opt-form-post-preview {
+  width: 100%;
+}
+
+#opt-form-post-preview #post-preview {
+  background-color: #FCFFF3;
+  width: 76% !important;
+  margin-left: 16px;
+  padding: 8px;
+}
+
+#opt-form-post-preview #post-preview .preview-container {
+  background-color: rgba(0,0,0, 0.05);
+  margin-top: 8px;
+}
+
+#opt-form-post-preview #post-preview .image-preview {
+  width: auto;
 }
 
 .post-area-new.open textarea, #postboard-top .post-area .post-area-new textarea, .mini-profile .post-area-new textarea {
@@ -2772,3 +2797,42 @@ ul.dropdown-menu li > li > a {
     width: 290px;
   }
 }
+
+
+.post-rt-reference {
+    background-color: #FAFAFA;
+    border: 1px solid #ccc;
+    padding: 2px;
+}
+
+.post-rt-reference:hover {
+    background-color: #FFF;
+    cursor: pointer;
+}
+
+.post-rt-reference .post-photo {
+    width: 24px;
+    height: 24px;
+    margin-right: 4px;
+}
+
+.post-rt-reference .post-photo img {
+    width: 24px;
+    height: auto;
+}
+
+.post-rt-reference .post-info-name {
+    font-size: 11px;
+    padding-left: 0px;
+}
+
+.post-rt-reference .post-text {
+    font-size: 11px;
+    margin: 4px 4px 4px 28px;
+}
+
+.post-rt-reference .post-info-time {
+    font-size: 9px;
+    color: #B3B5B7;
+}
+
