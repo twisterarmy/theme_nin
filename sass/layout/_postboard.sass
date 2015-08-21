@@ -157,7 +157,7 @@
 	text-decoration: none
 	top: 12px
 	right: 0
-	padding-right: 15px
+	padding-right: 11px
 	text-align: right
 	color: lighten($dark-grey,30%)
 	&:hover
@@ -330,31 +330,22 @@
 
 
 .post-rt-reference
-	padding: 5px
+	padding: 10px
 	margin-top: 10px
 	position: relative
 	border: 1px solid #eee
-
+	+border-radius(3px)
 	&:hover
 		background-color: #FFF
 		cursor: pointer
 	.post-photo
-		width: 16px
-		height: 16px
-		margin-right: 4px
-		margin-bottom: 4px
-		img
-			width: 16px
-			height: auto
+		display: none
 	.post-info-name
 		font-size: 12px
 	.post-text
-		margin: 0
+		margin: 5px 0 0 0
 		clear: both
 		font-size: 12px
 		line-height: 130%		
 	.post-info-time
-		color: #B3B5B7
-		top: 5px 
-		right: 5px
-		font-size: 12px
+		display: none
