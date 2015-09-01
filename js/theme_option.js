@@ -128,6 +128,13 @@ function reOrganizeTemplates() { // for nin's templating
     });
 }
 
+
+$(document).keyup(function(e) {
+  if (e.keyCode == 27) {$('.mini-profile .post-area').removeClass('display');}
+});
+
+
+
 function reAppendModules() { // avoid w1200 things
     $('.module.toptrends').detach().appendTo($('.dashboard.right'));
     $('.module.who-to-follow').detach().appendTo($('.dashboard.right'));
