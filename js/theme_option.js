@@ -114,11 +114,18 @@ function reOrganizeTemplates() { // for nin's templating
             else  {$('.mini-profile .post-area').removeClass('display');}
             return false;
     });
+    // new post prompt
+
+    $('<div><h3>New post</h3><span class="modal-close prompt-close"></span></div>')
+        .addClass('modal-header')
+        .prependTo('.mini-profile .post-area');
 
     $('.mini-profile .post-area .post-submit').bind( 'click', function() {
         $('.mini-profile .post-area').removeClass('display');
     });
-
+    $('.mini-profile .post-area .modal-close').bind( 'click', function() {
+        $('.mini-profile .post-area').removeClass('display');
+    });
 }
 
 function reAppendModules() { // avoid w1200 things
