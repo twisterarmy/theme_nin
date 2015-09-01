@@ -50,9 +50,7 @@ $(document).ready(function()
 
     $(window).scroll(function(){
         window_scrollY = window.pageYOffset; // declare variable here for screen not to scroll when closing modals
-        if ( (window_scrollY >= 300) && (!$('#postboard-top').hasClass('.onTop')) )  {$('#postboard-top').addClass('onTop')} // switch #postboard-top when scrolling
-            else
-                {$('#postboard-top').removeClass('onTop')}
+
     });
 
 });
@@ -102,6 +100,22 @@ function reOrganizeTemplates() { // for nin's templating
 
     //loader
     newLoader()
+
+    // new post button
+    $('<li></li>')
+        .addClass('userMenu-newPost')
+        .prependTo('.mini-profile-indicators');
+    $('<a href="#">New post</a>')
+        .addClass('ion')
+        .addClass('ion-plus')
+        .appendTo('.userMenu-newPost')
+        .bind( 'click', function() {
+            if(!$('.mini-profile .post-area').hasClass('display')) {$('.mini-profile .post-area').addClass('display');}
+            else  {$('.mini-profile .post-area').removeClass('display');}
+            return false;
+
+    });
+
 }
 
 function reAppendModules() { // avoid w1200 things
