@@ -2772,9 +2772,6 @@ ul.dropdown-menu li > li > a {
   .userMenu > ul {
     background-image: none;
   }
-  .userMenu .userMenu-profile {
-    display: none;
-  }
 
   .userMenu li.userMenu-search > input {
     width: 150px;
@@ -2807,6 +2804,9 @@ ul.dropdown-menu li > li > a {
     width: 25%;
     margin: 0;
     float: left;
+  }
+  .mini-profile-indicators li.userMenu-user {
+    display: none;
   }
 
   .who-follow {
