@@ -113,7 +113,10 @@ function reOrganizeTemplates() { // for nin's templating
             if(!$('.mini-profile .post-area').hasClass('display')) {$('.mini-profile .post-area').addClass('display');}
             else  {$('.mini-profile .post-area').removeClass('display');}
             return false;
+    });
 
+    $('.mini-profile .post-area .post-submit').bind( 'click', function() {
+        $('.mini-profile .post-area').removeClass('display');
     });
 
 }
