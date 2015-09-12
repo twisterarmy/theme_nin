@@ -16,6 +16,7 @@
 @import 'layout/_modal'
 @import 'layout/_profile'
 @import 'layout/_postboard'
+@import 'layout/_groupchat'
 
 // pages
 
@@ -223,7 +224,9 @@ ul.userMenu-search-profiles
 	.userMenu-user a
 		@extend .ion-profile
 		@extend .ion
-
+	.userMenu-groupmessages a
+		@extend .ion-android-contacts 
+		@extend .ion
 .messages-qtd
 	position: absolute
 	top: 5px

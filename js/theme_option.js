@@ -90,6 +90,11 @@ function reOrganizeTemplates() { // for nin's templating
     $('.userMenu-search-profiles button').html('+').attr('title',polyglot.t('Follow'));
     $('.mini-profile-actions span').html('');
 
+    //group chat 
+    $('button.invite').html('invite');
+    $('button.leave').html('leave');
+    $('.secret-key').attr('title', 'copy secret key');
+
     //re-organizes
     $('.promoted-posts-only').detach().appendTo($('.left .mini-profile'));
     $('.mini-profile .open-following-page').parent('li').detach().appendTo($('.mini-profile-indicators'));
