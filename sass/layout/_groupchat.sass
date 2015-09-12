@@ -10,14 +10,18 @@
 		font-weight: 700 
 		padding: 5px 0
 		text-align: left
-	input 
+	input[type="text"]
 		padding: 3px 
 		width: 100%
 		margin-bottom: 10px
+	input[type="checkbox"]
+		float: left 
+		margin-right: 10px
 
 .groupMessages 
 	button 
 		margin: 5px
+
 
 // new group
 .group-messages-new-group
@@ -65,3 +69,7 @@
 		overflow: hidden
 		&:hover 
 			background: white
+
+
+.direct-messages-thread + .group-messages-control 
+	display: none

@@ -501,7 +501,7 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
 .userMenu li.userMenu-home .menu-news.show {
   display: block;
 }
-.userMenu li.userMenu-dhtindicator, .userMenu li.userMenu-connections, .userMenu li.userMenu-messages {
+.userMenu li.userMenu-dhtindicator, .userMenu li.userMenu-connections, .userMenu li.userMenu-messages, .userMenu li.userMenu-groupmessages {
   display: none !important;
 }
 .userMenu li.userMenu-config, .userMenu li.userMenu-search {
@@ -941,6 +941,9 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
 }
 .modal-wrapper.directMessages .post-info-name {
   float: none;
+}
+.modal-wrapper.directMessages .message.received .post-info-name, .modal-wrapper.directMessages .message.sent .post-info-name {
+  display: none;
 }
 .modal-wrapper.directMessages .post-info-tag {
   line-height: 1em;
@@ -1510,7 +1513,10 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
 .open .related:hover .post-reply, #postboard-top .post-area .post-area-new .related:hover .post-reply, .mini-profile .post-area-new .related:hover .post-reply,
 .open .related:hover .post-propagate,
 #postboard-top .post-area .post-area-new .related:hover .post-propagate,
-.mini-profile .post-area-new .related:hover .post-propagate {
+.mini-profile .post-area-new .related:hover .post-propagate,
+.open .related:hover .post-favorite,
+#postboard-top .post-area .post-area-new .related:hover .post-favorite,
+.mini-profile .post-area-new .related:hover .post-favorite {
   display: inline-block !important;
 }
 
@@ -1648,10 +1654,14 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   padding: 5px 0;
   text-align: left;
 }
-.group-messages-join-group input {
+.group-messages-join-group input[type="text"] {
   padding: 3px;
   width: 100%;
   margin-bottom: 10px;
+}
+.group-messages-join-group input[type="checkbox"] {
+  float: left;
+  margin-right: 10px;
 }
 
 .groupMessages button, .groupMessages .show-more-followers {
@@ -1706,6 +1716,10 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
 }
 .group-messages-control .secret-key:hover {
   background: white;
+}
+
+.direct-messages-thread + .group-messages-control {
+  display: none;
 }
 
 .forEdition.profile-card {
