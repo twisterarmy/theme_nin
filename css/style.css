@@ -1637,7 +1637,7 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   line-height: 130%;
 }
 .post-rt-reference .post-info-time {
-  display: none;
+  font-size: 80%;
 }
 .post-rt-reference .post-area {
   padding-left: 0;
