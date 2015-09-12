@@ -91,6 +91,7 @@ function reOrganizeTemplates() { // for nin's templating
     $('.mini-profile-actions span').html('');
 
     //group chat 
+    $('.mini-profile-indicators li.userMenu-groupmessages a span:last-child ').html('Group Msg');
     $('button.invite').html('invite');
     $('button.leave').html('leave');
     $('.secret-key').attr('title', 'copy secret key');

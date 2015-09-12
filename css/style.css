@@ -239,7 +239,7 @@ html, body {
 html {
   font-size: 15px;
   background-color: #ddd;
-  background-image: url('../img/bg.png?1442060298');
+  background-image: url('../img/bg.png?1442064299');
   background-attachment: fixed;
 }
 
@@ -442,7 +442,7 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   max-width: 100%;
   width: 1200px;
   margin: auto;
-  background: url('../img/logo.png?1442060298') no-repeat 50% 50%;
+  background: url('../img/logo.png?1442064299') no-repeat 50% 50%;
   background-size: 20px;
 }
 .userMenu > ul li {
@@ -2878,7 +2878,7 @@ ul.dropdown-menu li > li > a {
   }
 
   .mini-profile-indicators li {
-    width: 25%;
+    width: 20%;
     margin: 0;
     float: left;
   }
