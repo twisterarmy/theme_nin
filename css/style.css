@@ -392,13 +392,13 @@ button.disabled:hover, .disabled.show-more-followers:hover, a.button.disabled:ho
   -webkit-box-shadow: 1px 1px 0 rgba(68, 68, 68, 0.3);
   box-shadow: 1px 1px 0 rgba(68, 68, 68, 0.3);
 }
-button.color-1, .modal-wrapper .modal-content button.postboard-news, .modal-wrapper .modal-content .postboard-news.show-more-followers, button.follow, .follow.show-more-followers, .forEdition.profile-card button.submit-changes, .forEdition.profile-card .submit-changes.show-more-followers, .color-1.show-more-followers, a.button.color-1, .modal-wrapper .modal-content a.button.postboard-news, a.button.follow {
+button.color-1, .modal-wrapper .modal-content button.postboard-news, .modal-wrapper .modal-content .postboard-news.show-more-followers, button.follow, .follow.show-more-followers, .direct-messages-thread + .group-messages-control button, .direct-messages-thread + .group-messages-control .show-more-followers, .forEdition.profile-card button.submit-changes, .forEdition.profile-card .submit-changes.show-more-followers, .color-1.show-more-followers, a.button.color-1, .modal-wrapper .modal-content a.button.postboard-news, a.button.follow {
   background: #A1B775;
   border-color: #96ae64;
   color: white;
   font-weight: 500;
 }
-button.color-1:hover, .modal-wrapper .modal-content button.postboard-news:hover, .modal-wrapper .modal-content .postboard-news.show-more-followers:hover, button.follow:hover, .follow.show-more-followers:hover, .forEdition.profile-card button.submit-changes:hover, .forEdition.profile-card .submit-changes.show-more-followers:hover, .color-1.show-more-followers:hover, a.button.color-1:hover, .modal-wrapper .modal-content a.button.postboard-news:hover, a.button.follow:hover {
+button.color-1:hover, .modal-wrapper .modal-content button.postboard-news:hover, .modal-wrapper .modal-content .postboard-news.show-more-followers:hover, button.follow:hover, .follow.show-more-followers:hover, .direct-messages-thread + .group-messages-control button:hover, .direct-messages-thread + .group-messages-control .show-more-followers:hover, .forEdition.profile-card button.submit-changes:hover, .forEdition.profile-card .submit-changes.show-more-followers:hover, .color-1.show-more-followers:hover, a.button.color-1:hover, .modal-wrapper .modal-content a.button.postboard-news:hover, a.button.follow:hover {
   border-color: #687b40;
 }
 button.color-2, button.unfollow, .unfollow.show-more-followers, .forEdition.profile-card button.toggle-priv-key, .forEdition.profile-card .toggle-priv-key.show-more-followers, .color-2.show-more-followers, a.button.color-2, a.button.unfollow {
@@ -907,9 +907,9 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   z-index: 5;
   background: #FDFCFA !important;
   position: absolute;
-  bottom: 0;
+  bottom: 40px;
   width: 100% !important;
-  padding: 20px !important;
+  padding: 10px 20px !important;
   -moz-box-shadow: 0 -8px 13px rgba(17, 17, 17, 0.1);
   -webkit-box-shadow: 0 -8px 13px rgba(17, 17, 17, 0.1);
   box-shadow: 0 -8px 13px rgba(17, 17, 17, 0.1);
@@ -999,7 +999,7 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
 }
 
 .direct-messages-thread {
-  padding-bottom: 180px;
+  padding-bottom: 200px;
   max-width: 420px;
   margin: auto;
 }
@@ -1719,7 +1719,24 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
 }
 
 .direct-messages-thread + .group-messages-control {
-  display: none;
+  position: absolute;
+  bottom: 0;
+  height: 40px;
+  overflow: hidden;
+  left: 0;
+  width: 100%;
+  padding: 3px 10px;
+  text-align: right !important;
+  z-index: 200;
+  background: #FDFCFA;
+  -moz-box-shadow: 0 -8px 13px rgba(17, 17, 17, 0.1);
+  -webkit-box-shadow: 0 -8px 13px rgba(17, 17, 17, 0.1);
+  box-shadow: 0 -8px 13px rgba(17, 17, 17, 0.1);
+}
+.direct-messages-thread + .group-messages-control button, .direct-messages-thread + .group-messages-control .show-more-followers {
+  float: none;
+  display: inline-block;
+  padding: 7px;
 }
 
 .forEdition.profile-card {
