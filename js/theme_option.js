@@ -37,13 +37,7 @@ $(document).ready(function()
         $('#postboard-top').addClass(promotedPostsOnly ? "hide" : "show");
     });
 
-    $(".userMenu-search-profiles .follow")
-        .on("eventToggleFollow", function() {
-            $(this).text('+').attr('title', polyglot.t('Follow'));
-        })
-        .on("eventToggleUnfollow", function() {
-            $(this).text('-').attr('title', polyglot.t('Unfollow'));
-        });
+
 
     if (/\/options.html$/i.test(document.location))
         $(document).ready(localizeLabels);
@@ -87,7 +81,6 @@ function reOrganizeTemplates() { // for nin's templating
     $('.modal-back').html('');
     $('.twister-user-remove').html('');
     $('.profile-card-main').attr('style', '');
-    $('.userMenu-search-profiles button').html('+').attr('title',polyglot.t('Follow'));
     $('.mini-profile-actions span').html('');
 
     //group chat 
@@ -132,6 +125,16 @@ function reOrganizeTemplates() { // for nin's templating
     $('.mini-profile .post-area .modal-close').bind( 'click', function() {
         $('.mini-profile .post-area').removeClass('display');
     });
+
+    // button "follow" in search
+    $('li:not(.twister-user) button.follow').html('+').attr('title',polyglot.t('Follow'));
+    $('li:not(.twister-user) button.follow')
+        .on("eventToggleFollow", function() {
+            $(this).text('+').attr('title', polyglot.t('Follow'));
+        })
+        .on("eventToggleUnfollow", function() {
+            $(this).text('-').attr('title', polyglot.t('Unfollow'));
+        });    
 }
 
 
