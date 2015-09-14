@@ -37,8 +37,6 @@ $(document).ready(function()
         $('#postboard-top').addClass(promotedPostsOnly ? "hide" : "show");
     });
 
-
-
     if (/\/options.html$/i.test(document.location))
         $(document).ready(localizeLabels);
 
@@ -47,30 +45,31 @@ $(document).ready(function()
 
     });
 
+    // Collapse all .post.open 
+    var allPostButton = $('<li></li>').addClass('userMenu-collapsePosts').append('<a href="#">Collapse All</a>');
+    $('.mini-profile-indicators').append(allPostButton);
+    $(allPostButton).children('a').on('click', function(e) {
+        var allPost =  $('#posts .post.open');
+        allPost.each(function(){
+        if (e.button === 0 && window.getSelection() == 0)
+            postExpandFunction(e, $(this));
+        });
+        return false
+    });
+
+
 });
 
-
-
 function testRightSide() { // if rightside is empty, don't show it and engarge postboard
-
-
-
     if( ( $('.toptrends').html() == '' ) && ($('.who-to-follow').html() == '') && ( $('.twistday-reminder').html() == '' ) ){
         $('.dashboard.right').css('display: none');
         $('.wrapper .postboard').addClass('large');
-
     }
-
     else {
         $('.dashboard.right').css('display: block');
         $('.wrapper .postboard').removeClass('large');
     }
-
 }
-
-
-
-
 
 function reOrganizeTemplates() { // for nin's templating
 
@@ -85,6 +84,7 @@ function reOrganizeTemplates() { // for nin's templating
 
     //group chat 
     $('.mini-profile-indicators li.userMenu-groupmessages a span:last-child ').html('Group Msg');
+
     $('button.invite').html('invite');
     $('button.leave').html('leave');
     $('.secret-key').attr('title', 'copy secret key');
@@ -113,8 +113,8 @@ function reOrganizeTemplates() { // for nin's templating
             else  {$('.mini-profile .post-area').removeClass('display');}
             return false;
     });
-    // new post prompt
 
+    // new post prompt
     $('<div><h3>New post</h3><span class="modal-close prompt-close"></span></div>')
         .addClass('modal-header')
         .prependTo('.mini-profile .post-area');
@@ -127,6 +127,7 @@ function reOrganizeTemplates() { // for nin's templating
     });
 
     // button "follow" in search
+    // not very nice but works
     $('li:not(.twister-user) button.follow').html('+').attr('title',polyglot.t('Follow'));
     $('li:not(.twister-user) button.follow')
         .on("eventToggleFollow", function() {
@@ -137,19 +138,16 @@ function reOrganizeTemplates() { // for nin's templating
         });    
 }
 
-
+// Close new post prompt with esc key
 $(document).keyup(function(e) {
   if (e.keyCode == 27) {$('.mini-profile .post-area').removeClass('display');}
 });
-
-
 
 function reAppendModules() { // avoid w1200 things
     $('.module.toptrends').detach().appendTo($('.dashboard.right'));
     $('.module.who-to-follow').detach().appendTo($('.dashboard.right'));
     $('.module.twistday-reminder').detach().appendTo($('.dashboard.right'));
 }
-
 
 function newLoader() { // create divs for new loader
     $('<div></div>').appendTo('.postboard-loading');
@@ -197,9 +195,6 @@ function openModal(modal) {
             modal.self.outerHeight(windowHeight);
             modal.self.css('margin-top', - windowHeight / 2);
         }
-
     }
-
     return modal;
 }
-
