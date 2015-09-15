@@ -243,7 +243,7 @@ html, body {
 html {
   font-size: 15px;
   background-color: #ddd;
-  background-image: url('../img/bg.png?1442064299');
+  background-image: url('../img/bg.png?1442230326');
   background-attachment: fixed;
 }
 
@@ -446,7 +446,7 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   max-width: 100%;
   width: 1200px;
   margin: auto;
-  background: url('../img/logo.png?1442064299') no-repeat 50% 50%;
+  background: url('../img/logo.png?1442230326') no-repeat 50% 50%;
   background-size: 20px;
 }
 .userMenu > ul li {
@@ -1399,6 +1399,8 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   overflow: hidden;
   width: 48px;
   margin: 0 15px 15px 0;
+  max-height: 60px;
+  clear: both;
 }
 .post-photo img {
   width: 100%;
