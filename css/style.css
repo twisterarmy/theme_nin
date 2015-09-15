@@ -1399,7 +1399,7 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   overflow: hidden;
   width: 48px;
   margin: 0 15px 15px 0;
-  max-height: 60px;
+  max-height: 48px;
   clear: both;
 }
 .post-photo img {
@@ -1550,6 +1550,7 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
 
 .post-stats {
   float: left;
+  clear: left;
 }
 .post-stats li {
   display: inline-block;
