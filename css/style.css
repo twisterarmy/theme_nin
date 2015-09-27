@@ -659,7 +659,7 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   margin-top: 8px;
   color: black;
   font-weight: bold;
-  font-size: 110%;
+  font-size: 80%;
 }
 .modal-wrapper.following-modal h2 {
   display: none;
