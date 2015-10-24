@@ -140,7 +140,10 @@ function reOrganizeTemplates() { // for nin's templating
 
 // Close new post prompt with esc key
 $(document).keyup(function(e) {
-  if (e.keyCode == 27) {$('.mini-profile .post-area').removeClass('display');}
+    if (e.keyCode == 27) {
+        $('.mini-profile .post-area').removeClass('display');
+        closeModal();
+    }
 });
 
 function reAppendModules() { // avoid w1200 things
