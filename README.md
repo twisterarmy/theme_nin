@@ -7,6 +7,11 @@ Nin is a clean and flat theme for the P2P microblogging platform [Twister](http:
 
 Clone or download the folder in `.twister/html/` after removing default `theme_nin` directory.
 
+### MacOS X Instructions
+
+        rm -R /Users/${USER}/Library/Application\ Support/twister/html/theme_nin
+        git clone https://github.com/myleneb/theme_nin.git /Users/${USER}/Library/Application\ Support/twister/html/theme_nin
+
 ####  Captures
 
 Homepage
