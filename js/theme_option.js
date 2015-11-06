@@ -13,12 +13,12 @@ $(window).load(function()
 $(document).ready(function()
 {
     var windowHeight = $(window).height();
-    
+
     testRightSide();
     reOrganizeTemplates();
 
     $.globalEval(postToElem.toString().replace(/postContext.append\(_templatePostRtBy/,
-        'postContext.addClass(\'post-retransmited-by-container\').prependTo(postContext.parent()).append(_templatePostRtBy'));
+        'postContext.prependTo(postContext.parent()).append(_templatePostRtBy'));
 
     $( '.userMenu-home.current a' ).on( 'click', function() {
         $('html, body').animate({scrollTop:0},300);
@@ -45,7 +45,7 @@ $(document).ready(function()
 
     });
 
-    // Collapse all .post.open 
+    // Collapse all .post.open
     var allPostButton = $('<li></li>').addClass('userMenu-collapsePosts').append('<a href="#">Collapse All</a>');
     $('.mini-profile-indicators').append(allPostButton);
     $(allPostButton).children('a').on('click', function(e) {
@@ -82,7 +82,7 @@ function reOrganizeTemplates() { // for nin's templating
     $('.profile-card-main').attr('style', '');
     $('.mini-profile-actions span').html('');
 
-    //group chat 
+    //group chat
     $('.mini-profile-indicators li.userMenu-groupmessages a span:last-child ').html('Group Msg');
 
     $('button.invite').html('invite');
@@ -94,7 +94,7 @@ function reOrganizeTemplates() { // for nin's templating
     $('.mini-profile .open-following-page').parent('li').detach().appendTo($('.mini-profile-indicators'));
     $('.mini-profile-indicators').detach().insertAfter($('.dashboard.left .profile-data'));
 
-    ///// page profile 
+    ///// page profile
     $('.forEdition .profile-card-main h2').detach().insertBefore($('.profile-card-main'));
 
     //loader
@@ -135,7 +135,7 @@ function reOrganizeTemplates() { // for nin's templating
         })
         .on("eventToggleUnfollow", function() {
             $(this).text('-').attr('title', polyglot.t('Unfollow'));
-        });    
+        });
 }
 
 // Close new post prompt with esc key
@@ -168,7 +168,7 @@ function localizeLabels() {
 }
 
 function openModal(modal) {
-    
+
     var windowHeight = $(window).height();
     if (!modal.classBase)
         modal.classBase = '.modal-wrapper';
@@ -188,7 +188,7 @@ function openModal(modal) {
         modal.postboard = modal.self.find('.postboard-posts');
 
         modal.self.prependTo('body').slideDown();
-     
+
 
     if (modal.classBase === '.modal-wrapper') {
         modal.content.outerHeight(modal.self.height() - modal.self.find('.modal-header').outerHeight());

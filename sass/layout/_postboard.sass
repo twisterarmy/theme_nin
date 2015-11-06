@@ -197,10 +197,17 @@
 	margin: 2px 0 4px 60px
 
 	color: lighten($dark-grey,30%)
-	&.post-retransmited-by-container
-		margin: 0 0 1em
 
-.post-retransmited-icon
+
+.post-rt-by
+	margin: 0 0 1em
+	div
+		display: inline
+	.prep:before, .prep:after
+		content: ' '
+
+
+.post-rt-icon
 	@extend .ion-shuffle
 	@extend .ion
 	&:before
