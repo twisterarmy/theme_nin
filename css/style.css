@@ -996,6 +996,13 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
 .direct-messages-list .post:hover {
   background: white;
 }
+
+.direct-messages-list .post .messages-qtd {
+  display: none;
+  top: 4px;
+  left: 56px;
+}
+
 .direct-messages-list li {
   position: relative;
   border-bottom: 1px solid #eee;
@@ -2377,6 +2384,7 @@ ul.userMenu-search-profiles button, ul.userMenu-search-profiles .show-more-follo
   top: 5px;
   right: 5px;
   background: #A1B775;
+  text-align: center;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
   color: #fff;
   width: 25px;
