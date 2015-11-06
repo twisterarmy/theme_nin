@@ -1112,6 +1112,9 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
 .profile-modal .modal-content .profile-data {
   background: none;
 }
+.profile-modal .modal-content .members {
+    overflow-y: auto;
+}
 
 .profile-modal h2.profile-screen-name {
   display: block;
