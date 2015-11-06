@@ -1714,6 +1714,30 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   border: 1px solid #ebebeb;
 }
 
+.profile-card[data-screen-name^=\*] .profile-bio {
+  text-align: center;
+  margin: 0;
+}
+.profile-card[data-screen-name^=\*] .profile-bio .group-description {
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, 0);
+  background: none;
+  text-align: center;
+  width: 58%;
+  padding: 4px;
+  vertical-align: middle;
+}
+.profile-card[data-screen-name^=\*] .profile-bio .group-description:focus {
+  border: 1px solid rgba(0, 0, 0, .1);
+  background: white;
+}
+.profile-card[data-screen-name^=\*] .profile-bio .group-description:hover {
+  border: 1px solid rgba(0, 0, 0, .1);
+}
+.profile-card[data-screen-name^=\*] .profile-bio .save, .profile-card[data-screen-name^=\*] .profile-bio .cancel {
+  display: none;
+}
+
 .group-messages-control {
   text-align: left !important;
 }
