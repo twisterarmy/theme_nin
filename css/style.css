@@ -863,6 +863,10 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   line-height: 0.8rem;
 }
 
+.confirm-popup.prompt-wrapper {
+  margin-top: -100px;
+}
+
 /************ FOLLOWING-CONFIG MODAL ********* */
 .prompt-wrapper.following-config-modal, .direct-messages-thread + .group-messages-control .following-config-modal.invite-form, .mini-profile .following-config-modal.post-area.display {
   margin-top: -100px;
