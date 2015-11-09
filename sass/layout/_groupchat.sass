@@ -59,6 +59,30 @@
 			border: 1px solid darken( #F8F8F8 , 5%)
 
 
+// there is no special class for group DM profile modal window currently
+.profile-card[data-screen-name^=\*]
+	.profile-bio
+		text-align: center
+		margin: 0
+
+		.group-description
+			display: inline-block
+			border: 1px solid rgba(0, 0, 0, 0)
+			background: none
+			text-align: center
+			width: 58%
+			padding: 4px
+			vertical-align: middle
+
+			&:focus
+				border: 1px solid rgba(0, 0, 0, .1)
+				background: white
+
+			&:hover
+				border: 1px solid rgba(0, 0, 0, .1)
+
+			.save, .cancel
+				display: none
 
 
 // messages control
