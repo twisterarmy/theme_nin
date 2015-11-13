@@ -976,7 +976,7 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   right: 25px;
   top: 50%;
   font-size: 1.1em;
-  margin: -6px 0 0 0;
+  margin: -0.55em 0 0 0;
   color: rgba(0, 0, 0, 0.4);
   opacity: 0;
   -moz-transition-property: right, opacity;
@@ -1714,6 +1714,12 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
 .groupMessages .direct-messages-list .post-info-time:hover {
   text-decoration: none;
   color: inherit;
+}
+.groupMessages .direct-messages-list .post .messages-qtd {
+  top: 50%;
+  left: unset;
+  right: 24px;
+  margin-top: -13px;
 }
 
 .group-messages-new-group {
