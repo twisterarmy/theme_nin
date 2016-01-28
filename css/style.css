@@ -254,7 +254,7 @@ html {
 body {
   font-size: 1rem;
   line-height: 1.3rem;
-  font-family: "Roboto", sans-serif, "Symbola";
+  font-family: "Roboto", sans-serif, "Symbola", "Symbola";
   font-weight: 400;
   overflow-y: scroll !important;
 }
@@ -314,6 +314,8 @@ textarea, input {
   background: white;
   display: block;
   border: none;
+  font-family: "Monospace", "Roboto", sans-serif, "Symbola";
+  font-size: 0.8rem;
 }
 
 samp, .forEdition.profile-card .secret-key-container .secret-key {
@@ -381,7 +383,7 @@ button, .show-more-followers, a.button {
   color: #3E3C42;
   background: #F8F8F8;
   border: 1px solid #ebebeb;
-  font-family: "Ionicons", "Roboto", sans-serif;
+  font-family: "Ionicons", "Roboto", sans-serif, "Symbola";
   cursor: pointer;
 }
 button:hover, .show-more-followers:hover, a.button:hover {
@@ -850,7 +852,7 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   margin-right: 10px;
   font-weight: 600;
   font-size: 0.8rem;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
   margin-bottom: 10px;
   color: rgba(255, 255, 255, 0.8);
   -moz-transition: margin 0.2s;
@@ -2137,7 +2139,7 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   border: solid 1px rgba(0, 0, 0, 0.1);
   position: relative;
   margin: 1rem 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif, "Symbola";
 }
 .network .highlight {
   font-size: 1.2rem;
