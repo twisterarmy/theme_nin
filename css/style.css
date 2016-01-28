@@ -114,7 +114,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-weight: normal;
   font-style: normal;
 }
-.ion:before, .userMenu li.userMenu-config > a:before, .modal-header span:before, .prompt-wrapper .modal-header span:before, .direct-messages-thread + .group-messages-control .invite-form .modal-header span:before, .mini-profile .post-area .modal-header span:before, .prompt-wrapper .switch-mode:before, .direct-messages-thread + .group-messages-control .invite-form .switch-mode:before, .mini-profile .post-area.display .switch-mode:before, .bitmessage-ctc:before, .tox-ctc:before, .profile-modal .profile-tox:before, .profile-modal .profile-bitmessage:before, .post-rt-icon:before, .post-interactions span:before, .post-stats li.stat-count:before, .mini-profile-indicators .userMenu-connections a:before, .mini-profile-indicators .userMenu-messages a:before, .mini-profile-indicators .userMenu-user a:before, .mini-profile-indicators .userMenu-groupmessages a:before, .mini-profile-indicators .userMenu-collapsePosts a:before, .twister-user-remove:before, .refresh-toptrends:before, .twistday-reminder .refresh:before, .refresh-users:before, .view-all-users:before, .ion-after:after, .isFollowing:after, .direct-messages-list .post:after {
+.ion:before, .userMenu li.userMenu-config > a:before, .modal-header span:before, .prompt-wrapper .modal-header span:before, .direct-messages-thread + .group-messages-control .invite-form .modal-header span:before, .mini-profile .post-area .modal-header span:before, .minimize-modal:before, .prompt-wrapper .switch-mode:before, .direct-messages-thread + .group-messages-control .invite-form .switch-mode:before, .mini-profile .post-area.display .switch-mode:before, .bitmessage-ctc:before, .tox-ctc:before, .profile-modal .profile-tox:before, .profile-modal .profile-bitmessage:before, .post-rt-icon:before, .post-interactions span:before, .post-stats li.stat-count:before, .mini-profile-indicators .userMenu-connections a:before, .mini-profile-indicators .userMenu-messages a:before, .mini-profile-indicators .userMenu-user a:before, .mini-profile-indicators .userMenu-groupmessages a:before, .mini-profile-indicators .userMenu-collapsePosts a:before, .twister-user-remove:before, .refresh-toptrends:before, .twistday-reminder .refresh:before, .refresh-users:before, .view-all-users:before, .ion-after:after, .isFollowing:after, .direct-messages-list .post:after {
   display: inline-block;
   font-family: "Ionicons";
   speak: none;
@@ -128,11 +128,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -moz-osx-font-smoothing: grayscale;
 }
 
-.ion:before, .userMenu li.userMenu-config > a:before, .modal-header span:before, .prompt-wrapper .modal-header span:before, .direct-messages-thread + .group-messages-control .invite-form .modal-header span:before, .mini-profile .post-area .modal-header span:before, .prompt-wrapper .switch-mode:before, .direct-messages-thread + .group-messages-control .invite-form .switch-mode:before, .mini-profile .post-area.display .switch-mode:before, .bitmessage-ctc:before, .tox-ctc:before, .profile-modal .profile-tox:before, .profile-modal .profile-bitmessage:before, .post-rt-icon:before, .post-interactions span:before, .post-stats li.stat-count:before, .mini-profile-indicators .userMenu-connections a:before, .mini-profile-indicators .userMenu-messages a:before, .mini-profile-indicators .userMenu-user a:before, .mini-profile-indicators .userMenu-groupmessages a:before, .mini-profile-indicators .userMenu-collapsePosts a:before, .twister-user-remove:before, .refresh-toptrends:before, .twistday-reminder .refresh:before, .refresh-users:before, .view-all-users:before {
+.ion:before, .userMenu li.userMenu-config > a:before, .modal-header span:before, .prompt-wrapper .modal-header span:before, .direct-messages-thread + .group-messages-control .invite-form .modal-header span:before, .mini-profile .post-area .modal-header span:before, .minimize-modal:before, .prompt-wrapper .switch-mode:before, .direct-messages-thread + .group-messages-control .invite-form .switch-mode:before, .mini-profile .post-area.display .switch-mode:before, .bitmessage-ctc:before, .tox-ctc:before, .profile-modal .profile-tox:before, .profile-modal .profile-bitmessage:before, .post-rt-icon:before, .post-interactions span:before, .post-stats li.stat-count:before, .mini-profile-indicators .userMenu-connections a:before, .mini-profile-indicators .userMenu-messages a:before, .mini-profile-indicators .userMenu-user a:before, .mini-profile-indicators .userMenu-groupmessages a:before, .mini-profile-indicators .userMenu-collapsePosts a:before, .twister-user-remove:before, .refresh-toptrends:before, .twistday-reminder .refresh:before, .refresh-users:before, .view-all-users:before {
   padding: 0 3px;
 }
 
-.ion:after, .userMenu li.userMenu-config > a:after, .modal-header span:after, .prompt-wrapper .modal-header span:after, .direct-messages-thread + .group-messages-control .invite-form .modal-header span:after, .mini-profile .post-area .modal-header span:after, .prompt-wrapper .switch-mode:after, .direct-messages-thread + .group-messages-control .invite-form .switch-mode:after, .mini-profile .post-area.display .switch-mode:after, .bitmessage-ctc:after, .tox-ctc:after, .profile-modal .profile-tox:after, .profile-modal .profile-bitmessage:after, .post-rt-icon:after, .post-interactions span:after, .post-stats li.stat-count:after, .mini-profile-indicators .userMenu-connections a:after, .mini-profile-indicators .userMenu-messages a:after, .mini-profile-indicators .userMenu-user a:after, .mini-profile-indicators .userMenu-groupmessages a:after, .mini-profile-indicators .userMenu-collapsePosts a:after, .twister-user-remove:after, .refresh-toptrends:after, .twistday-reminder .refresh:after, .refresh-users:after, .view-all-users:after, .ion-after:before, .isFollowing:before, .direct-messages-list .post:before {
+.ion:after, .userMenu li.userMenu-config > a:after, .modal-header span:after, .prompt-wrapper .modal-header span:after, .direct-messages-thread + .group-messages-control .invite-form .modal-header span:after, .mini-profile .post-area .modal-header span:after, .minimize-modal:after, .prompt-wrapper .switch-mode:after, .direct-messages-thread + .group-messages-control .invite-form .switch-mode:after, .mini-profile .post-area.display .switch-mode:after, .bitmessage-ctc:after, .tox-ctc:after, .profile-modal .profile-tox:after, .profile-modal .profile-bitmessage:after, .post-rt-icon:after, .post-interactions span:after, .post-stats li.stat-count:after, .mini-profile-indicators .userMenu-connections a:after, .mini-profile-indicators .userMenu-messages a:after, .mini-profile-indicators .userMenu-user a:after, .mini-profile-indicators .userMenu-groupmessages a:after, .mini-profile-indicators .userMenu-collapsePosts a:after, .twister-user-remove:after, .refresh-toptrends:after, .twistday-reminder .refresh:after, .refresh-users:after, .view-all-users:after, .ion-after:before, .isFollowing:before, .direct-messages-list .post:before {
   display: none;
 }
 
@@ -174,6 +174,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 .ion-close:before, .modal-header span.modal-close:before, .direct-messages-thread + .group-messages-control .invite-form .modal-header span.modal-close:before, .mini-profile .post-area .modal-header span.modal-close:before, .twister-user-remove:before {
   content: "";
+}
+
+.ion-minus:before, .minimize-modal:before {
+  content: "";
 }
 
 .ion-back:before, .modal-header span.modal-back:before, .direct-messages-thread + .group-messages-control .invite-form .modal-header span.modal-back:before, .mini-profile .post-area .modal-header span.modal-back:before {
@@ -243,7 +247,7 @@ html, body {
 html {
   font-size: 15px;
   background-color: #ddd;
-  background-image: url('../img/bg.png?1442230326');
+  background-image: url('../img/bg.png?1453965385');
   background-attachment: fixed;
 }
 
@@ -446,12 +450,13 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   max-width: 100%;
   width: 1200px;
   margin: auto;
-  background: url('../img/logo.png?1442230326') no-repeat 50% 50%;
+  background: url('../img/logo.png?1453965385') no-repeat 50% 50%;
   background-size: 20px;
 }
 .userMenu > ul li {
   position: relative;
-  display: inline-block;
+  display: block;
+  float: left;
   margin: 0 10px;
 }
 .userMenu > ul li > a {
@@ -570,6 +575,7 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   width: 150px;
   position: fixed;
   top: 70px;
+  z-index: 2000;
 }
 .dashboard.right {
   float: left;
@@ -657,7 +663,7 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
 .modal-wrapper.new-user .secret-key {
   display: block;
   margin-top: 8px;
-  color: black;
+  color: #010000;
   font-weight: bold;
   font-size: 80%;
 }
@@ -787,7 +793,7 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   display: none;
 }
 .modal-header span.modal-back, .direct-messages-thread + .group-messages-control .invite-form .modal-header span.modal-back, .mini-profile .post-area .modal-header span.modal-back {
-  right: 35px;
+  right: 70px;
 }
 
 /* Composants */
@@ -810,6 +816,51 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
 }
 .twister-user small {
   display: none;
+}
+
+/* Minimized */
+.minimize-modal {
+  position: absolute;
+  top: 0;
+  line-height: 52px;
+  font-size: 1rem;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.1s linear;
+  right: 35px !important;
+}
+.minimize-modal:hover {
+  color: white;
+}
+.minimize-modal b {
+  display: none;
+}
+
+#modals-minimized {
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  bottom: 0;
+  width: 168px;
+  text-align: right;
+}
+#modals-minimized li {
+  background: #3E3C42;
+  cursor: pointer;
+  margin-right: 10px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.8);
+  -moz-transition: margin 0.2s;
+  -o-transition: margin 0.2s;
+  -webkit-transition: margin 0.2s;
+  transition: margin 0.2s;
+}
+#modals-minimized li:hover {
+  color: white;
+  margin-right: 0;
 }
 
 /*********** POPUP PROMPT ************ */
@@ -863,7 +914,7 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   line-height: 0.8rem;
 }
 
-.confirm-popup.prompt-wrapper {
+.confirm-popup.prompt-wrapper, .direct-messages-thread + .group-messages-control .confirm-popup.invite-form, .mini-profile .confirm-popup.post-area.display {
   margin-top: -100px;
 }
 
@@ -1000,13 +1051,11 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
 .direct-messages-list .post:hover {
   background: white;
 }
-
 .direct-messages-list .post .messages-qtd {
   display: none;
   top: 4px;
   left: 56px;
 }
-
 .direct-messages-list li {
   position: relative;
   border-bottom: 1px solid #eee;
@@ -1124,7 +1173,7 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   background: none;
 }
 .profile-modal .modal-content .members {
-    overflow-y: auto;
+  overflow-y: auto;
 }
 
 .profile-modal h2.profile-screen-name {
@@ -1488,7 +1537,7 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   display: inline;
 }
 .post-rt-by .prep:before, .post-rt-by .prep:after {
-  content: ' ';
+  content: " ";
 }
 
 .post-rt-icon:before {
@@ -1744,7 +1793,7 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
 }
 .profile-card[data-screen-name^=\*] .profile-bio .group-description {
   display: inline-block;
-  border: 1px solid rgba(0, 0, 0, 0);
+  border: 1px solid transparent;
   background: none;
   text-align: center;
   width: 58%;
@@ -1752,13 +1801,13 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   vertical-align: middle;
 }
 .profile-card[data-screen-name^=\*] .profile-bio .group-description:focus {
-  border: 1px solid rgba(0, 0, 0, .1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   background: white;
 }
 .profile-card[data-screen-name^=\*] .profile-bio .group-description:hover {
-  border: 1px solid rgba(0, 0, 0, .1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
-.profile-card[data-screen-name^=\*] .profile-bio .save, .profile-card[data-screen-name^=\*] .profile-bio .cancel {
+.profile-card[data-screen-name^=\*] .profile-bio .group-description .save, .profile-card[data-screen-name^=\*] .profile-bio .group-description .cancel {
   display: none;
 }
 
