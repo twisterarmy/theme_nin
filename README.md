@@ -23,10 +23,13 @@ Example with profile in sidebar:
 
 ![hashtag-search](https://raw.githubusercontent.com/myleneb/theme_nin/nin-v2/captures/search-hashtag.jpg)
 
+Minimized modals:
+
+![mobile](https://raw.githubusercontent.com/myleneb/theme_nin/nin-v2/captures/minimized-modals.jpg)
+
 Responsive view:
 
 ![mobile](https://raw.githubusercontent.com/myleneb/theme_nin/nin-v2/captures/mobile.jpg)
-
 
 ####  To do
 
