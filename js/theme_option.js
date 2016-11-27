@@ -61,13 +61,14 @@ $(document).ready(function()
 });
 
 function testRightSide() { // if rightside is empty, don't show it and engarge postboard
-    if( ( $('.toptrends').html() == '' ) && ($('.who-to-follow').html() == '') && ( $('.twistday-reminder').html() == '' ) ){
-        $('.dashboard.right').css('display: none');
-        $('.wrapper .postboard').addClass('large');
-    }
-    else {
-        $('.dashboard.right').css('display: block');
+    var container = $('.dashboard.right');
+
+    if (container.children('.module:not(:empty)').length) {
+        container.show();
         $('.wrapper .postboard').removeClass('large');
+    } else {
+        container.hide();
+        $('.wrapper .postboard').addClass('large');
     }
 }
 
