@@ -135,9 +135,29 @@ $header-modal-height : $menu-height
 			top: $header-modal-height +2
 			z-index: 2000
 			@extend .color-1
-
-
-
+			
+			
+	&.new-users-modal
+		a
+			color: $main-color-dark
+			&.twister-user-name
+				&:hover
+					text-decoration: none
+		.twister-user-info
+			text-align: left
+			font-size: .8rem
+			line-height: 1rem
+			width: 80%
+			padding-left: $mini-usr-img + 20
+		button
+			position: absolute
+			right: 10px
+			top: 10px
+			@extend .small
+		.bio
+			color: rgba(0, 0, 0, 0.6)
+			font-style: italic
+			padding: .25rem 0
 
 
 .modal-header

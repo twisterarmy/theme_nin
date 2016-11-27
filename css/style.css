@@ -725,6 +725,29 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   font-style: italic;
   padding: 0.25rem 0;
 }
+.modal-wrapper.new-users-modal a {
+  color: #222;
+}
+.modal-wrapper.new-users-modal a.twister-user-name:hover {
+  text-decoration: none;
+}
+.modal-wrapper.new-users-modal .twister-user-info {
+  text-align: left;
+  font-size: 0.8rem;
+  line-height: 1rem;
+  width: 80%;
+  padding-left: 68px;
+}
+.modal-wrapper.new-users-modal button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.modal-wrapper.new-users-modal .bio {
+  color: rgba(0, 0, 0, 0.6);
+  font-style: italic;
+  padding: 0.25rem 0;
+}
 .modal-wrapper .modal-content {
   width: 100%;
   overflow: hidden;
@@ -2813,6 +2836,18 @@ img.twister-user-photo {
 }
 .twistday-reminder .twisterday {
   font-size: 12px;
+}
+
+/*********** NEWCOMERS ************/
+.new-users.module li button {
+  position: absolute;
+  right: 30px;
+  top: 10px;
+  display: none;
+  padding: 0.4rem !important;
+}
+.new-users.module li:hover button {
+  display: block;
 }
 
 /******* LOADER ************ */
