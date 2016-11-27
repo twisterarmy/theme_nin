@@ -2590,6 +2590,20 @@ ul.userMenu-search-profiles button, ul.userMenu-search-profiles .show-more-follo
   display: none;
 }
 
+.latest-activity {
+  font-size: 12px;
+}
+.latest-activity label {
+  display: inline-block;
+}
+.latest-activity .time {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 12px;
+  margin: 1px 5px;
+}
+
 /***************** POST AREA ************** */
 .post-area-new textarea {
   resize: none;
