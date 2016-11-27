@@ -147,9 +147,12 @@ $(document).keyup(function(e) {
 });
 
 function reAppendModules() { // avoid w1200 things
-    $('.module.toptrends').detach().appendTo($('.dashboard.right'));
-    $('.module.who-to-follow').detach().appendTo($('.dashboard.right'));
-    $('.module.twistday-reminder').detach().appendTo($('.dashboard.right'));
+    $('.dashboard.right')
+        .append($('.module.toptrends'))
+        .append($('.module.who-to-follow'))
+        .append($('.module.twistday-reminder'))
+        .append($('.module.new-users'))
+    ;
 }
 
 function newLoader() { // create divs for new loader
