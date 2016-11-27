@@ -12,13 +12,14 @@ $(window).load(function()
 
 $(document).ready(function()
 {
-    var windowHeight = $(window).height();
-
     testRightSide();
     reOrganizeTemplates();
 
     $.globalEval(postToElem.toString().replace(/postContext.append\(_templatePostRtBy/,
         'postContext.prependTo(postContext.parent()).append(_templatePostRtBy'));
+
+    $.globalEval(openModal.toString().replace(/window_scrollY = window\.pageYOffset;/, '')
+        .replace(/\$\('body'\)\.css\('overflow', 'hidden'\);/, ''));
 
     $( '.userMenu-home.current a' ).on( 'click', function() {
         $('html, body').animate({scrollTop:0},300);
@@ -56,8 +57,6 @@ $(document).ready(function()
         });
         return false
     });
-
-
 });
 
 function testRightSide() { // if rightside is empty, don't show it and engarge postboard
@@ -169,39 +168,4 @@ function localizeLabels() {
     $("label[for=t-4]").text(polyglot.t("Keys"));
     $("label[for=t-5]").text(polyglot.t("Appearance"));
     $("label[for=t-6]").text(polyglot.t("Users"));
-}
-
-function openModal(modal) {
-
-    var windowHeight = $(window).height();
-    if (!modal.classBase)
-        modal.classBase = '.modal-wrapper';
-
-    $(modal.classBase + ':not(#templates *)').remove();
-
-    modal.self = $('#templates ' + modal.classBase).clone(true)
-        .addClass(modal.classAdd);
-
-    if (modal.title)
-        modal.self.find('.modal-header h3').html(modal.title);
-    if (modal.content)
-        modal.content = modal.self.find('.modal-content')
-            .append(modal.content);
-    else
-        modal.content = modal.self.find('.modal-content');
-        modal.postboard = modal.self.find('.postboard-posts');
-
-        modal.self.prependTo('body').slideDown();
-
-
-    if (modal.classBase === '.modal-wrapper') {
-        modal.content.outerHeight(modal.self.height() - modal.self.find('.modal-header').outerHeight());
-
-        if (modal.self.outerHeight() > windowHeight) {
-            modal.content.outerHeight(modal.content.outerHeight() - modal.self.outerHeight() + windowHeight);
-            modal.self.outerHeight(windowHeight);
-            modal.self.css('margin-top', - windowHeight / 2);
-        }
-    }
-    return modal;
 }
