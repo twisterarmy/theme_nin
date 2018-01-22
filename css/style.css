@@ -2248,6 +2248,9 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
 .options {
   position: relative;
 }
+.options input {
+  display: inline-block;
+}
 .options button, .options .show-more-followers, .options input, .options select {
   font-size: 13px;
 }
