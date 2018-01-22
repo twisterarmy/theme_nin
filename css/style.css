@@ -2288,7 +2288,7 @@ button.light:hover, .light.show-more-followers:hover, a.button.light:hover {
   opacity: 0;
   visibility: hidden;
 }
-.options input#tab_language:checked ~ .tab-content .language, .options input#t-2:checked ~ .tab-content .theme, .options input#t-3:checked ~ .tab-content .notifications, .options input#t-4:checked ~ .tab-content .keys, .options input#t-5:checked ~ .tab-content .appearance, .options input#t-6:checked ~ .tab-content .users {
+.options input#tab_language:checked ~ .tab-content .language, .options input#t-2:checked ~ .tab-content .theme, .options input#t-3:checked ~ .tab-content .notifications, .options input#t-4:checked ~ .tab-content .keys, .options input#t-5:checked ~ .tab-content .appearance, .options input#t-6:checked ~ .tab-content .users, .options input#t-7:checked ~ .tab-content .webtorrent, .options input#t-8:checked ~ .tab-content .DMs {
   position: relative;
   z-index: 10;
   opacity: 1;
