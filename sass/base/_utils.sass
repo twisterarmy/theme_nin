@@ -15,7 +15,7 @@
 
 /************** BUTTONS ************/
 
-button, a.button
+@mixin button-basic
 	padding: .6rem 1rem
 	display: inline-block
 	line-height: .75rem
@@ -42,6 +42,9 @@ button, a.button
 		&:hover
 			color: #666
 			+box-shadow(1px 1px 0 rgba(#444, .3))
+
+button, a.button
+	@include button-basic
 	&.color-1
 		background: $main-color-color
 		border-color: darken($main-color-color, 5%)
