@@ -18,11 +18,11 @@
 			float: left
 			margin-right: 1%
 			@extend .clear-fix
-			&:last-child 
+			&:last-child
 				margin-right: 0
 
-			&:last-child 
-				h2 
+			&:last-child
+				h2
 					+background-image(linear-gradient(to right , $color-green, #5E80A2) )
 
 
@@ -46,7 +46,7 @@
 
 	span.connection-status
 		font-weight: 500
-		&:before 
+		&:before
 			content: ""
 			display: inline-block
 			height: .8em
@@ -65,23 +65,22 @@
 		font-weight: 700
 		font-family: Arial
 		font-size: 95%
-	h2 
-		font-weight: 400 
+	h2
+		font-weight: 400
 		+background-image(linear-gradient(to left , $color-green, #5E80A2) )
 		padding: 1rem 2rem
 		color: white
 
 
-	h3 
+	h3
 		font-weight: 600
 		margin-top: 2*$space
 		padding: 0 1.5rem
 		+box-sizing(content-box)
-		&:after 
-			display: block 
+		&:after
+			display: block
 			content: ''
-			height: 1px 
+			height: 1px
 			width: 100%
 			background: rgba(#5F81A1,.5)
 			margin-top: $space
-

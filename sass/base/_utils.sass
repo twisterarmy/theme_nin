@@ -1,14 +1,14 @@
 
 
 
-.box-shadow 
+.box-shadow
 	+box-shadow(0 8px 13px rgba(#111, 0))
 
 
 .clear-fix
 	&:after // clearfix
 		content: ""
-		display: table 
+		display: table
 		clear: both
 
 
@@ -21,13 +21,13 @@ button, a.button
 	line-height: .75rem
 	letter-spacing: 0.07rem
 	font-size: .75rem
-	position: relative 
+	position: relative
 	font-weight: 300
 	text-transform: uppercase
 	+transition-property(background, border-color)
 	+transition-duration(.1s)
 	color: $dark-grey
-	background: #F8F8F8 
+	background: #F8F8F8
 	border: 1px solid darken( #F8F8F8 , 5%)
 	font-family: $symbol-font-family, $main-font-family
 	cursor: pointer
@@ -42,29 +42,29 @@ button, a.button
 		&:hover
 			color: #666
 			+box-shadow(1px 1px 0 rgba(#444, .3))
-	&.color-1 
+	&.color-1
 		background: $main-color-color
 		border-color: darken($main-color-color, 5%)
 		color: white
 		font-weight: 500
-		&:hover 
+		&:hover
 			border-color: darken($main-color-color, 22%)
 	&.color-2
 		background: #64676C
 		border-color: darken(#64676C, 5%)
 		color: white
 		font-weight: 500
-		&:hover 
+		&:hover
 			border-color: darken(#64676C, 15%)
-	&.small 
+	&.small
 		padding:  .5rem
 		font-weight: 700
-		font-size: .7rem 
+		font-size: .7rem
 		line-height: .7rem
-	&.light 
+	&.light
 		background: #eee
 		border-color: darken(#eee, 5%)
 		color: $main-color-dark
 		font-weight: 500
-		&:hover 
+		&:hover
 			border-color: darken(#eee, 25%)

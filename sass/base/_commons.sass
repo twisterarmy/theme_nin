@@ -8,16 +8,16 @@
 html, body
 	min-height: 100%
 	color: $defaut-font-color
-	position: absolute 
+	position: absolute
 	width: 100%
 
-html 
+html
 	font-size: $global-font-size
 	background-color: #ddd
 	background-image: image-url("bg.png")
 	background-attachment: fixed
 
-body 
+body
 	font-size: $main-font-size
 	line-height : $main-line-height
 	font-family : $main-font-family, "Symbola"
@@ -26,25 +26,25 @@ body
 
 
 
-a 
+a
 	text-decoration: none
 	color: $main-color-color
 	&:hover, &:active
 		color: $main-color-color
 		text-decoration: underline
-	i 
+	i
 		text-decoration: underline
 		font-style: normal
 
-i, em 
-	font-style: italic 
+i, em
+	font-style: italic
 	font-family: $serif-font-family
 	letter-spacing: 0
 
-strong, b 
+strong, b
 	font-weight: 600
 
-img 
+img
 	background: $bloc-background-color
 
 h1
@@ -64,12 +64,12 @@ h3
 	font-weight: 400
 	line-height: 1.1em
 
-br 
+br
 	display: block
 
-textarea, input 
-	background: white 
-	display: block 
+textarea, input
+	background: white
+	display: block
 	border: none
 	font-family: "Monospace", $main-font-family
 	font-size: .8rem
@@ -81,19 +81,19 @@ samp
 	font-size: 11px
 	line-height: 11px
 	display: inline-block
-	padding:  5px 
+	padding:  5px
 	+border-radius(1px)
 	font-weight: 500
 	font-family: monospace
 	word-wrap: break-word
-	
+
 /* isFollowing */
 
 
 .isFollowing
 	@extend .ion-checkmark
 	@extend .ion-after
-	&:after 
+	&:after
 		color: $main-color-color
 		padding-left: 3px
 		display: inline
@@ -103,6 +103,5 @@ samp
 h3
 	.isFollowing:before
 		display: none!important
-	.isFollowing:after 
+	.isFollowing:after
 		display: none!important
-

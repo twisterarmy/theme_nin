@@ -2,43 +2,43 @@
 
 
 .group-messages-join-group
-	.modal-content 
+	.modal-content
 		padding: 20px
-	button 
+	button
 		margin: 5px 0
-	.label 
-		font-weight: 700 
+	.label
+		font-weight: 700
 		padding: 5px 0
 		text-align: left
 	input[type="text"]
-		padding: 3px 
+		padding: 3px
 		width: 100%
 		margin-bottom: 10px
 	input[type="checkbox"]
-		float: left 
+		float: left
 		margin-right: 10px
 
-.groupMessages 
-	button 
+.groupMessages
+	button
 		margin: 5px
 
 	.direct-messages-list
-		li 
+		li
 			padding: 10px 20px
 
-		.post-photo 
+		.post-photo
 			display: none
 
-		.post-text 
+		.post-text
 			display: none
 		.post-info-time
 			position: static
 			display: block
-			text-align: left 
+			text-align: left
 			padding: 5px 0
 			color: inherit
 
-			&:hover 
+			&:hover
 				text-decoration: none
 				color: inherit
 
@@ -52,13 +52,13 @@
 // new group
 .group-messages-new-group
 	text-align: center!important
-	.label 
-		font-weight: 700 
+	.label
+		font-weight: 700
 		padding: 5px 1%
 		text-align: left
 	textarea
-		&.description, &.invite 
-			width: 98% 
+		&.description, &.invite
+			width: 98%
 			margin: 5px auto
 			padding: 5px
 			text-align: left
@@ -96,18 +96,18 @@
 	text-align: left!important
 	button
 		margin: 3px 0 3px 3px
-	textarea 
-		width: 98% 
+	textarea
+		width: 98%
 		margin: 5px auto
 		padding: 5px
 		text-align: left
 		border: 1px solid darken( #F8F8F8 , 5%)
-	.invite-form 
+	.invite-form
 		display: none
-	div.profile-bio 
+	div.profile-bio
 		margin-left: 0
 
-	.secret-key 
+	.secret-key
 		display: none
 		font-size: 10px
 		padding: 5px
@@ -115,15 +115,15 @@
 		cursor: pointer
 		border: 1px solid darken( #F8F8F8 , 5%)
 		color: $dark-grey
-		background: #F8F8F8 
+		background: #F8F8F8
 		overflow: hidden
-		&:hover 
+		&:hover
 			background: white
 
 
-.direct-messages-thread + .group-messages-control 
-	position: absolute 
-	bottom: 0 
+.direct-messages-thread + .group-messages-control
+	position: absolute
+	bottom: 0
 	height: 40px
 	overflow: hidden
 	left: 0
@@ -133,14 +133,14 @@
 	z-index: 200
 	background: $bloc-light-color
 	+box-shadow(0 -8px 13px rgba(#111, 0.1))
-	.invite-form 
+	.invite-form
 		@extend .prompt-wrapper
 		bottom: 40px
 		top: auto
 		textarea
 			min-height: 100px
-	button 
-		float: none 
+	button
+		float: none
 		display: inline-block
 		padding: 7px
 		@extend .color-1

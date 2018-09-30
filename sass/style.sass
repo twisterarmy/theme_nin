@@ -32,30 +32,30 @@
 
 .promoted-posts-only
 	margin: 0 0
-	
+
 	li
 		cursor: pointer
 		display: block
 		margin: 0
 		width: 50%
-		padding: .5rem 
+		padding: .5rem
 		float: left
 		text-align: center
 		transition: color .1s linear
 		position: relative
 		border-left: 1px solid $main-background-color
-		span 
+		span
 			font-size: .8rem
 			line-height: .8rem
 			display: block
-		&.disabled 
+		&.disabled
 			background: $bloc-background-color
 			color: rgba($defaut-font-color, .3)
 			z-index: 3
 		&.active
 			color: $defaut-font-color
 			cursor: default
-			
+
 			z-index: 5
 
 
@@ -82,13 +82,13 @@
 	display: block
 	padding: 10px
 
-	
+
 
 ul.userMenu-search-profiles
 	width: 100%
 	padding: 0
-	
-	
+
+
 	li
 		float: none
 		display: block
@@ -97,11 +97,11 @@ ul.userMenu-search-profiles
 		cursor: pointer
 		background: $bloc-light-color
 		border-bottom: 1px solid $main-background-color
-		&:hover 
+		&:hover
 			background: white
 
 		a
-			display: block 
+			display: block
 			width: 100%
 			font-size: 12px
 			font-weight: 400
@@ -116,10 +116,10 @@ ul.userMenu-search-profiles
 				font-weight: 400
 				font-size: 12px
 
-	.mini-screen-name b,  
+	.mini-screen-name b,
 	.mini-screen-name
 		font-weight: 500
-	.mini-profile-photo 
+	.mini-profile-photo
 		width: $mini-usr-img / 1.5
 		height: auto
 		height: $mini-usr-img / 1.5
@@ -130,7 +130,7 @@ ul.userMenu-search-profiles
 	.mini-profile-info
 		width: 100%
 		float: none
-	.mini-profile-name 
+	.mini-profile-name
 		padding: 5px 0 0 0
 
 	button
@@ -142,7 +142,7 @@ ul.userMenu-search-profiles
 		font-weight: 700
 		padding: 0
 		position: absolute
-		top: 5px 
+		top: 5px
 		right: 5px
 
 
@@ -164,8 +164,8 @@ ul.userMenu-search-profiles
 
 .mini-profile
 
-	a:hover 
-		text-decoration: none 
+	a:hover
+		text-decoration: none
 
 	a.button
 		background: $main-color-light
@@ -173,11 +173,11 @@ ul.userMenu-search-profiles
 	.post-area
 		margin-top: 1px
 		margin-bottom: 20px
-		
+
 		@extend .clear-fix
-		.modal-header 
-			@extend .modal-header 
-			h3 
+		.modal-header
+			@extend .modal-header
+			h3
 				padding: 0 0 0 20px
 	.post-area-new
 		@extend .open
@@ -188,7 +188,7 @@ ul.userMenu-search-profiles
 			width: 100%
 
 .mini-profile-indicators
-	margin: 0 
+	margin: 0
 	text-align: center
 	@extend .clear-fix
 	border-top: 1px solid $main-background-color
@@ -209,7 +209,7 @@ ul.userMenu-search-profiles
 			&:hover
 				color: $dark-grey
 				background: $bloc-light-color
-			&:before 
+			&:before
 				display: block!important
 				width: 100%!important
 				font-size: 1.4rem!important
@@ -224,10 +224,10 @@ ul.userMenu-search-profiles
 		@extend .ion-profile
 		@extend .ion
 	.userMenu-groupmessages a
-		@extend .ion-android-contacts 
+		@extend .ion-android-contacts
 		@extend .ion
 	.userMenu-collapsePosts a
-		@extend .ion 
+		@extend .ion
 		@extend .ion-arrow-shrink
 .messages-qtd
 	position: absolute
@@ -237,7 +237,7 @@ ul.userMenu-search-profiles
 	text-align: center
 	+text-shadow(1px 1px 0 rgba(#000,.2))
 	color: #fff
-	width: 25px 
+	width: 25px
 	height: 25px
 	line-height: 25px
 	font-size: 10px
@@ -295,7 +295,7 @@ ul.userMenu-search-profiles
 .mini-profile
 	a
 		span.following-count
-			display: block 
+			display: block
 			font-weight: 900
 			font-size: 1.2rem
 			color: lighten($dark-grey,20%)
@@ -319,7 +319,7 @@ ul.userMenu-search-profiles
 
 
 .show-more-followers
-	@extend button 
+	@extend button
 	@extend .small
 	float: right
 	margin-right: 5px
@@ -346,7 +346,7 @@ ul.userMenu-search-profiles
 /***************** POST AREA ***************/
 
 .post-area-new
-	
+
 	textarea
 		resize: none
 		+box-sizing(border-box)
@@ -368,15 +368,15 @@ ul.userMenu-search-profiles
 
 .mini-profile .post-area
 	display: none
-	&.display 
+	&.display
 		display: block
 		@extend .prompt-wrapper
 		margin-top: -110px
 
 
 
-#post-preview 
-	border: 1px solid $main-background-color 
+#post-preview
+	border: 1px solid $main-background-color
 	border-bottom: 0
 	padding: 5px
 	+transition-property(all)
@@ -439,15 +439,15 @@ textarea.splited-post
 .who-to-follow
 	&.module
 
-		li 
-			button 
-				position: absolute 
+		li
+			button
+				position: absolute
 				right: 30px
 				top: 10px
 				@extend .small
-				display: none 
+				display: none
 				padding: .4rem!important
-			&:hover button 
+			&:hover button
 				display: block
 
 
@@ -519,7 +519,7 @@ img.twister-user-photo
 	letter-spacing: 0
 	float: right
 	display: block
-	margin:  10px 
+	margin:  10px
 	position: relative
 
 .view-all-users
@@ -531,7 +531,7 @@ img.twister-user-photo
 	letter-spacing: 0
 	float: right
 	display: block
-	margin:  10px 
+	margin:  10px
 	position: relative
 	@extend .ion-eye
 	@extend .ion
@@ -567,16 +567,16 @@ img.twister-user-photo
 /********* TWISTDAY REMINDER *******/
 
 .twistday-reminder
-	
+
 
 	.twister-user-full, .twister-user-tag
-		font-size: .9rem 
-		line-height: 1rem 
+		font-size: .9rem
+		line-height: 1rem
 		color: $defaut-font-color
 		font-weight: 500
-		opacity: 1 
+		opacity: 1
 		display: inline-block
-	.twisterday 
+	.twisterday
 		font-size: 12px
 
 /*********** NEWCOMERS ************/
@@ -607,74 +607,74 @@ img.twister-user-photo
 	margin:  100px auto
 	display: none
 
-	div 
+	div
 		width: .1em
 		height: .1em
 		position: absolute
 		border-radius: 50%
 
-		&:nth-child(1) 
+		&:nth-child(1)
 			background: #62839F
 			top: 0
 			left: 50%
-			margin-left: -.05em 
+			margin-left: -.05em
 			transform-origin: 50% 250%
 			animation: rota 1.13s linear infinite, opa 3.67s ease-in-out infinite alternate
 
 
-		&:nth-child(2) 
+		&:nth-child(2)
 			background: #749294
-			top: 50% 
+			top: 50%
 			right: 0
-			margin-top: -.05em 
+			margin-top: -.05em
 			transform-origin: -150% 50%
 			animation: rota 1.86s linear infinite, opa 4.29s ease-in-out infinite alternate
 
 
-		&:nth-child(3) 
+		&:nth-child(3)
 			background: #94AC7E
 			bottom: 0
-			left: 50% 
-			margin-left: -.05em 
+			left: 50%
+			margin-left: -.05em
 			transform-origin: 50% -150%
 			animation:  rota 1.45s linear infinite, opa 5.12s ease-in-out infinite alternate
 
 
-		&:nth-child(4) 
+		&:nth-child(4)
 			background: #B4C669
-			top: 50% 
+			top: 50%
 			left: 0
-			margin-top: -.05em 
+			margin-top: -.05em
 			transform-origin: 250% 50%
 			animation: rota 1.72s linear infinite,  opa 5.25s ease-in-out infinite alternate
 
-@keyframes rota 
+@keyframes rota
 	to
 		transform: rotate(360deg)
 
 
-@keyframes opa 
-	12.0% 
+@keyframes opa
+	12.0%
 		opacity: 0.80
-	19.5% 
+	19.5%
 		opacity: 0.88
-	37.2% 
+	37.2%
 		opacity: 0.64
-	40.5% 
+	40.5%
 		opacity: 0.52
-	52.7% 
+	52.7%
 		opacity: 0.69
-	60.2% 
+	60.2%
 		opacity: 0.60
-	66.6% 
+	66.6%
 		opacity: 0.52
-	70.0% 
+	70.0%
 		opacity: 0.63
-	79.9% 
+	79.9%
 		opacity: 0.60
-	84.2% 
+	84.2%
 		opacity: 0.75
-	91.0% 
+	91.0%
 		opacity: 0.87
 
 

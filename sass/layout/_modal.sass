@@ -25,7 +25,7 @@ $header-modal-height : $menu-height
 	+box-shadow(-8px 0 13px rgba(#111, 0.2))
 	+transition-property(top, bottom)
 	+transition-duration(1s)
-	&.remove 
+	&.remove
 		bottom: 300%
 	// NEW USER MODAL //
 
@@ -51,14 +51,14 @@ $header-modal-height : $menu-height
 
 	&.following-modal
 
-		h2 
+		h2
 			display: none
 		.mini-following-info
 			border-bottom: 1px solid $main-background-color
 			line-height: $mini-usr-img
 
-		a 
-			display: block 
+		a
+			display: block
 			padding: 10px
 			width: 100%
 
@@ -66,9 +66,9 @@ $header-modal-height : $menu-height
 			color: $defaut-font-color
 			background: $bloc-light-color
 
-			&:hover 
+			&:hover
 				background: white
-				text-decoration: none 
+				text-decoration: none
 				font-weight: 500
 		.mini-profile-photo
 			width: $mini-usr-img
@@ -77,20 +77,20 @@ $header-modal-height : $menu-height
 			line-height: 0
 			margin: 0 $space 0 0
 			float: left
-		.mini-following-name 
-			&:after 
+		.mini-following-name
+			&:after
 				line-height: 20px
-		.mini-screen-name 
+		.mini-screen-name
 			display: none
-	
+
 
 
 
 	&.who-to-follow-modal
-		a 
+		a
 			color: $main-color-dark
-			&.twister-user-name 
-				&:hover 
+			&.twister-user-name
+				&:hover
 					text-decoration: none
 		.twister-user-info
 			text-align: left
@@ -98,11 +98,11 @@ $header-modal-height : $menu-height
 			line-height: 1rem
 			width: 80%
 			padding-left: $mini-usr-img + 20
-		button 
-			position: absolute 
+		button
+			position: absolute
 			right: 10px
 			top: 10px
-			@extend .small	
+			@extend .small
 		.bio
 			color: rgba(0, 0, 0, 0.6)
 			font-style: italic
@@ -122,10 +122,10 @@ $header-modal-height : $menu-height
 			width: 100%
 			margin: auto
 
-			h2 
+			h2
 				display: block
-				span 
-					display: none 
+				span
+					display: none
 
 
 		.postboard-news
@@ -135,8 +135,8 @@ $header-modal-height : $menu-height
 			top: $header-modal-height +2
 			z-index: 2000
 			@extend .color-1
-			
-			
+
+
 	&.new-users-modal
 		a
 			color: $main-color-dark
@@ -163,21 +163,21 @@ $header-modal-height : $menu-height
 .modal-header
 	position: relative
 	background: darken($main-color-dark,.3)
-	height: $header-modal-height 
+	height: $header-modal-height
 	+box-sizing(border-box)
 	@extend .clear-fix
 
 	h3
 		padding-left: 20px
 		line-height: $header-modal-height
-		font-weight: 500 
+		font-weight: 500
 		font-size: 1rem
 		float: left
 		color: white
-		span 
+		span
 			position: relative
-	span 
-		
+	span
+
 		@extend .ion
 		position: absolute
 		top: 0
@@ -197,7 +197,7 @@ $header-modal-height : $menu-height
 			right: 10px
 		&.mark-all-as-read
 			@extend .ion-checkmark
-			position: static 
+			position: static
 			float: left
 			margin-left: 10px
 			display: none
@@ -236,21 +236,21 @@ $header-modal-height : $menu-height
 	border-bottom: 1px solid $main-background-color
 	width: 100%
 	min-height: auto
-	padding: 7px 
+	padding: 7px
 	clear: left
-	&:first-child 
+	&:first-child
 		border-top: 1px solid $main-background-color
 		border-bottom: 1px solid $main-background-color !important
-	&:last-child 
+	&:last-child
 		border-bottom: 0
-	small 
+	small
 		display: none
 
 
 
 
 /* Minimized */
-.minimize-modal 
+.minimize-modal
 	@extend .ion
 	@extend .ion-minus
 	position: absolute
@@ -269,15 +269,15 @@ $header-modal-height : $menu-height
 
 
 
-#modals-minimized 
-	position: fixed 
+#modals-minimized
+	position: fixed
 	z-index: 2000
-	left: 0 
-	bottom: 0 
+	left: 0
+	bottom: 0
 	width: $leftWidth
 	text-align: right
 	li
-		background: $dark-grey 
+		background: $dark-grey
 		cursor: pointer
 		margin-right: 10px
 		font-weight: 600
@@ -286,16 +286,14 @@ $header-modal-height : $menu-height
 		margin-bottom: 10px
 		color: rgba(white, .8)
 		+transition(margin .2s)
-		&:hover 
-			color: white 
+		&:hover
+			color: white
 			margin-right: 0
 
 /*********** POPUP PROMPT *************/
 
 @import '_prompt'
 
-/********* DIRECT MESSAGES MODAL ***********/ 
+/********* DIRECT MESSAGES MODAL ***********/
 
 @import '_dm'
-
-

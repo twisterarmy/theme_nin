@@ -19,7 +19,7 @@ $menuBgColor : $dark-grey
 		max-width: 100%
 		width: $site-width
 		margin: auto
-		background: image-url("logo.png") no-repeat 50% 50% 
+		background: image-url("logo.png") no-repeat 50% 50%
 		background-size: 20px
 		li
 			position: relative
@@ -27,7 +27,7 @@ $menuBgColor : $dark-grey
 			float: left
 			margin: 0 10px
 			> a
-				line-height: $menu-height 
+				line-height: $menu-height
 				display: inline-block
 				color: rgba($menu-font-color, 0.5)!important
 				font-size: 1rem
@@ -36,24 +36,24 @@ $menuBgColor : $dark-grey
 				&:hover
 					color: $menu-font-color!important
 					text-decoration: none
-				
+
 				&:before
 					padding-right: 5px
-				span 
-					display: inline-block 
+				span
+					display: inline-block
 
 
 			&.current  a
 				color: $menu-font-color!important
 
 
-/* Menu specific entries */ 
+/* Menu specific entries */
 
 .userMenu li
 
-	&.userMenu-home 
-		a 
-			.label 
+	&.userMenu-home
+		a
+			.label
 				display: inline-block!important
 
 		.menu-news
@@ -63,7 +63,7 @@ $menuBgColor : $dark-grey
 			top: 5px
 			right: -12px
 			background: $main-color-color
-			width: 15px 
+			width: 15px
 			height: 15px
 			line-height: 15px
 			font-size: 10px
@@ -73,7 +73,7 @@ $menuBgColor : $dark-grey
 			+border-radius(50%)
 			+box-sizing(content-box)
 			color: white
-			&.show 
+			&.show
 				display: block
 
 
@@ -83,10 +83,10 @@ $menuBgColor : $dark-grey
 	&.userMenu-config, &.userMenu-search
 		float: right
 		color: $menu-font-color
-		+ a 
-			color: $main-color-dark 
+		+ a
+			color: $main-color-dark
 	&.userMenu-search
-		> input 
+		> input
 			border: 1px solid rgba(white,.3)
 			line-height: $menu-height/2
 			margin-top: $menu-height/4
@@ -95,7 +95,7 @@ $menuBgColor : $dark-grey
 			background: rgba(white,.1)
 			color: white
 			+border-radius(7px)
-			&:focus 
+			&:focus
 				border-color: rgba(white,.7)
 	&.userMenu-config > a
 		@extend .ion
@@ -105,10 +105,10 @@ $menuBgColor : $dark-grey
 		a
 			background: $bloc-light-color
 			border-top: 1px solid $main-background-color
-			&:hover 
+			&:hover
 				background: white
 			text-decoration: none
-			display: block 
+			display: block
 			width: 100%
 			font-weight: 400
 			line-height: $mini-usr-img / 1.5
