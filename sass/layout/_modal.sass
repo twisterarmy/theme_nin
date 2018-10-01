@@ -7,6 +7,16 @@ $header-modal-height : $menu-height
 
 // style
 
+@mixin modal-blackout
+	display: block
+	background: rgba(0,0,0, 0.6)
+	z-index: -1
+	position: fixed
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+
 .modal-blackout
 	display: none
 
@@ -110,6 +120,7 @@ $header-modal-height : $menu-height
 
 
 	.modal-content
+		background: #fff
 		width: 100%
 		@extend .clear-fix
 		overflow: hidden
