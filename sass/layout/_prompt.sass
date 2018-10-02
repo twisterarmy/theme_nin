@@ -1,6 +1,6 @@
 /*********** POPUP PROMPT *************/
 
-.prompt-wrapper
+@mixin prompt-wrapper-basic
 	background: $bloc-light-color
 	z-index: 200
 	position: fixed
@@ -9,6 +9,9 @@
 	width: 600px
 	margin-left: -300px
 	+box-shadow(0 8px 33px rgba(#000, .3))
+
+.prompt-wrapper
+	@include prompt-wrapper-basic
 	.following-config-method-buttons
 		padding: 0 20px 20px 0
 		float: right
