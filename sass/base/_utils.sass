@@ -43,22 +43,25 @@
 			color: #666
 			+box-shadow(1px 1px 0 rgba(#444, .3))
 
+@mixin button-color-basic($type: 1)
+	$color: $main-color-color
+	$hover-border-color-darken-amount: 22%
+	@if $type == 2
+		$color: #64676C
+		$hover-border-color-darken-amount: 15%
+	background: $color
+	border-color: darken($color, 5%)
+	color: white
+	font-weight: 500
+	&:hover
+		border-color: darken($color, $hover-border-color-darken-amount)
+
 button, a.button
 	@include button-basic
 	&.color-1
-		background: $main-color-color
-		border-color: darken($main-color-color, 5%)
-		color: white
-		font-weight: 500
-		&:hover
-			border-color: darken($main-color-color, 22%)
+		@include button-color-basic
 	&.color-2
-		background: #64676C
-		border-color: darken(#64676C, 5%)
-		color: white
-		font-weight: 500
-		&:hover
-			border-color: darken(#64676C, 15%)
+		@include button-color-basic(2)
 	&.small
 		padding:  .5rem
 		font-weight: 700

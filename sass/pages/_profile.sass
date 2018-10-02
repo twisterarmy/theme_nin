@@ -59,9 +59,9 @@
 		&.last-child
 			margin-right: 0
 		&.submit-changes
-			@extend button.color-1
+			@include button-color-basic
 		&.toggle-priv-key
-			@extend button.color-2
+			@include button-color-basic(2)
 	.secret-key-container
 		text-align: left !important
 		font-size: 1rem!important
