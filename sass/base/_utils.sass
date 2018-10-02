@@ -56,6 +56,12 @@
 	&:hover
 		border-color: darken($color, $hover-border-color-darken-amount)
 
+@mixin button-small-basic
+	padding:  .5rem
+	font-weight: 700
+	font-size: .7rem
+	line-height: .7rem
+
 button, a.button
 	@include button-basic
 	&.color-1
@@ -63,10 +69,7 @@ button, a.button
 	&.color-2
 		@include button-color-basic(2)
 	&.small
-		padding:  .5rem
-		font-weight: 700
-		font-size: .7rem
-		line-height: .7rem
+		@include button-small-basic
 	&.light
 		background: #eee
 		border-color: darken(#eee, 5%)
