@@ -109,6 +109,19 @@
 			padding:  15px
 			background: $bloc-light-color
 
+		&.promoted
+			> .post-data
+				.post-text::after
+					font-size: 70%
+					color: #FFF
+					background-color: rgba($color-green, 0.75)
+					margin: 0px 8px
+					padding: 2px 4px
+					content: attr(data-promoted)
+				&:hover
+					.post-text::after
+						background-color: $color-green
+
 
 
 
