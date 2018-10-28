@@ -2020,6 +2020,20 @@ button.light:hover, a.button.light:hover {
   border-radius: 3px;
 }
 
+.post .new-replies-available {
+  text-align: center;
+  margin-top: 8px;
+}
+.post .new-replies-available button {
+  background: #A1B775;
+  border-color: #96ae64;
+  color: white;
+  font-weight: 500;
+}
+.post .new-replies-available button:hover {
+  border-color: #687b40;
+}
+
 .avatar-row {
   margin-left: 5px;
 }
