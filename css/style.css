@@ -114,7 +114,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-weight: normal;
   font-style: normal;
 }
-.ion:before, .userMenu li.userMenu-config > a:before, .modal-header span:before, .prompt-wrapper .modal-header span:before, .mini-profile .post-area .modal-header span:before, .minimize-modal:before, .prompt-wrapper .switch-mode:before, .bitmessage-ctc:before, .tox-ctc:before, .profile-modal .profile-tox:before, .profile-modal .profile-bitmessage:before, .post-rt-icon:before, .post-interactions span:before, .post-stats li.stat-count:before, .mini-profile-indicators .userMenu-connections a:before, .mini-profile-indicators .userMenu-messages a:before, .mini-profile-indicators .userMenu-user a:before, .mini-profile-indicators .userMenu-groupmessages a:before, .mini-profile-indicators .userMenu-collapsePosts a:before, .twister-user-remove:before, .refresh-toptrends:before, .twistday-reminder .refresh:before, .refresh-users:before, .view-all-users:before, .ion-after:after, .isFollowing:after, .direct-messages-list .post:after {
+.ion:before, .userMenu li.userMenu-config > a:before, .modal-header span:before, .prompt-wrapper .modal-header span:before, .mini-profile .post-area .modal-header span:before, .minimize-modal:before, .prompt-wrapper .switch-mode:before, .bitmessage-ctc:before, .tox-ctc:before, .profile-modal .profile-tox:before, .profile-modal .profile-bitmessage:before, .post-rt-icon:before, .post-interactions span:before, .mini-profile-indicators .userMenu-connections a:before, .mini-profile-indicators .userMenu-messages a:before, .mini-profile-indicators .userMenu-user a:before, .mini-profile-indicators .userMenu-groupmessages a:before, .mini-profile-indicators .userMenu-collapsePosts a:before, .twister-user-remove:before, .refresh-toptrends:before, .twistday-reminder .refresh:before, .refresh-users:before, .view-all-users:before, .ion-after:after, .isFollowing:after, .direct-messages-list .post:after {
   display: inline-block;
   font-family: "Ionicons";
   speak: none;
@@ -128,11 +128,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   -moz-osx-font-smoothing: grayscale;
 }
 
-.ion:before, .userMenu li.userMenu-config > a:before, .modal-header span:before, .prompt-wrapper .modal-header span:before, .mini-profile .post-area .modal-header span:before, .minimize-modal:before, .prompt-wrapper .switch-mode:before, .bitmessage-ctc:before, .tox-ctc:before, .profile-modal .profile-tox:before, .profile-modal .profile-bitmessage:before, .post-rt-icon:before, .post-interactions span:before, .post-stats li.stat-count:before, .mini-profile-indicators .userMenu-connections a:before, .mini-profile-indicators .userMenu-messages a:before, .mini-profile-indicators .userMenu-user a:before, .mini-profile-indicators .userMenu-groupmessages a:before, .mini-profile-indicators .userMenu-collapsePosts a:before, .twister-user-remove:before, .refresh-toptrends:before, .twistday-reminder .refresh:before, .refresh-users:before, .view-all-users:before {
+.ion:before, .userMenu li.userMenu-config > a:before, .modal-header span:before, .prompt-wrapper .modal-header span:before, .mini-profile .post-area .modal-header span:before, .minimize-modal:before, .prompt-wrapper .switch-mode:before, .bitmessage-ctc:before, .tox-ctc:before, .profile-modal .profile-tox:before, .profile-modal .profile-bitmessage:before, .post-rt-icon:before, .post-interactions span:before, .mini-profile-indicators .userMenu-connections a:before, .mini-profile-indicators .userMenu-messages a:before, .mini-profile-indicators .userMenu-user a:before, .mini-profile-indicators .userMenu-groupmessages a:before, .mini-profile-indicators .userMenu-collapsePosts a:before, .twister-user-remove:before, .refresh-toptrends:before, .twistday-reminder .refresh:before, .refresh-users:before, .view-all-users:before {
   padding: 0 3px;
 }
 
-.ion:after, .userMenu li.userMenu-config > a:after, .modal-header span:after, .prompt-wrapper .modal-header span:after, .mini-profile .post-area .modal-header span:after, .minimize-modal:after, .prompt-wrapper .switch-mode:after, .bitmessage-ctc:after, .tox-ctc:after, .profile-modal .profile-tox:after, .profile-modal .profile-bitmessage:after, .post-rt-icon:after, .post-interactions span:after, .post-stats li.stat-count:after, .mini-profile-indicators .userMenu-connections a:after, .mini-profile-indicators .userMenu-messages a:after, .mini-profile-indicators .userMenu-user a:after, .mini-profile-indicators .userMenu-groupmessages a:after, .mini-profile-indicators .userMenu-collapsePosts a:after, .twister-user-remove:after, .refresh-toptrends:after, .twistday-reminder .refresh:after, .refresh-users:after, .view-all-users:after, .ion-after:before, .isFollowing:before, .direct-messages-list .post:before {
+.ion:after, .userMenu li.userMenu-config > a:after, .modal-header span:after, .prompt-wrapper .modal-header span:after, .mini-profile .post-area .modal-header span:after, .minimize-modal:after, .prompt-wrapper .switch-mode:after, .bitmessage-ctc:after, .tox-ctc:after, .profile-modal .profile-tox:after, .profile-modal .profile-bitmessage:after, .post-rt-icon:after, .post-interactions span:after, .mini-profile-indicators .userMenu-connections a:after, .mini-profile-indicators .userMenu-messages a:after, .mini-profile-indicators .userMenu-user a:after, .mini-profile-indicators .userMenu-groupmessages a:after, .mini-profile-indicators .userMenu-collapsePosts a:after, .twister-user-remove:after, .refresh-toptrends:after, .twistday-reminder .refresh:after, .refresh-users:after, .view-all-users:after, .ion-after:before, .isFollowing:before, .direct-messages-list .post:before {
   display: none;
 }
 
@@ -148,7 +148,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   content: "";
 }
 
-.ion-shuffle:before, .prompt-wrapper .switch-mode:before, .post-rt-icon:before, .post-interactions span.post-propagate:before, .post-stats li.stat-count:before, .refresh-toptrends:before, .twistday-reminder .refresh:before, .refresh-users:before {
+.ion-shuffle:before, .prompt-wrapper .switch-mode:before, .post-rt-icon:before, .post-interactions span.post-propagate:before, .refresh-toptrends:before, .twistday-reminder .refresh:before, .refresh-users:before {
   content: "";
 }
 
@@ -904,6 +904,14 @@ button.light:hover, a.button.light:hover {
 .twister-peer .bio {
   text-align: center;
   padding: 4px;
+}
+
+.avatar.tiny {
+  width: 20px;
+  height: 20px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
 }
 
 .twister-user {
@@ -1989,35 +1997,28 @@ button.light:hover, a.button.light:hover {
 .post-stats {
   float: left;
   clear: left;
+  height: 34px;
 }
-.post-stats li {
+.post-stats > div {
   display: inline-block;
+  line-height: 16px;
+  vertical-align: middle;
 }
-.post-stats li.stat-count {
+.post-stats .stat-count {
   font-size: 12px;
-  float: left;
-  line-height: 20px;
+  padding-right: 4px;
+  border-right: solid 1px #C3C3C3;
 }
-.post-stats li.stat-count:before {
-  margin-right: 0;
-}
-.post-stats li.stat-count span:last-child {
+.post-stats .stat-count div:last-child {
   display: none;
 }
-.post-stats a {
-  position: relative;
-  text-decoration: none;
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  margin: 0 2px 0 0;
+.post-stats .avatar-row {
+  padding: 4px;
 }
-.post-stats a img {
-  width: 20px;
-  height: 20px;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
+.post-stats .avatar-row a {
+  display: inline-block;
+  position: relative;
+  margin-right: 2px;
 }
 
 .post .new-replies-available {
@@ -2034,9 +2035,6 @@ button.light:hover, a.button.light:hover {
   border-color: #687b40;
 }
 
-.avatar-row {
-  margin-left: 5px;
-}
 .avatar-row a:hover .user-name-tooltip {
   display: block;
 }
@@ -2052,7 +2050,7 @@ button.light:hover, a.button.light:hover {
   -webkit-border-radius: 3px;
   border-radius: 3px;
   color: #fff;
-  top: -32px;
+  top: -28px;
   left: -10px;
 }
 .avatar-row .user-name-tooltip:after {
@@ -2060,7 +2058,7 @@ button.light:hover, a.button.light:hover {
   position: absolute;
   width: 0;
   left: 13px;
-  bottom: -5px;
+  bottom: -4px;
   border-top: solid 5px #222;
   border-left: solid 5px transparent;
   border-right: solid 5px transparent;

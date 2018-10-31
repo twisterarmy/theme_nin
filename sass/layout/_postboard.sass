@@ -304,31 +304,23 @@
 .post-stats
 	float: left
 	clear: left
-	li
+	height: 34px
+	> div
 		display: inline-block
-		&.stat-count
-			font-size: 12px
-			float: left
-			line-height: 20px
-			@extend .ion-shuffle
-			@extend .ion
-			&:before
-				margin-right: 0
-			span:last-child
-				display: none
-
-	a
-		position: relative
-		text-decoration: none
-		display: inline-block
-		width: 20px
-		height: 20px
-		margin: 0 2px 0 0
-
-		img
-			width: 20px
-			height: 20px
-			+border-radius(3px)
+		line-height: 16px
+		vertical-align: middle
+	.stat-count
+		font-size: 12px
+		padding-right: 4px
+		border-right: solid 1px $light-grey
+		div:last-child
+			display: none
+	.avatar-row
+		padding: 4px
+		a
+			display: inline-block
+			position: relative
+			margin-right: 2px
 
 .post
 	.new-replies-available
@@ -343,7 +335,6 @@
 //what appears on top of .avatar-row img on hover
 
 .avatar-row
-	margin-left: 5px
 	a:hover
 		.user-name-tooltip
 			display: block
@@ -358,14 +349,14 @@
 		padding:  5px
 		+border-radius(3px)
 		color: #fff
-		top: -32px
+		top: -28px
 		left: -10px
 		&:after
 			content: ""
 			position: absolute
 			width: 0
 			left: 13px
-			bottom: -5px
+			bottom: -4px
 			border-top: solid 5px $main-color-dark
 			border-left: solid 5px transparent
 			border-right: solid 5px transparent
