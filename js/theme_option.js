@@ -1,17 +1,13 @@
-$(window).resize(function()
-{
+$(window).on('resize', function () {
     testRightSide();
     reAppendModules();
 });
 
-$(window).load(function()
-{
+$(window).on('load', function () {
     testRightSide();
 });
 
-
-$(document).ready(function()
-{
+$(function () {
     testRightSide();
     reOrganizeTemplates();
 
@@ -21,13 +17,13 @@ $(document).ready(function()
     $.globalEval(openModal.toString().replace(/window_scrollY = window\.pageYOffset;/, '')
         .replace(/\$\('body'\)\.css\('overflow', 'hidden'\);/, ''));
 
-    $( '.userMenu-home.current a' ).on( 'click', function() {
+    $('.userMenu-home.current a').on('click', function () {
         $('html, body').animate({scrollTop:0},300);
         return false
     });
 
     // modify the way promoted posts are shown
-    $( ".promoted-posts-only").click(function() {
+    $('.promoted-posts-only').on('click', function () {
         //active promoted posts tab
         $(this).children('.promoted-posts').addClass(promotedPostsOnly ? "active" : "disabled");
         $(this).children('.normal-posts').addClass(promotedPostsOnly ? "disabled" : "active");
@@ -39,11 +35,10 @@ $(document).ready(function()
     });
 
     if (/\/options.html$/i.test(document.location))
-        $(document).ready(localizeLabels);
+        localizeLabels();
 
-    $(window).scroll(function(){
+    $(window).on('scroll', function () {
         window_scrollY = window.pageYOffset; // declare variable here for screen not to scroll when closing modals
-
     });
 
     // Collapse all .post.open
@@ -108,7 +103,7 @@ function reOrganizeTemplates() { // for nin's templating
         .addClass('ion')
         .addClass('ion-plus')
         .appendTo('.userMenu-newPost')
-        .bind( 'click', function() {
+        .on('click', function () {
             if(!$('.mini-profile .post-area').hasClass('display')) {$('.mini-profile .post-area').addClass('display');}
             else  {$('.mini-profile .post-area').removeClass('display');}
             return false;
@@ -119,10 +114,10 @@ function reOrganizeTemplates() { // for nin's templating
         .addClass('modal-header')
         .prependTo('.mini-profile .post-area');
 
-    $('.mini-profile .post-area .post-submit').bind( 'click', function() {
+    $('.mini-profile .post-area .post-submit').on('click', function () {
         $('.mini-profile .post-area').removeClass('display');
     });
-    $('.mini-profile .post-area .modal-close').bind( 'click', function() {
+    $('.mini-profile .post-area .modal-close').on('click', function () {
         $('.mini-profile .post-area').removeClass('display');
     });
 
@@ -139,7 +134,7 @@ function reOrganizeTemplates() { // for nin's templating
 }
 
 // Close new post prompt with esc key
-$(document).keyup(function(e) {
+$(document).on('keyup', function (e) {
     if (e.keyCode == 27) {
         $('.mini-profile .post-area').removeClass('display');
         closeModal();
