@@ -1995,12 +1995,12 @@ button.light:hover, a.button.light:hover {
 }
 
 .post-stats {
+  display: flex;
   float: left;
   clear: left;
   height: 34px;
 }
 .post-stats > div {
-  display: inline-block;
   line-height: 16px;
   vertical-align: middle;
 }
