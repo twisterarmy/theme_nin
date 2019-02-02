@@ -89,8 +89,8 @@ function reOrganizeTemplates() { // for nin's templating
     $('.mini-profile .open-following-page').parent('li').detach().appendTo($('.mini-profile-indicators'));
     $('.mini-profile-indicators').detach().insertAfter($('.dashboard.left .profile-data'));
 
-    ///// page profile
-    $('.forEdition .profile-card-main h2').detach().insertBefore($('.profile-card-main'));
+    twister.tmpl.accountMC.find('.alias')
+        .insertBefore(twister.tmpl.accountMC.find('.avatar'));
 
     //loader
     newLoader()

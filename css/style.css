@@ -2,7 +2,7 @@
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp, .forEdition.profile-card .secret-key-container .secret-key,
+del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, .profile-bio, center,
 dl, dt, dd, ol, ul, li,
@@ -318,7 +318,7 @@ textarea, input {
   font-size: 0.8rem;
 }
 
-samp, .forEdition.profile-card .secret-key-container .secret-key {
+samp {
   background: #3E3C42;
   color: white;
   font-size: 11px;
@@ -356,7 +356,7 @@ h3 .isFollowing:after {
   box-shadow: 0 8px 13px rgba(17, 17, 17, 0);
 }
 
-.clear-fix:after, .userMenu > ul:after, .wrapper:after, .dashboard > .module:after, .dashboard > .module ol:after, .modal-wrapper.following-modal a:after, .modal-wrapper .modal-content:after, .modal-header:after, .prompt-wrapper .modal-header:after, .mini-profile .post-area .modal-header:after, .twister-user:after, .direct-messages-thread .post:after, #postboard-top:after, #postboard-top .post-area:after, .expanded-content:after, .forEdition.profile-card:after, .forEdition.profile-card .profile-card-main:after, .network.singleBlock:after, .network.singleBlock .module:after, .options .tab-content:after, ul.userMenu-search-profiles li:after, .mini-profile .post-area:after, .mini-profile-indicators:after, .profile-data:after {
+.clear-fix:after, .userMenu > ul:after, .wrapper:after, .dashboard > .module:after, .dashboard > .module ol:after, .modal-wrapper.following-modal a:after, .modal-wrapper .modal-content:after, .modal-header:after, .prompt-wrapper .modal-header:after, .mini-profile .post-area .modal-header:after, .twister-user:after, .direct-messages-thread .post:after, #postboard-top:after, #postboard-top .post-area:after, .expanded-content:after, .network.singleBlock:after, .network.singleBlock .module:after, .options .tab-content:after, ul.userMenu-search-profiles li:after, .mini-profile .post-area:after, .mini-profile-indicators:after, .profile-data:after {
   content: "";
   display: table;
   clear: both;
@@ -1452,6 +1452,60 @@ button.light:hover, a.button.light:hover {
   border-color: #687b40;
 }
 
+/********* ACCOUNT MODAL ******** */
+.account-modal .module {
+  margin: 4px;
+}
+.account-modal .module > div {
+  margin: 4px 0;
+  padding: 4px 12px;
+}
+.account-modal input, .account-modal textarea {
+  display: block;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 320px;
+  margin: 12px 16px;
+  padding: 2px 4px;
+}
+.account-modal textarea {
+  width: 320px;
+  max-width: 320px;
+  min-width: 320px;
+  min-height: 28px;
+}
+.account-modal input:focus, .account-modal textarea:focus {
+  border-bottom: solid 1px #A1B775;
+}
+.account-modal .alias {
+  margin: 0px 16px;
+}
+.account-modal .avatar {
+  cursor: pointer;
+  width: 64px;
+  height: 64px;
+  overflow: hidden;
+  margin: 12px 16px;
+}
+.account-modal .avatar img {
+  width: 64px;
+  height: auto;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.account-modal .c-buttons {
+  text-align: right;
+}
+.account-modal .toggle-secret-key {
+  float: left;
+}
+.account-modal .secret-key-container {
+  text-align: center;
+  font-size: 12px;
+}
+.account-modal .secret-key {
+  background-color: #A1B775;
+  font-weight: bold;
+}
+
 /****** LOGIN TO ACCOUNT MODAL ***** */
 .login-modal .module {
   margin: 4px;
@@ -1573,10 +1627,6 @@ button.light:hover, a.button.light:hover {
   margin: 0 10px 10px 0;
   display: block;
   float: left;
-}
-
-.profile-card-photo.forEdition {
-  float: none;
 }
 
 .profile-bio {
@@ -2198,103 +2248,6 @@ button.light:hover, a.button.light:hover {
 }
 .following-own-modal .following-list .latest-activity {
   font-size: 11px;
-}
-
-.forEdition.profile-card {
-  padding: 0;
-  background: none;
-  background: #FDFCFA;
-  -moz-box-shadow: 1px 2px 2px rgba(17, 17, 17, 0.1);
-  -webkit-box-shadow: 1px 2px 2px rgba(17, 17, 17, 0.1);
-  box-shadow: 1px 2px 2px rgba(17, 17, 17, 0.1);
-}
-.forEdition.profile-card .profile-card-main {
-  padding: 20px;
-  margin: 0 0 1px 0;
-}
-.forEdition.profile-card .profile-card-main input {
-  display: block;
-  margin: 0 0 10px 100px;
-  width: 600px;
-  background: #F3F2F0;
-  border: 1px solid #FDFCFA;
-  padding: 6px 4px;
-  margin-bottom: 4px;
-  font-size: 1rem;
-  font-weight: 400;
-}
-.forEdition.profile-card .profile-card-main input:hover, .forEdition.profile-card .profile-card-main input:focus {
-  background: white;
-  border-color: #000;
-}
-.forEdition.profile-card img {
-  width: 70px;
-  float: left;
-}
-.forEdition.profile-card h2 {
-  font-weight: 400;
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjEuMCIgeTE9IjAuNSIgeDI9IjAuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ExYjc3NSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzVlODBhMiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-  background-size: 100%;
-  background-image: -webkit-gradient(linear, 100% 50%, 0% 50%, color-stop(0%, #a1b775), color-stop(100%, #5e80a2));
-  background-image: -moz-linear-gradient(right, #a1b775, #5e80a2);
-  background-image: -webkit-linear-gradient(right, #a1b775, #5e80a2);
-  background-image: linear-gradient(to left, #a1b775, #5e80a2);
-  padding: 1rem 2rem;
-  color: white;
-}
-.forEdition.profile-card h3 {
-  font-weight: 600;
-  margin-top: 2rem;
-  padding: 0 1.5rem;
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
-}
-.forEdition.profile-card h3:after {
-  display: block;
-  content: "";
-  height: 1px;
-  width: 100%;
-  background: rgba(95, 129, 161, 0.5);
-  margin-top: 1rem;
-}
-.forEdition.profile-card button {
-  float: right;
-  margin: 10px;
-}
-.forEdition.profile-card button.last-child {
-  margin-right: 0;
-}
-.forEdition.profile-card button.submit-changes {
-  background: #A1B775;
-  border-color: #96ae64;
-  color: white;
-  font-weight: 500;
-}
-.forEdition.profile-card button.submit-changes:hover {
-  border-color: #687b40;
-}
-.forEdition.profile-card button.toggle-priv-key {
-  background: #64676C;
-  border-color: #585a5f;
-  color: white;
-  font-weight: 500;
-}
-.forEdition.profile-card button.toggle-priv-key:hover {
-  border-color: #3f4144;
-}
-.forEdition.profile-card .secret-key-container {
-  text-align: left !important;
-  font-size: 1rem !important;
-  clear: both;
-  padding: 10px;
-}
-.forEdition.profile-card .secret-key-container .label {
-  clear: both;
-  display: block;
-  float: left;
-  font-weight: 700;
-  margin-right: 20px;
 }
 
 /********** LOGIN AND NETWORK PAGES ****** */
