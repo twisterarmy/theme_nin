@@ -11,10 +11,11 @@ $(function () {
     testRightSide();
     reOrganizeTemplates();
 
-    $.globalEval(postToElem.toString().replace(/postContext.append\(_templatePostRtBy/,
-        'postContext.prependTo(postContext.parent()).append(_templatePostRtBy'));
+    // indirect eval call in hope to execute code globally
+    (1, eval)(postToElem.toString().replace(/postContext.append\(twister\.tmpl\.postRtBy/,
+        'postContext.prependTo(postContext.parent()).append(twister.tmpl.postRtBy'));
 
-    $.globalEval(openModal.toString().replace(/window_scrollY = window\.pageYOffset;/, '')
+    (1, eval)(openModal.toString().replace(/window_scrollY = window\.pageYOffset;/, '')
         .replace(/\$\('body'\)\.css\('overflow', 'hidden'\);/, ''));
 
     $('.userMenu-home.current a').on('click', function () {
